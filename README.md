@@ -1,0 +1,30 @@
+# aruaru-tokyo-server
+
+[aruaru.tokyo](https://aruaru.tokyo/) のTOPページ。Rust + [Poem](https://github.com/poem-web/poem)製、DB非依存・1バイナリ完結。
+
+`audiocafe.tokyo`(PHP)とは別ドメイン・別スタックの姉妹サイトで、poem-cosmo-tauriエコシステムの規約(hyper/Poemを直接使い、重量級フレームワークやDBに依存しない)に合わせて実装している。
+
+## 機能
+
+- 「あるある」(誰もが頷く日常のあるある集)コンテンツ、ジャンル別5カテゴリ + ランダム表示
+- [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb)への即リンク
+- GitHub上の指定リポジトリ(aon-co-jp組織)を選ぶと、README.md・CLAUDE.md・PORTING.mdをrustdocコメント(`//!`)形式の`.rs`風テキストに変換して表示する機能(readme-to-rs構想の簡易実装)
+
+## ビルド・起動
+
+```bash
+cargo build --release
+ARUARU_TOKYO_BIND=0.0.0.0:4100 ./target/release/aruaru-tokyo-server
+```
+
+`ARUARU_TOKYO_BIND`未指定時は`0.0.0.0:4100`で待ち受ける。
+
+## 本番構成(参考)
+
+VPS上ではsystemdサービスとして`127.0.0.1:4100`にバインドし、nginxが443番でTLS終端した上でリバースプロキシする。`/aruaru/`・`/aruaru-lady/`・`/rakuten-mobile/`パスは`audiocafe.tokyo`側の実体(PHP)へ内部プロキシするミラーとして、同じnginx vhost内に個別のlocationブロックを追加している(詳細は[CLAUDE.md](CLAUDE.md)参照)。
+
+## 関連プロジェクト
+
+- [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb) — OTP認証・サイト管理サーバー(tokio+hyper製)
+- [open-runo](https://github.com/aon-co-jp/open-runo) / [poem-cosmo-tauri](https://github.com/aon-co-jp/poem-cosmo-tauri) — エコシステムのRust実装規約の出典元
+- audiocafe.tokyo(PHP、別リポジトリ管理外・VPS上の運用ディレクトリ)
