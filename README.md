@@ -25,6 +25,10 @@ VPS上ではsystemdサービスとして`127.0.0.1:4100`にバインドし、ngi
 
 ## 関連プロジェクト
 
+- [open-runo](https://github.com/aon-co-jp/open-runo) — Rust→WASM/tokio+hyperのopen-runoエコシステム本体
+- [poem-cosmo-tauri](https://github.com/aon-co-jp/poem-cosmo-tauri) — Poem/Tauri実装規約の出典元
+- [open-web-server](https://github.com/aon-co-jp/open-web-server) — 汎用WEBサーバーゲートウェイ
+- [aruaru-db](https://github.com/aon-co-jp/aruaru-db) — DB層(このリポジトリはDB非依存)
+- [open-raid-z](https://github.com/aon-co-jp/open-raid-z) — 開発ルールの正本
 - [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb) — OTP認証・サイト管理サーバー(tokio+hyper製)
-- [open-runo](https://github.com/aon-co-jp/open-runo) / [poem-cosmo-tauri](https://github.com/aon-co-jp/poem-cosmo-tauri) — エコシステムのRust実装規約の出典元
 - audiocafe.tokyo(PHP、別リポジトリ管理外・VPS上の運用ディレクトリ)
