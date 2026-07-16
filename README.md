@@ -31,4 +31,4 @@ VPS上ではsystemdサービスとして`127.0.0.1:4100`にバインドし、ngi
 - [aruaru-db](https://github.com/aon-co-jp/aruaru-db) — DB層(このリポジトリはDB非依存)
 - [open-raid-z](https://github.com/aon-co-jp/open-raid-z) — 開発ルールの正本
 - [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb) — OTP認証・サイト管理サーバー(tokio+hyper製)
-- audiocafe.tokyo(PHP、別リポジトリ管理外・VPS上の運用ディレクトリ)
+- [audiocafe.tokyo](https://github.com/aon-co-jp/audiocafe-tokyo)(PHP)
