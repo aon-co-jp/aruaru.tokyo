@@ -8,7 +8,10 @@
 
 - 「あるある」(誰もが頷く日常のあるある集)コンテンツ、ジャンル別5カテゴリ + ランダム表示
 - [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb)への即リンク
-- GitHub上の指定リポジトリ(aon-co-jp組織)を選ぶと、README.md・CLAUDE.md・PORTING.mdをrustdocコメント(`//!`)形式の`.rs`風テキストに変換して表示する機能(readme-to-rs構想の簡易実装)
+- GitHub(aon-co-jp)アカウントのトップページへのリンク
+- 「🔄 最新のリポジトリ一覧を取得」ボタンで、GitHub APIから最新の全リポジトリ名を取得して選択肢を動的に更新
+- 選択中のリポジトリのGitHubページへの直接リンク
+- README.md・CLAUDE.md・PORTING.mdを、GitHub風にレンダリングしたHTML表示と、rustdocコメント(`//!`)形式の`.rs`風テキスト表示の両方で閲覧可能(タブ切替、readme-to-rs構想の実装)。表示エリアは横幅いっぱい(94vw、最大1400px)
 
 ## ビルド・起動
 
