@@ -8,8 +8,9 @@ use poem::{get, handler, Route, Server};
 use rand::seq::SliceRandom;
 use serde::Deserialize;
 
-const ARUARU_EASYWEB_URL: &str = "http://127.0.0.1:8080/";
+const ARUARU_EASYWEB_URL: &str = "https://runo.tokyo/";
 const GITHUB_ORG: &str = "aon-co-jp";
+const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
 
 const GITHUB_REPOS: &[&str] = &[
     "open-runo",
@@ -24,6 +25,16 @@ const GITHUB_REPOS: &[&str] = &[
     "aruaru-ai",
     "open-cuda",
 ];
+
+/// リポジトリ名として妥当な形式か検証する(GitHubの実際の命名規則: 英数字・
+/// ハイフン・アンダースコア・ドットのみ)。「🔄 最新のリポジトリ一覧を取得」で
+/// 動的に取得したリポジトリは`GITHUB_REPOS`の静的リストに含まれないため、
+/// 固定リストとの照合ではなくこの形式検証で受け付ける。
+fn is_valid_repo_name(name: &str) -> bool {
+    !name.is_empty()
+        && name.len() <= 100
+        && name.chars().all(|c| c.is_ascii_alphanumeric() || c == '-' || c == '_' || c == '.')
+}
 
 const REPO_FILES: &[(&str, &str, bool)] = &[
     ("README.md", "README(概要)", true),
@@ -124,6 +135,59 @@ fn markdown_to_rs(markdown: &str) -> String {
         + "\n"
 }
 
+/// MarkdownをGitHub風の見た目でレンダリングしたHTMLへ変換する
+/// (`pulldown-cmark`使用。見出し・リスト・コードブロック・リンク等の
+/// 標準的なMarkdown記法に対応)。
+fn markdown_to_github_style_html(markdown: &str) -> String {
+    use pulldown_cmark::{html, Options, Parser};
+    let mut options = Options::empty();
+    options.insert(Options::ENABLE_TABLES);
+    options.insert(Options::ENABLE_STRIKETHROUGH);
+    options.insert(Options::ENABLE_TASKLISTS);
+    let parser = Parser::new_ext(markdown, options);
+    let mut html_out = String::new();
+    html::push_html(&mut html_out, parser);
+    html_out
+}
+
+/// GitHub APIから`aon-co-jp`の全リポジトリ名を最新の状態で取得する。
+/// `aon-co-jp`はOrganizationではなく個人アカウントのため`/users/`
+/// エンドポイントを使う(`/orgs/`だと404になることを実機確認済み)。
+/// 認証無しの公開APIを使うため、レート制限(未認証: 60回/時/IP)に注意。
+async fn fetch_org_repos(client: &reqwest::Client) -> Result<Vec<String>, String> {
+    let url = format!("https://api.github.com/users/{GITHUB_ORG}/repos?per_page=100&sort=updated");
+    let resp = client
+        .get(&url)
+        .header("User-Agent", "aruaru.tokyo-repo-list/0.1")
+        .header("Accept", "application/vnd.github+json")
+        .timeout(std::time::Duration::from_secs(8))
+        .send()
+        .await
+        .map_err(|e| e.to_string())?;
+    if !resp.status().is_success() {
+        return Err(format!("GitHub API returned {}", resp.status()));
+    }
+    let body: serde_json::Value = resp.json().await.map_err(|e| e.to_string())?;
+    let names = body
+        .as_array()
+        .map(|arr| {
+            arr.iter()
+                .filter_map(|repo| repo.get("name").and_then(|n| n.as_str()).map(str::to_string))
+                .collect::<Vec<_>>()
+        })
+        .unwrap_or_default();
+    Ok(names)
+}
+
+#[handler]
+async fn api_repos() -> poem::web::Json<serde_json::Value> {
+    let client = reqwest::Client::new();
+    match fetch_org_repos(&client).await {
+        Ok(names) => poem::web::Json(serde_json::json!({ "repos": names })),
+        Err(e) => poem::web::Json(serde_json::json!({ "error": e })),
+    }
+}
+
 async fn fetch_repo_file(client: &reqwest::Client, repo: &str, filename: &str) -> Option<String> {
     for branch in ["main", "master"] {
         let url = format!("https://raw.githubusercontent.com/{GITHUB_ORG}/{repo}/{branch}/{filename}");
@@ -201,19 +265,33 @@ fn render_repo_options(selected: &str) -> String {
 }
 
 async fn render_repo_results(selected_repo: &str) -> String {
-    if selected_repo.is_empty() || !GITHUB_REPOS.contains(&selected_repo) {
+    if !is_valid_repo_name(selected_repo) {
         return String::new();
     }
     let client = reqwest::Client::new();
+    let repo_url = format!("{GITHUB_ORG_URL}/{selected_repo}");
     let mut out = String::new();
-    for (filename, label, required) in REPO_FILES {
+    out.push_str(&format!(
+        "<p class=\"repo-link\"><a href=\"{repo_url}\" target=\"_blank\" rel=\"noopener\">🔗 {selected_repo} をGitHubで開く</a></p>\n"
+    ));
+    for (idx, (filename, label, required)) in REPO_FILES.iter().enumerate() {
         let markdown = fetch_repo_file(&client, selected_repo, filename).await;
         out.push_str("<div class=\"repo-file-block\">\n");
         out.push_str(&format!("  <h3>{}</h3>\n", html_escape(label)));
         match markdown {
             Some(md) => {
+                let gh_html = markdown_to_github_style_html(&md);
                 let rs = html_escape(&markdown_to_rs(&md));
-                out.push_str(&format!("  <pre class=\"rs-output\">{rs}</pre>\n"));
+                let tab_id = format!("{selected_repo}-{idx}");
+                out.push_str(&format!(
+                    r#"  <div class="view-toggle" data-tab="{tab_id}">
+    <button type="button" class="view-toggle-btn active" data-view="gh">GitHub風表示</button>
+    <button type="button" class="view-toggle-btn" data-view="rs">.rs形式</button>
+  </div>
+  <div class="markdown-body" id="gh-{tab_id}">{gh_html}</div>
+  <pre class="rs-output hidden" id="rs-{tab_id}">{rs}</pre>
+"#
+                ));
             }
             None => {
                 let msg = if *required {
@@ -262,23 +340,46 @@ const STYLE: &str = r#"
   .category h2 { font-size:1.05rem; margin:0 0 .75rem; color:var(--accent-2); }
   .category ul { margin:0; padding-left:1.2rem; }
   .category li { margin-bottom:.5rem; }
-  section.tool { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.5rem; margin:2.5rem 0; }
+  /* GitHub風README表示は横幅いっぱいに使うため、main の780px制約から
+     意図的にbreak-outさせる(vw基準の中央寄せトリック)。 */
+  section.tool { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.75rem; margin:2.5rem 0; width:94vw; max-width:1400px; position:relative; left:50%; transform:translateX(-50%); }
   section.tool h2 { font-size:1.1rem; margin:0 0 .5rem; color:var(--accent-2); }
   section.tool p.desc { color:var(--muted); font-size:.85rem; margin:0 0 1rem; }
   .repo-form { display:flex; gap:.6rem; flex-wrap:wrap; }
   .repo-form select { flex:1; min-width:200px; font:inherit; padding:.5rem .7rem; border-radius:.5rem; border:1px solid var(--border); background:var(--bg); color:var(--fg); }
   .repo-form button { padding:.5rem 1.2rem; }
-  pre.rs-output { margin-top:1.25rem; background:#1e1e1e; color:#d4d4d4; border-radius:.6rem; padding:1rem 1.2rem; overflow-x:auto; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; line-height:1.5; max-height:480px; }
+  pre.rs-output { margin-top:1.25rem; background:#1e1e1e; color:#d4d4d4; border-radius:.6rem; padding:1.25rem 1.5rem; overflow-x:auto; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; line-height:1.5; max-height:70vh; width:100%; }
   .rs-error { color:#c0392b; font-size:.85rem; margin-top:1rem; }
   .repo-file-block { margin-top:1.5rem; }
   .repo-file-block h3 { font-size:.9rem; margin:0 0 .4rem; color:var(--muted); }
+  .repo-link { margin:0 0 1rem; font-size:.9rem; }
+  .repo-fetch-row { display:flex; align-items:center; gap:.6rem; margin-bottom:.75rem; flex-wrap:wrap; }
+  .repo-fetch-row button { padding:.4rem 1rem; font-size:.85rem; }
+  .repo-fetch-status { font-size:.8rem; color:var(--muted); }
+  .view-toggle { display:flex; gap:.4rem; margin-bottom:.5rem; }
+  .view-toggle-btn { background:transparent; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.3rem .9rem; font-size:.78rem; font-weight:600; box-shadow:none; }
+  .view-toggle-btn.active { background:var(--accent-2); color:#fff; border-color:var(--accent-2); }
+  .hidden { display:none !important; }
+  .markdown-body { background:var(--bg-card); border:1px solid var(--border); border-radius:.6rem; padding:1.5rem 2rem; overflow-x:auto; max-height:70vh; overflow-y:auto; width:100%; }
+  .markdown-body img { max-width:100%; }
+  .markdown-body ul, .markdown-body ol { padding-left:1.6rem; }
+  .markdown-body h1, .markdown-body h2, .markdown-body h3 { border-bottom:1px solid var(--border); padding-bottom:.3rem; }
+  .markdown-body code { background:rgba(148,163,184,.18); padding:.1rem .35rem; border-radius:.3rem; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.85em; }
+  .markdown-body pre { background:#1e1e1e; color:#d4d4d4; padding:.8rem 1rem; border-radius:.5rem; overflow-x:auto; }
+  .markdown-body pre code { background:none; padding:0; }
+  .markdown-body table { border-collapse:collapse; width:100%; font-size:.88rem; }
+  .markdown-body th, .markdown-body td { border:1px solid var(--border); padding:.4rem .6rem; }
+  .markdown-body blockquote { border-left:3px solid var(--accent); margin:0; padding:.2rem 1rem; color:var(--muted); }
+  .markdown-body a { color:var(--accent-2); }
+  .org-link { text-align:center; margin:2rem 0; }
+  .org-link a { color:var(--accent-2); font-weight:600; text-decoration:none; }
   footer { text-align:center; color:var(--muted); font-size:.8rem; margin-top:3rem; }
 "#;
 
 #[handler]
 async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let selected_repo = q.repo.unwrap_or_default();
-    let selected_repo = if GITHUB_REPOS.contains(&selected_repo.as_str()) { selected_repo } else { String::new() };
+    let selected_repo = if is_valid_repo_name(&selected_repo) { selected_repo } else { String::new() };
 
     let repo_results = render_repo_results(&selected_repo).await;
     let related_sites = render_related_sites();
@@ -327,15 +428,23 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
       それぞれrustdocコメント(<code>//!</code>)形式の <code>.rs</code> 風
       テキストに変換して表示します。(readme-to-rs構想の簡易実装、Rust+Poem実装)
     </p>
+    <div class="repo-fetch-row">
+      <button type="button" id="fetch-repos-btn">🔄 最新のリポジトリ一覧を取得</button>
+      <span class="repo-fetch-status" id="fetch-repos-status"></span>
+    </div>
     <form class="repo-form" method="get">
-      <select name="repo">
+      <select name="repo" id="repo-select">
         <option value="">リポジトリを選択…</option>
         {repo_options}
       </select>
-      <button type="submit">.rs に変換して表示</button>
+      <button type="submit">表示</button>
     </form>
     {repo_results}
   </section>
+
+  <div class="org-link">
+    <a href="{GITHUB_ORG_URL}" target="_blank" rel="noopener">🏢 GitHub organization: {GITHUB_ORG} のトップを見る</a>
+  </div>
 
   <footer>&copy; 2026 aruaru.tokyo (Rust + Poem)</footer>
 </main>
@@ -348,6 +457,44 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     result.querySelector('.cat').textContent = pick.category;
     result.querySelector('.txt').textContent = pick.text;
     result.style.display = 'block';
+  }});
+
+  // ボタンを押した瞬間にGitHub組織の最新リポジトリ一覧をAPI経由で取得し、
+  // <select>を動的に差し替える。
+  const fetchBtn = document.getElementById('fetch-repos-btn');
+  const fetchStatus = document.getElementById('fetch-repos-status');
+  const repoSelect = document.getElementById('repo-select');
+  fetchBtn.addEventListener('click', async () => {{
+    fetchStatus.textContent = '取得中… / Fetching…';
+    try {{
+      const res = await fetch('/api/repos');
+      const data = await res.json();
+      if (data.error) {{ fetchStatus.textContent = '❌ ' + data.error; return; }}
+      const repos = data.repos || [];
+      const current = repoSelect.value;
+      repoSelect.innerHTML = '<option value="">リポジトリを選択…</option>' +
+        repos.map(r => `<option value="${{r}}">${{r}}</option>`).join('');
+      if (repos.includes(current)) repoSelect.value = current;
+      fetchStatus.textContent = `✅ ${{repos.length}}件取得しました。`;
+    }} catch (e) {{
+      fetchStatus.textContent = '❌ 取得に失敗しました。';
+    }}
+  }});
+
+  // GitHub風表示 / .rs形式 の切替タブ配線。
+  document.querySelectorAll('.view-toggle').forEach(toggle => {{
+    const tabId = toggle.getAttribute('data-tab');
+    const ghEl = document.getElementById('gh-' + tabId);
+    const rsEl = document.getElementById('rs-' + tabId);
+    toggle.querySelectorAll('.view-toggle-btn').forEach(b => {{
+      b.addEventListener('click', () => {{
+        toggle.querySelectorAll('.view-toggle-btn').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        const view = b.getAttribute('data-view');
+        if (view === 'gh') {{ ghEl.classList.remove('hidden'); rsEl.classList.add('hidden'); }}
+        else {{ ghEl.classList.add('hidden'); rsEl.classList.remove('hidden'); }}
+      }});
+    }});
   }});
 </script>
 </body>
@@ -366,7 +513,10 @@ fn healthz() -> &'static str {
 async fn main() -> Result<(), std::io::Error> {
     tracing_subscriber::fmt::init();
     let bind = std::env::var("ARUARU_TOKYO_BIND").unwrap_or_else(|_| "0.0.0.0:4100".to_string());
-    let app = Route::new().at("/", get(top)).at("/healthz", get(healthz));
+    let app = Route::new()
+        .at("/", get(top))
+        .at("/healthz", get(healthz))
+        .at("/api/repos", get(api_repos));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
