@@ -432,6 +432,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 
   <div class="quick-links">
     <a href="{ARUARU_EASYWEB_URL}" target="_blank" rel="noopener">🔧 aruaru-easyweb を開く</a>
+    <a href="/help">❓ 困った時は</a>
     <br />
     {related_sites}
   </div>
@@ -535,6 +536,51 @@ fn healthz() -> &'static str {
     "ok"
 }
 
+#[handler]
+fn help_page() -> Html<String> {
+    Html(format!(
+        r#"<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>困った時は | aruaru.tokyo</title>
+<style>{STYLE}</style>
+</head>
+<body>
+<main>
+<header><h1>困った時は</h1></header>
+
+<h2>Google Chromeで「保護されていない通信」と出る場合</h2>
+<p>Edge(Windowsの証明書ストアを使用)では正常なのに対し、Chromeは独自の
+「Chrome Root Store」という、Windowsとは別の信頼済みルート証明書リストを
+持っています。新しいLet's Encryptのルート証明書がまだお使いのChromeの
+バージョンに反映されていない可能性があります。</p>
+<p><strong>対処法:</strong> Chromeを<code>chrome://settings/help</code>から更新し、
+再起動(タスクマネージャーでプロセスが残っていないか確認)してから再度アクセスしてください。</p>
+
+<h2>サイトが表示されない場合(DNS_PROBE_FINISHED_NXDOMAIN等)</h2>
+<p>お使いのDNS(特にCloudflareの1.1.1.1)が、ドメインの権威サーバーに
+一時的に到達できないことがあります。Google(8.8.8.8)・Quad9(9.9.9.9)
+など別のDNSでは問題なく解決できることが多いです。</p>
+<p><strong>対処法:</strong> スマホのモバイル回線(Wi-Fiオフ)で試すか、
+Windowsの設定(ネットワークとインターネット → プロパティ → DNSサーバーの
+割り当てを「手動」)でDNSサーバーを変更してください。
+<strong>優先DNS</strong>欄に<code>8.8.8.8</code>のみ、<strong>代替DNS</strong>欄に
+<code>8.8.4.4</code>をそれぞれ別々に入力してください
+(1つの欄に<code>8.8.8.8 / 8.8.4.4</code>とまとめて入力すると
+「無効なエントリ」エラーになります)。「HTTPS経由のDNS」が
+「オン(手動テンプレート)」の場合はまず「オフ」にしてから保存を試してください。
+それでも解決しない場合は、単純にDNSの反映待ち(通常数分〜1時間程度)
+であることも多いです。</p>
+
+<div class="org-link"><a href="/">← TOP</a></div>
+</main>
+</body>
+</html>"#
+    ))
+}
+
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     tracing_subscriber::fmt::init();
@@ -542,6 +588,7 @@ async fn main() -> Result<(), std::io::Error> {
     let app = Route::new()
         .at("/", get(top))
         .at("/healthz", get(healthz))
+        .at("/help", get(help_page))
         .at("/api/repos", get(api_repos));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
