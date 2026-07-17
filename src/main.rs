@@ -348,6 +348,8 @@ const STYLE: &str = r#"
   @media (prefers-color-scheme: dark) { :root { --bg:#1a1712; --bg-card:#24201a; --fg:#f1ece0; --muted:#b3a893; --accent:#ff9466; --accent-2:#6ea1ff; --border:#3a3327; } }
   * { box-sizing: border-box; }
   body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.7; }
+  a { color:var(--fg); }
+  a:visited { color:var(--fg); }
   main { max-width:780px; margin:0 auto; padding:2.5rem 1.25rem 5rem; }
   header { text-align:center; margin-bottom:1.25rem; }
   header h1 { font-size:2rem; margin:0 0 .4rem; letter-spacing:-.02em; }
