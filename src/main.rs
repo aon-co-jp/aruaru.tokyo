@@ -62,6 +62,12 @@ const RELATED_SITES: &[RelatedSite] = &[
         url_ja: "https://audiocafe.tokyo/aruaru-lady/",
         url_en: "https://audiocafe.tokyo/aruaru-lady/index-en.php",
     },
+    RelatedSite {
+        label_ja: "aon.tokyo / aon.co.jp(AI・IT・WEB・オーディオ)",
+        label_en: "aon.tokyo / aon.co.jp (AI/IT/WEB & audio equipment)",
+        url_ja: "https://aon.tokyo/",
+        url_en: "https://aon.tokyo/",
+    },
 ];
 
 fn categories() -> Vec<(&'static str, Vec<&'static str>)> {
