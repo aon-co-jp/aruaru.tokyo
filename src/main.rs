@@ -63,10 +63,16 @@ const RELATED_SITES: &[RelatedSite] = &[
         url_en: "https://audiocafe.tokyo/aruaru-lady/index-en.php",
     },
     RelatedSite {
-        label_ja: "aon.tokyo / aon.co.jp(AI・IT・WEB・オーディオ)",
-        label_en: "aon.tokyo / aon.co.jp (AI/IT/WEB & audio equipment)",
+        label_ja: "aon.tokyo(AI・IT・WEB・オーディオ)",
+        label_en: "aon.tokyo (AI/IT/WEB & audio equipment)",
         url_ja: "https://aon.tokyo/",
         url_en: "https://aon.tokyo/",
+    },
+    RelatedSite {
+        label_ja: "aon.co.jp(AI・IT・WEB・オーディオ、aon.tokyoと同一内容)",
+        label_en: "aon.co.jp (AI/IT/WEB & audio equipment, same content as aon.tokyo)",
+        url_ja: "https://aon.co.jp/",
+        url_en: "https://aon.co.jp/",
     },
     RelatedSite {
         label_ja: "karu.tokyo(軽井沢・あきる野・東京の観光とリモートワーク)",
