@@ -68,6 +68,18 @@ const RELATED_SITES: &[RelatedSite] = &[
         url_ja: "https://aon.tokyo/",
         url_en: "https://aon.tokyo/",
     },
+    RelatedSite {
+        label_ja: "karu.tokyo(軽井沢・あきる野・東京の観光とリモートワーク)",
+        label_en: "karu.tokyo (Karuizawa/Akiruno/Tokyo tourism & remote work)",
+        url_ja: "https://karu.tokyo/",
+        url_en: "https://karu.tokyo/",
+    },
+    RelatedSite {
+        label_ja: "aruaru.tokyo/rakuten-mobile(楽天モバイル情報)",
+        label_en: "aruaru.tokyo/rakuten-mobile (Rakuten Mobile info)",
+        url_ja: "https://aruaru.tokyo/rakuten-mobile/",
+        url_en: "https://aruaru.tokyo/rakuten-mobile/",
+    },
 ];
 
 fn categories() -> Vec<(&'static str, Vec<&'static str>)> {
