@@ -132,9 +132,9 @@ pub struct IndexStrings {
     pub org_link_label: &'static str,
     pub label_readme: &'static str,
     pub label_porting: &'static str,
-    /// CLAUDE.mdのラベル。「設計思想＆開発方針＆開発環境ルール」という
-    /// 日本語表記は、ユーザー指示によりリンクテキストとしてこの日本語名で
-    /// 表示することが明示されているため、言語に関わらず常に含める。
+    /// CLAUDE.mdのラベル。「WEBアプリ設計思想、開発方針、開発環境ルール」
+    /// という日本語表記は、ユーザー指示によりリンクテキストとしてこの
+    /// 日本語名で表示することが明示されているため、言語に関わらず常に含める。
     pub label_claude: &'static str,
     pub label_none: &'static str,
     pub btn_fetch_live: &'static str,
@@ -146,7 +146,7 @@ pub struct IndexStrings {
     pub back_to_top: &'static str,
 }
 
-const LABEL_CLAUDE_JA: &str = "CLAUDE.md(設計思想＆開発方針＆開発環境ルール)";
+const LABEL_CLAUDE_JA: &str = "CLAUDE.md(WEBアプリ設計思想、開発方針、開発環境ルール)";
 
 pub fn index_strings(lang: Lang) -> IndexStrings {
     match lang {
