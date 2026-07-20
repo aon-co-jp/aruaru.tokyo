@@ -12,6 +12,19 @@ mod i18n;
 mod meta_index;
 
 const ARUARU_EASYWEB_URL: &str = "https://runo.tokyo/";
+
+/// runo.tokyoのTOPページ(このサイトとは別ドメイン、東京都西部の暮らし・
+/// テレワーク紹介とopen-runoエコシステムの入口)への明示リンク先
+/// (2026-07-20追記、ユーザー指示: 「aruaru.tokyo から runo.tokyo への
+/// リンク」)。既存の`ARUARU_EASYWEB_URL`も同じ`https://runo.tokyo/`を
+/// 指すが、「🔧 aruaru-easyweb を開く」というラベルでは行き先がruno.tokyo
+/// だと分かりにくいため、別途分かりやすいラベルのリンクを追加する。
+const RUNO_TOKYO_URL: &str = "https://runo.tokyo/";
+
+/// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
+/// 表示しない、2026-07-20追記)。
+const BLOG_POST_URL: &str = "https://ameblo.jp/www-aon/entry-12973252437.html";
+const BLOG_POST_TITLE: &str = "プログラム言語やフレームワークなどの全てをRust(Poemやhyper)版に移植するメリット?";
 const GITHUB_ORG: &str = "aon-co-jp";
 const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
 
@@ -358,6 +371,8 @@ pub(crate) const STYLE: &str = r#"
   header h1 { font-size:2rem; margin:0 0 .4rem; letter-spacing:-.02em; }
   header h1 span { color:var(--accent); }
   header p { color:var(--muted); margin:0; }
+  .blog-link { text-align:center; font-size:.85rem; margin:0 0 1rem; }
+  .blog-link a { color:var(--accent-2); text-decoration:none; font-weight:600; }
   .quick-links { text-align:center; margin-bottom:2rem; }
   .quick-links a { display:inline-block; text-decoration:none; font-weight:600; background:var(--accent-2); color:#fff; border-radius:999px; padding:.55rem 1.4rem; margin:.2rem; font-size:.9rem; }
   .shuffle-bar { text-align:center; margin:1.5rem 0 2.5rem; }
@@ -428,12 +443,15 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 </head>
 <body>
 <main>
+  <p class="blog-link"><a href="{BLOG_POST_URL}" target="_blank" rel="noopener">📝 {BLOG_POST_TITLE}</a></p>
+
   <header>
     <h1>aruaru<span>.tokyo</span></h1>
     <p>「それ、あるある!」を集めました。 / A collection of everyday "aruaru" moments.</p>
   </header>
 
   <div class="quick-links">
+    <a href="{RUNO_TOKYO_URL}" target="_blank" rel="noopener">🏠 runo.tokyo を見る</a>
     <a href="{ARUARU_EASYWEB_URL}" target="_blank" rel="noopener">🔧 aruaru-easyweb を開く</a>
     <a href="/help">❓ 困った時は</a>
     <a href="/open-aruaru-runo-iLumi">📚 プロジェクトシリーズ</a>
