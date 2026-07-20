@@ -153,7 +153,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Ja => IndexStrings {
             title: "プロジェクトシリーズ索引 | aruaru.tokyo",
             h1: "📚 プロジェクトシリーズ索引",
-            intro: "aon-co-jp organization配下、F:\\open-runoエコシステム全体のプロジェクト一覧です(メタリポジトリ aon〔旧称: open-aruaru-runo-iLumi〕と同内容)。各プロジェクト名をクリックすると、その場でGitHub APIから最新情報(⭐Star数・最終更新日時・既定ブランチ)を取得して表示します。",
+            intro: "aon-co-jp organization配下、open-cosmoエコシステム全体のプロジェクト一覧です(メタリポジトリ aon〔旧称: open-aruaru-runo-iLumi〕と同内容)。各プロジェクト名をクリックすると、その場でGitHub APIから最新情報(⭐Star数・最終更新日時・既定ブランチ)を取得して表示します。",
             org_link_label: "🏢 GitHub organization: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -170,7 +170,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::En => IndexStrings {
             title: "Project Series Index | aruaru.tokyo",
             h1: "📚 Project Series Index",
-            intro: "A list of every project under the aon-co-jp GitHub organization / F:\\open-runo ecosystem (same content as the aon meta repository, formerly named open-aruaru-runo-iLumi). Click a project's live-fetch button to pull its latest info (stars, last updated, default branch) from the GitHub API on the spot.",
+            intro: "A list of every project under the aon-co-jp GitHub organization / open-cosmo ecosystem (same content as the aon meta repository, formerly named open-aruaru-runo-iLumi). Click a project's live-fetch button to pull its latest info (stars, last updated, default branch) from the GitHub API on the spot.",
             org_link_label: "🏢 GitHub organization: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -187,7 +187,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::EnGb => IndexStrings {
             title: "Project Series Index | aruaru.tokyo",
             h1: "📚 Project Series Index",
-            intro: "A list of every project under the aon-co-jp GitHub organisation / F:\\open-runo ecosystem (same content as the aon meta repository, formerly named open-aruaru-runo-iLumi). Click a project's live-fetch button to pull its latest information (stars, last updated, default branch) from the GitHub API on the spot.",
+            intro: "A list of every project under the aon-co-jp GitHub organisation / open-cosmo ecosystem (same content as the aon meta repository, formerly named open-aruaru-runo-iLumi). Click a project's live-fetch button to pull its latest information (stars, last updated, default branch) from the GitHub API on the spot.",
             org_link_label: "🏢 GitHub organisation: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -204,7 +204,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::ZhCn => IndexStrings {
             title: "项目系列索引 | aruaru.tokyo",
             h1: "📚 项目系列索引",
-            intro: "aon-co-jp organization下、F:\\open-runo生态系统的全部项目一览(与元仓库aon〔原名open-aruaru-runo-iLumi〕内容相同)。点击项目的实时获取按钮，即可当场从GitHub API获取最新信息(⭐Star数・最后更新时间・默认分支)。",
+            intro: "aon-co-jp organization下、open-cosmo生态系统的全部项目一览(与元仓库aon〔原名open-aruaru-runo-iLumi〕内容相同)。点击项目的实时获取按钮，即可当场从GitHub API获取最新信息(⭐Star数・最后更新时间・默认分支)。",
             org_link_label: "🏢 GitHub organization: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -221,7 +221,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::ZhTw => IndexStrings {
             title: "專案系列索引 | aruaru.tokyo",
             h1: "📚 專案系列索引",
-            intro: "aon-co-jp organization底下、F:\\open-runo生態系統的全部專案一覽(與元儲存庫aon〔原名open-aruaru-runo-iLumi〕內容相同)。點擊專案的即時取得按鈕，即可當場從GitHub API取得最新資訊(⭐Star數・最後更新時間・預設分支)。",
+            intro: "aon-co-jp organization底下、open-cosmo生態系統的全部專案一覽(與元儲存庫aon〔原名open-aruaru-runo-iLumi〕內容相同)。點擊專案的即時取得按鈕，即可當場從GitHub API取得最新資訊(⭐Star數・最後更新時間・預設分支)。",
             org_link_label: "🏢 GitHub organization: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -238,7 +238,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Ko => IndexStrings {
             title: "프로젝트 시리즈 색인 | aruaru.tokyo",
             h1: "📚 프로젝트 시리즈 색인",
-            intro: "aon-co-jp organization 산하, F:\\open-runo 생태계 전체 프로젝트 목록입니다(메타 저장소 aon〔이전 명칭: open-aruaru-runo-iLumi〕와 동일한 내용). 각 프로젝트의 실시간 조회 버튼을 클릭하면 GitHub API에서 최신 정보(⭐Star 수・최종 업데이트・기본 브랜치)를 즉시 가져와 표시합니다.",
+            intro: "aon-co-jp organization 산하, open-cosmo 생태계 전체 프로젝트 목록입니다(메타 저장소 aon〔이전 명칭: open-aruaru-runo-iLumi〕와 동일한 내용). 각 프로젝트의 실시간 조회 버튼을 클릭하면 GitHub API에서 최신 정보(⭐Star 수・최종 업데이트・기본 브랜치)를 즉시 가져와 표시합니다.",
             org_link_label: "🏢 GitHub organization: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -255,7 +255,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::It => IndexStrings {
             title: "Indice della serie di progetti | aruaru.tokyo",
             h1: "📚 Indice della serie di progetti",
-            intro: "Un elenco di tutti i progetti dell'organizzazione GitHub aon-co-jp / ecosistema F:\\open-runo (stesso contenuto del meta-repository aon, ex open-aruaru-runo-iLumi). Fai clic sul pulsante di aggiornamento in tempo reale di un progetto per recuperare al volo le informazioni più recenti (stelle, ultimo aggiornamento, branch predefinito) dall'API di GitHub.",
+            intro: "Un elenco di tutti i progetti dell'organizzazione GitHub aon-co-jp / ecosistema open-cosmo (stesso contenuto del meta-repository aon, ex open-aruaru-runo-iLumi). Fai clic sul pulsante di aggiornamento in tempo reale di un progetto per recuperare al volo le informazioni più recenti (stelle, ultimo aggiornamento, branch predefinito) dall'API di GitHub.",
             org_link_label: "🏢 Organizzazione GitHub: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -272,7 +272,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Fr => IndexStrings {
             title: "Index de la série de projets | aruaru.tokyo",
             h1: "📚 Index de la série de projets",
-            intro: "Une liste de tous les projets de l'organisation GitHub aon-co-jp / de l'écosystème F:\\open-runo (même contenu que le méta-dépôt aon, anciennement open-aruaru-runo-iLumi). Cliquez sur le bouton de récupération en direct d'un projet pour obtenir sur-le-champ ses informations les plus récentes (étoiles, dernière mise à jour, branche par défaut) depuis l'API GitHub.",
+            intro: "Une liste de tous les projets de l'organisation GitHub aon-co-jp / de l'écosystème open-cosmo (même contenu que le méta-dépôt aon, anciennement open-aruaru-runo-iLumi). Cliquez sur le bouton de récupération en direct d'un projet pour obtenir sur-le-champ ses informations les plus récentes (étoiles, dernière mise à jour, branche par défaut) depuis l'API GitHub.",
             org_link_label: "🏢 Organisation GitHub : aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -289,7 +289,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::De => IndexStrings {
             title: "Projektserien-Index | aruaru.tokyo",
             h1: "📚 Projektserien-Index",
-            intro: "Eine Liste aller Projekte der GitHub-Organisation aon-co-jp / des F:\\open-runo-Ökosystems (gleicher Inhalt wie das Meta-Repository aon, vormals open-aruaru-runo-iLumi). Klicken Sie auf die Live-Abruf-Schaltfläche eines Projekts, um dessen aktuelle Informationen (Sterne, letzte Aktualisierung, Standard-Branch) sofort über die GitHub-API abzurufen.",
+            intro: "Eine Liste aller Projekte der GitHub-Organisation aon-co-jp / des open-cosmo-Ökosystems (gleicher Inhalt wie das Meta-Repository aon, vormals open-aruaru-runo-iLumi). Klicken Sie auf die Live-Abruf-Schaltfläche eines Projekts, um dessen aktuelle Informationen (Sterne, letzte Aktualisierung, Standard-Branch) sofort über die GitHub-API abzurufen.",
             org_link_label: "🏢 GitHub-Organisation: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -306,7 +306,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Ar => IndexStrings {
             title: "فهرس سلسلة المشاريع | aruaru.tokyo",
             h1: "📚 فهرس سلسلة المشاريع",
-            intro: "قائمة بجميع المشاريع ضمن منظمة GitHub التابعة لـ aon-co-jp / نظام F:\\open-runo البيئي (نفس محتوى المستودع الوصفي aon، المعروف سابقاً باسم open-aruaru-runo-iLumi). انقر على زر الجلب المباشر لأي مشروع لسحب أحدث معلوماته (النجوم، آخر تحديث، الفرع الافتراضي) من واجهة GitHub API فوراً.",
+            intro: "قائمة بجميع المشاريع ضمن منظمة GitHub التابعة لـ aon-co-jp / نظام open-cosmo البيئي (نفس محتوى المستودع الوصفي aon، المعروف سابقاً باسم open-aruaru-runo-iLumi). انقر على زر الجلب المباشر لأي مشروع لسحب أحدث معلوماته (النجوم، آخر تحديث، الفرع الافتراضي) من واجهة GitHub API فوراً.",
             org_link_label: "🏢 منظمة GitHub: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -323,7 +323,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Fa => IndexStrings {
             title: "نمایه سری پروژه‌ها | aruaru.tokyo",
             h1: "📚 نمایه سری پروژه‌ها",
-            intro: "فهرستی از تمام پروژه‌های سازمان GitHub با نام aon-co-jp / اکوسیستم F:\\open-runo (همان محتوای مخزن فراداده aon، با نام سابق open-aruaru-runo-iLumi). روی دکمه دریافت زنده هر پروژه کلیک کنید تا اطلاعات جدید آن (ستاره‌ها، آخرین به‌روزرسانی، شاخه پیش‌فرض) بلافاصله از API گیت‌هاب دریافت شود.",
+            intro: "فهرستی از تمام پروژه‌های سازمان GitHub با نام aon-co-jp / اکوسیستم open-cosmo (همان محتوای مخزن فراداده aon، با نام سابق open-aruaru-runo-iLumi). روی دکمه دریافت زنده هر پروژه کلیک کنید تا اطلاعات جدید آن (ستاره‌ها، آخرین به‌روزرسانی، شاخه پیش‌فرض) بلافاصله از API گیت‌هاب دریافت شود.",
             org_link_label: "🏢 سازمان GitHub: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -340,7 +340,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Ru => IndexStrings {
             title: "Индекс серии проектов | aruaru.tokyo",
             h1: "📚 Индекс серии проектов",
-            intro: "Список всех проектов организации GitHub aon-co-jp / экосистемы F:\\open-runo (то же содержимое, что и в мета-репозитории aon, ранее известном как open-aruaru-runo-iLumi). Нажмите кнопку живого получения данных у проекта, чтобы тут же получить актуальную информацию (звёзды, последнее обновление, ветка по умолчанию) через GitHub API.",
+            intro: "Список всех проектов организации GitHub aon-co-jp / экосистемы open-cosmo (то же содержимое, что и в мета-репозитории aon, ранее известном как open-aruaru-runo-iLumi). Нажмите кнопку живого получения данных у проекта, чтобы тут же получить актуальную информацию (звёзды, последнее обновление, ветка по умолчанию) через GitHub API.",
             org_link_label: "🏢 Организация GitHub: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",
@@ -357,7 +357,7 @@ pub fn index_strings(lang: Lang) -> IndexStrings {
         Lang::Uk => IndexStrings {
             title: "Індекс серії проєктів | aruaru.tokyo",
             h1: "📚 Індекс серії проєктів",
-            intro: "Список усіх проєктів організації GitHub aon-co-jp / екосистеми F:\\open-runo (той самий вміст, що й у мета-репозиторії aon, раніше відомому як open-aruaru-runo-iLumi). Натисніть кнопку живого отримання даних проєкту, щоб одразу отримати актуальну інформацію (зірки, останнє оновлення, гілка за замовчуванням) через GitHub API.",
+            intro: "Список усіх проєктів організації GitHub aon-co-jp / екосистеми open-cosmo (той самий вміст, що й у мета-репозиторії aon, раніше відомому як open-aruaru-runo-iLumi). Натисніть кнопку живого отримання даних проєкту, щоб одразу отримати актуальну інформацію (зірки, останнє оновлення, гілка за замовчуванням) через GitHub API.",
             org_link_label: "🏢 Організація GitHub: aon-co-jp",
             label_readme: "README.md",
             label_porting: "PORTING.md",

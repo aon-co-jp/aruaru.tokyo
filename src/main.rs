@@ -14,7 +14,7 @@ mod meta_index;
 const ARUARU_EASYWEB_URL: &str = "https://runo.tokyo/";
 
 /// runo.tokyoのTOPページ(このサイトとは別ドメイン、東京都西部の暮らし・
-/// テレワーク紹介とopen-runoエコシステムの入口)への明示リンク先
+/// テレワーク紹介とopen-cosmoエコシステムの入口)への明示リンク先
 /// (2026-07-20追記、ユーザー指示: 「aruaru.tokyo から runo.tokyo への
 /// リンク」)。既存の`ARUARU_EASYWEB_URL`も同じ`https://runo.tokyo/`を
 /// 指すが、「🔧 aruaru-easyweb を開く」というラベルでは行き先がruno.tokyo
@@ -29,7 +29,7 @@ const GITHUB_ORG: &str = "aon-co-jp";
 const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
 
 const GITHUB_REPOS: &[&str] = &[
-    "open-runo",
+    "open-cosmo",
     "poem-cosmo-tauri",
     "open-web-server",
     "aruaru-db",
