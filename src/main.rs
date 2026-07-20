@@ -8,6 +8,9 @@ use poem::{get, handler, Route, Server};
 use rand::seq::SliceRandom;
 use serde::Deserialize;
 
+mod i18n;
+mod meta_index;
+
 const ARUARU_EASYWEB_URL: &str = "https://runo.tokyo/";
 const GITHUB_ORG: &str = "aon-co-jp";
 const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
@@ -140,7 +143,7 @@ fn categories() -> Vec<(&'static str, Vec<&'static str>)> {
     ]
 }
 
-fn html_escape(s: &str) -> String {
+pub(crate) fn html_escape(s: &str) -> String {
     s.replace('&', "&amp;")
         .replace('<', "&lt;")
         .replace('>', "&gt;")
@@ -343,7 +346,7 @@ fn flat_items_json() -> String {
     serde_json::to_string(&items).unwrap_or_else(|_| "[]".to_string())
 }
 
-const STYLE: &str = r#"
+pub(crate) const STYLE: &str = r#"
   :root { color-scheme: light dark; --bg:#fdf6ec; --bg-card:#ffffff; --fg:#2c2418; --muted:#8a7f6b; --accent:#ff7a45; --accent-2:#2f6fed; --border:#eadfc9; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1a1712; --bg-card:#24201a; --fg:#f1ece0; --muted:#b3a893; --accent:#ff9466; --accent-2:#6ea1ff; --border:#3a3327; } }
   * { box-sizing: border-box; }
@@ -433,6 +436,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   <div class="quick-links">
     <a href="{ARUARU_EASYWEB_URL}" target="_blank" rel="noopener">🔧 aruaru-easyweb を開く</a>
     <a href="/help">❓ 困った時は</a>
+    <a href="/open-aruaru-runo-iLumi">📚 プロジェクトシリーズ</a>
     <br />
     {related_sites}
   </div>
@@ -531,6 +535,20 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     Html(body)
 }
 
+#[derive(Deserialize)]
+struct LangQuery {
+    lang: Option<String>,
+}
+
+/// `/open-aruaru-runo-iLumi`(エイリアス`/open-aruaru-runo`)——
+/// エコシステム全体のメタ索引リポジトリ`open-aruaru-runo-iLumi`と
+/// 同内容のプロジェクトシリーズ索引ページ。両パスとも同じ内容を返す。
+#[handler]
+async fn meta_index_page(Query(q): Query<LangQuery>) -> Html<String> {
+    let lang = i18n::Lang::parse(q.lang.as_deref());
+    Html(meta_index::render_page(lang, "/open-aruaru-runo-iLumi"))
+}
+
 #[handler]
 fn healthz() -> &'static str {
     "ok"
@@ -593,7 +611,9 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/", get(top))
         .at("/healthz", get(healthz))
         .at("/help", get(help_page))
-        .at("/api/repos", get(api_repos));
+        .at("/api/repos", get(api_repos))
+        .at("/open-aruaru-runo-iLumi", get(meta_index_page))
+        .at("/open-aruaru-runo", get(meta_index_page));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
