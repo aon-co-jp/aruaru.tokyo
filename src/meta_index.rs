@@ -75,8 +75,8 @@ pub const PROJECTS: &[Project] = &[
         role_ja: "aruaruエコシステム(aruaru-tokyo・aruaru-db・e-gov.info・karu.tokyo等)共通の「AIチャットコマース」応答サービス。リポジトリ名は「LLM」を冠するが、実際のLLM推論への差し替えは今後という正直な開示がREADMEに明記されている。",
     },
     Project {
-        name: "aruaru-tokyo",
-        repo: "aon-co-jp/aruaru-tokyo",
+        name: "aruaru.tokyo",
+        repo: "aon-co-jp/aruaru.tokyo",
         has_readme: true,
         has_porting: true,
         has_claude: true,
