@@ -13,6 +13,40 @@ mod meta_index;
 
 const ARUARU_EASYWEB_URL: &str = "https://runo.tokyo/";
 
+fn percent_encode(input: &str) -> String {
+    let mut out = String::with_capacity(input.len() * 3);
+    for byte in input.as_bytes() {
+        match byte {
+            b'A'..=b'Z' | b'a'..=b'z' | b'0'..=b'9' | b'-' | b'_' | b'.' | b'~' => {
+                out.push(*byte as char);
+            }
+            _ => out.push_str(&format!("%{:02X}", byte)),
+        }
+    }
+    out
+}
+
+/// クリックした瞬間にYouTube検索を行うリンク(検索結果ページ自体は
+/// 検索の都度最新のものが表示される。掲載時点での特定動画へのリンクでは
+/// ないため、リンク切れが起きない/検索結果は常に最新)。
+fn youtube_search_link(label: &str, query: &str) -> String {
+    format!(
+        r#"<a href="https://www.youtube.com/results?search_query={}" target="_blank" rel="noopener noreferrer">▶️ {}</a>"#,
+        percent_encode(query),
+        label
+    )
+}
+
+/// Googleの動画検索(YouTube以外の動画サイトも横断的に含まれる)を、
+/// クリックした瞬間に行うリンク。
+fn google_video_search_link(label: &str, query: &str) -> String {
+    format!(
+        r#"<a href="https://www.google.com/search?q={}&tbm=vid" target="_blank" rel="noopener noreferrer">🎬 {}</a>"#,
+        percent_encode(query),
+        label
+    )
+}
+
 /// runo.tokyoのTOPページ(このサイトとは別ドメイン、東京都西部の暮らし・
 /// テレワーク紹介とopen-cosmoエコシステムの入口)への明示リンク先
 /// (2026-07-20追記、ユーザー指示: 「aruaru.tokyo から runo.tokyo への
@@ -112,7 +146,8 @@ const RELATED_SITES: &[RelatedSite] = &[
 /// ユーザーから提供された実際の報道見出し・リンクをそのまま紹介するのみに留め、
 /// 独自の医療的な効能・安全性の主張や推奨は一切追加しない。
 fn render_cancer_news_section() -> String {
-    r##"<section class="category">
+    format!(
+        r##"<section class="category">
     <h2>民間のガン治療法に関する報道 / News on Cancer Treatment Research</h2>
     <p style="font-size:.85rem;color:var(--muted);">以下は報道・公開情報の紹介のみで、独自の医療的な効能・安全性の主張は行っていません。 /
     The items below are simply introduced as reported information; no independent medical claims are made.</p>
@@ -127,8 +162,17 @@ fn render_cancer_news_section() -> String {
       <a href="https://www.facebook.com/reel/1793445321653771?locale=ja_JP" target="_blank" rel="noopener noreferrer">📘 Facebook(予備 / backup)</a></li>
       <li><a href="https://aon.tokyo/cancer" target="_blank" rel="noopener noreferrer">民間のガン治療法についての情報は aon.tokyo/cancer をご覧ください</a><br>
       <span style="color:var(--muted);">For information on non-clinical/private-sector cancer treatment approaches, see aon.tokyo/cancer.</span></li>
+      <li>{cancer_search_jp} / {cancer_search_en}<br>
+      <span style="color:var(--muted);">クリックした瞬間に検索結果を表示します(効果を保証するものではありません) / Opens a fresh search each time you click (no claims of efficacy are made here).</span></li>
+      <li>{cancer_video_search_jp} / {cancer_video_search_en}<br>
+      <span style="color:var(--muted);">YouTube以外の動画も含めた横断検索です(効果を保証するものではありません) / A broader video search beyond YouTube (no claims of efficacy are made here).</span></li>
     </ul>
-  </section>"##.to_string()
+  </section>"##,
+        cancer_search_jp = youtube_search_link("がんの治療法について調べる", "がん 治療法"),
+        cancer_search_en = youtube_search_link("Cancer treatment methods", "cancer treatment methods"),
+        cancer_video_search_jp = google_video_search_link("がんの治療法の動画を調べる", "がん 治療法"),
+        cancer_video_search_en = google_video_search_link("Cancer treatment method videos", "cancer treatment methods"),
+    )
 }
 
 fn categories() -> Vec<(&'static str, Vec<&'static str>)> {
