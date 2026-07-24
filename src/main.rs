@@ -166,12 +166,20 @@ fn render_cancer_news_section() -> String {
       <span style="color:var(--muted);">クリックした瞬間に検索結果を表示します(効果を保証するものではありません) / Opens a fresh search each time you click (no claims of efficacy are made here).</span></li>
       <li>{cancer_video_search_jp} / {cancer_video_search_en}<br>
       <span style="color:var(--muted);">YouTube以外の動画も含めた横断検索です(効果を保証するものではありません) / A broader video search beyond YouTube (no claims of efficacy are made here).</span></li>
+      <li>{banana_search_jp} / {banana_search_en}<br>
+      <span style="color:var(--muted);">クリックした瞬間に検索結果を表示します(効果を保証するものではありません) / Opens a fresh search each time you click (no claims of efficacy are made here).</span></li>
+      <li>{baking_soda_search_jp} / {baking_soda_search_en}<br>
+      <span style="color:var(--muted);">クリックした瞬間に検索結果を表示します(効果を保証するものではありません) / Opens a fresh search each time you click (no claims of efficacy are made here).</span></li>
     </ul>
   </section>"##,
         cancer_search_jp = youtube_search_link("がんの治療法について調べる", "がん 治療法"),
         cancer_search_en = youtube_search_link("Cancer treatment methods", "cancer treatment methods"),
         cancer_video_search_jp = google_video_search_link("がんの治療法の動画を調べる", "がん 治療法"),
         cancer_video_search_en = google_video_search_link("Cancer treatment method videos", "cancer treatment methods"),
+        banana_search_jp = youtube_search_link("「バナナ ガン治療法」で調べる", "バナナ ガン治療法"),
+        banana_search_en = youtube_search_link("Search \"banana cancer treatment\"", "banana cancer treatment"),
+        baking_soda_search_jp = youtube_search_link("「重曹水 ガン治療法」で調べる", "重曹水 ガン治療法"),
+        baking_soda_search_en = youtube_search_link("Search \"baking soda water cancer treatment\"", "baking soda water cancer treatment"),
     )
 }
 
