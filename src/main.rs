@@ -121,8 +121,10 @@ fn render_cancer_news_section() -> String {
       <span style="color:var(--muted);">Destroying Tumors with Shockwaves — a New "No Scalpel, No Needle" Liver Cancer Treatment: Osaka Metropolitan University Research Team Begins Specified Clinical Research, Aiming for Drug/Medical Device Approval Within the Next Year</span><br>
       <a href="https://www.facebook.com/masahiro.ishizuka.54?locale=ja_JP" target="_blank" rel="noopener noreferrer">📘 Facebook</a> /
       <a href="https://www.youtube.com/watch?v=hRFXYCGX8Fo" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></li>
-      <li><a href="https://www.youtube.com/watch?v=84EkcJmgmnQ" target="_blank" rel="noopener noreferrer">世界初！からだ自身が"がん治療"　九州大学が開発</a><br>
-      <span style="color:var(--muted);">A World First! The Body Itself Fights Cancer — Developed by Kyushu University</span></li>
+      <li>マックトリガー。世界初！からだ自身が"がん治療"　九州大学が開発<br>
+      <span style="color:var(--muted);">Mac Trigger. A World First! The Body Itself Fights Cancer — Developed by Kyushu University</span><br>
+      <a href="https://www.youtube.com/watch?v=84EkcJmgmnQ" target="_blank" rel="noopener noreferrer">▶️ YouTube</a> /
+      <a href="https://www.facebook.com/reel/1793445321653771?locale=ja_JP" target="_blank" rel="noopener noreferrer">📘 Facebook(予備 / backup)</a></li>
       <li><a href="https://aon.tokyo/cancer" target="_blank" rel="noopener noreferrer">民間のガン治療法についての情報は aon.tokyo/cancer をご覧ください</a><br>
       <span style="color:var(--muted);">For information on non-clinical/private-sector cancer treatment approaches, see aon.tokyo/cancer.</span></li>
     </ul>
