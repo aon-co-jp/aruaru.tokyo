@@ -527,6 +527,14 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   <header>
     <h1>aruaru<span>.tokyo</span></h1>
     <p>「それ、あるある!」を集めました。 / A collection of everyday "aruaru" moments.</p>
+    <p class="related-sites" style="font-size:0.85rem;">🔗 関連サイト / Related sites:
+    <a href="https://aon.tokyo/">aon.tokyo</a> ・
+    <a href="https://aon.tokyo/cancer">aon.tokyo/cancer</a> ・
+    <a href="https://aon.co.jp/">aon.co.jp</a> ・
+    <a href="https://aruaru.tokyo/">aruaru.tokyo</a> ・
+    <a href="https://karu.tokyo/">karu.tokyo</a> ・
+    <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
+    <a href="https://fbi.tokyo/">fbi.tokyo</a></p>
   </header>
 
   <div class="quick-links">
