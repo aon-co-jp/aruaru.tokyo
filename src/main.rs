@@ -534,7 +534,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://aruaru.tokyo/">aruaru.tokyo</a> ・
     <a href="https://karu.tokyo/">karu.tokyo</a> ・
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
-    <a href="https://fbi.tokyo/">fbi.tokyo</a></p>
+    <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
+<a href="https://runo.tokyo/">runo.tokyo</a></p>
   </header>
 
   <div class="quick-links">
