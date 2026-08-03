@@ -63,6 +63,11 @@ const BLOG_POST_TITLE_JA: &str = "プログラム言語やフレームワーク�
 /// 日本語のみだが、リンクのラベルは英語話者にも内容が伝わるよう
 /// 意訳したもの(URLは日英共通、リンク先は変えない)。
 const BLOG_POST_TITLE_EN: &str = "The benefits of migrating everything — programming languages, frameworks, and more — to Rust";
+
+/// 2件目のブログ記事(ユーザー指示、2026-08-04追記)。
+const BLOG_POST2_URL: &str = "https://ameblo.jp/www-aon/entry-12974607800.html";
+const BLOG_POST2_TITLE_JA: &str = "上下水道配管や屋根瓦などのハイテク新素材。パナホームとヤマダホームのコーキングレス外壁";
+
 const GITHUB_ORG: &str = "aon-co-jp";
 const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
 
@@ -526,6 +531,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <body>
 <main>
   <p class="blog-link"><a href="{BLOG_POST_URL}" target="_blank" rel="noopener">📝 {BLOG_POST_TITLE_JA}</a> / <a href="{BLOG_POST_URL}" target="_blank" rel="noopener">{BLOG_POST_TITLE_EN}</a></p>
+  <p class="blog-link"><a href="{BLOG_POST2_URL}" target="_blank" rel="noopener">📝 {BLOG_POST2_TITLE_JA}</a></p>
 
   <header>
     <h1>aruaru<span>.tokyo</span></h1>
