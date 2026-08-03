@@ -160,6 +160,9 @@ fn render_cancer_news_section() -> String {
       <span style="color:var(--muted);">Mac Trigger. A World First! The Body Itself Fights Cancer — Developed by Kyushu University</span><br>
       <a href="https://www.youtube.com/watch?v=84EkcJmgmnQ" target="_blank" rel="noopener noreferrer">▶️ YouTube</a> /
       <a href="https://www.facebook.com/reel/1793445321653771?locale=ja_JP" target="_blank" rel="noopener noreferrer">📘 Facebook(予備 / backup)</a></li>
+      <li>がんが小さくなる 金沢大学がん薬物療法とは？ 分子標的療法<br>
+      <span style="color:var(--muted);">Cancer Shrinkage: What Is Kanazawa University's Cancer Drug Therapy? Molecular Targeted Therapy</span><br>
+      <a href="https://youtu.be/u4xTbs4JZ30" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></li>
       <li><a href="https://aon.tokyo/cancer" target="_blank" rel="noopener noreferrer">民間のガン治療法についての情報は aon.tokyo/cancer をご覧ください</a><br>
       <span style="color:var(--muted);">For information on non-clinical/private-sector cancer treatment approaches, see aon.tokyo/cancer.</span></li>
       <li>{cancer_search_jp} / {cancer_search_en}</li>
