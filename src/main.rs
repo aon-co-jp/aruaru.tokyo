@@ -68,6 +68,11 @@ const BLOG_POST_TITLE_EN: &str = "The benefits of migrating everything — progr
 const BLOG_POST2_URL: &str = "https://ameblo.jp/www-aon/entry-12974607800.html";
 const BLOG_POST2_TITLE_JA: &str = "上下水道配管や屋根瓦などのハイテク新素材。パナホームとヤマダホームのコーキングレス外壁";
 
+/// 3件目のブログ記事(ユーザー指示、2026-08-08追記)。「民間のガン治療法に
+/// 関する報道」セクションの直下に掲載する(ユーザー指示の掲載位置)。
+const BLOG_POST3_URL: &str = "https://ameblo.jp/www-aon/entry-12975130765.html";
+const BLOG_POST3_TITLE_JA: &str = "足振りで腰痛改善＋ダイエット";
+
 const GITHUB_ORG: &str = "aon-co-jp";
 const GITHUB_ORG_URL: &str = "https://github.com/aon-co-jp";
 
@@ -567,6 +572,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   {categories_html}
 
   {cancer_news_section}
+
+  <p class="blog-link"><a href="{BLOG_POST3_URL}" target="_blank" rel="noopener">📝 {BLOG_POST3_TITLE_JA}</a></p>
 
   <section class="tool">
     <h2>📄 README/CLAUDE.md/PORTING.md → .rs 変換ビューア</h2>
