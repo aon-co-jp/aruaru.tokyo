@@ -174,6 +174,7 @@ fn render_video_sections() -> String {
 </div>
 <p><a href="https://www.facebook.com/reel/1858159605169381?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 <p><a href="https://gigxit.co.jp/blog/blog-14717/" target="_blank" rel="noopener noreferrer">Blog（ブログ）</a></p>
+<p><a href="https://ameblo.jp/www-aon/entry-12975242866.html" target="_blank" rel="noopener noreferrer">BlogのBackup（ブログのバックアップ）</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
