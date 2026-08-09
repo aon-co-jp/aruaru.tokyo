@@ -167,6 +167,13 @@ fn render_video_sections() -> String {
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">コールセンターのAI革命！3つのAI搭載型CRMを徹底比較 （ブログ公開）</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/ytel7hnI4yQ" title="コールセンターのAI革命！3つのAI搭載型CRMを徹底比較 （ブログ公開）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">AISmartCallが凄すぎる！意地悪な客にも神対応？最新AIコールセンターの実力を徹底検証</h2>
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/GfwmakE6Usc" title="AISmartCallが凄すぎる！意地悪な客にも神対応？最新AIコールセンターの実力を徹底検証" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
