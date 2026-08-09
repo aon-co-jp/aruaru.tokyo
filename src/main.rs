@@ -164,6 +164,7 @@ fn render_video_sections() -> String {
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/SY6ur61NRQY" title="AI × 電話が作り出す衝撃的すぎる販売方法" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p><a href="https://www.facebook.com/reel/1862687241780111?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -171,6 +172,7 @@ fn render_video_sections() -> String {
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/ytel7hnI4yQ" title="コールセンターのAI革命！3つのAI搭載型CRMを徹底比較 （ブログ公開）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p><a href="https://www.facebook.com/reel/1858159605169381?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -178,6 +180,15 @@ fn render_video_sections() -> String {
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/GfwmakE6Usc" title="AISmartCallが凄すぎる！意地悪な客にも神対応？最新AIコールセンターの実力を徹底検証" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p><a href="https://www.facebook.com/reel/1722317175553405?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">AIが最適な回答を提示　カスタマーセンター向け新カスハラ対策(2024年10月10日)</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/ryYgyiM07-A" title="AIが最適な回答を提示　カスタマーセンター向け新カスハラ対策(2024年10月10日)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.facebook.com/reel/1555401388944798?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -185,6 +196,7 @@ fn render_video_sections() -> String {
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/f8i7tIcyrTY" title="EC×AIで10億円を1人で回す時代｜代理店はもはや不要？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p><a href="https://www.facebook.com/reel/1378596376931848?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -192,6 +204,7 @@ fn render_video_sections() -> String {
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/iFn9LGnL6zQ" title="GoogleのEC特化AI「UCP」がついに開始！事業者がやるべき準備とは？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<p><a href="https://www.facebook.com/reel/1064557992696202?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
