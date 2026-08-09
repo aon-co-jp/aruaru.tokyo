@@ -157,7 +157,28 @@ const RELATED_SITES: &[RelatedSite] = &[
 /// もの(2026-08-08追加、ユーザー指示)。カテゴリ一覧とガン治療報道
 /// セクションの間に掲載する。
 fn render_video_sections() -> String {
-    r##"<p class="blog-link"><a href="https://www.youtube.com/results?search_query=%E3%83%89%E3%82%A4%E3%83%84%E4%BC%81%E6%A5%AD%E3%81%AFIT%20WEB%20AI%E6%B4%BB%E7%94%A8%E3%81%A7%E6%99%82%E7%9F%AD%E5%8B%A4%E5%8B%99%20%E6%9C%89%E7%B5%A6%E6%B6%88%E5%8C%96%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84%20%E9%80%B1%E4%BC%913%E6%97%A5" target="_blank" rel="noopener noreferrer">▶️ ドイツ企業はIT WEB AI活用で時短勤務 有給消化率が高い 週休3日</a></p>
+    r##"<p class="blog-link" style="font-size:1.4rem;"><a href="https://www.youtube.com/results?search_query=%E3%83%89%E3%82%A4%E3%83%84%E4%BC%81%E6%A5%AD%E3%81%AFIT%20WEB%20AI%E6%B4%BB%E7%94%A8%E3%81%A7%E6%99%82%E7%9F%AD%E5%8B%A4%E5%8B%99%20%E6%9C%89%E7%B5%A6%E6%B6%88%E5%8C%96%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84%20%E9%80%B1%E4%BC%913%E6%97%A5" target="_blank" rel="noopener noreferrer">▶️ ドイツ企業はIT WEB AI活用で時短勤務 有給消化率が高い 週休3日</a></p>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">Claude Codeで公式LINEのAIチャットボットをゼロから作る実戦ガイド</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/Z89kjQRe0mw" title="Claude Codeで公式LINEのAIチャットボットをゼロから作る実戦ガイド" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【衝撃】Claudeを使って10分でAIチャットボットを作成する方法を解説</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/c6zKkPYM4Uo" title="【衝撃】Claudeを使って10分でAIチャットボットを作成する方法を解説" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">I Built an AI Chatbot with Claude Code in 10 Minutes</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/rfewrxRs8Aw" title="I Built an AI Chatbot with Claude Code in 10 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">鴨頭さんがマクドナルドの最低な店長だった話。指示、命令では人は動かない…元マクドナルドの店長が語る現場での対応</h2>
