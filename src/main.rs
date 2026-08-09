@@ -173,6 +173,7 @@ fn render_video_sections() -> String {
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/ytel7hnI4yQ" title="コールセンターのAI革命！3つのAI搭載型CRMを徹底比較 （ブログ公開）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <p><a href="https://www.facebook.com/reel/1858159605169381?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+<p><a href="https://gigxit.co.jp/blog/blog-14717/" target="_blank" rel="noopener noreferrer">Blog（ブログ）</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
