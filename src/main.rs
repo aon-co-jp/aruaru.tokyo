@@ -152,6 +152,46 @@ const RELATED_SITES: &[RelatedSite] = &[
     },
 ];
 
+/// aon.tokyoに掲載済みの3本の動画セクション(鴨頭さんのマクドナルド動画・
+/// 宇宙の広さ体感動画・宇宙の大きさを体感できる動画)をそのままコピーした
+/// もの(2026-08-08追加、ユーザー指示)。カテゴリ一覧とガン治療報道
+/// セクションの間に掲載する。
+fn render_video_sections() -> String {
+    r##"<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">鴨頭さんがマクドナルドの最低な店長だった話。指示、命令では人は動かない…元マクドナルドの店長が語る現場での対応</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/vCTkpVXHmU4" title="鴨頭さんがマクドナルドの最低な店長だった話。指示、命令では人は動かない…元マクドナルドの店長が語る現場での対応" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">動画が表示されない場合はこちらで検索 / If the video does not play, search here: <a href="https://www.youtube.com/results?search_query=%E9%B4%A8%E9%A0%AD%E5%98%89%E4%BA%BA%EF%BC%88%E3%81%8B%E3%82%82%E3%81%8C%E3%81%97%E3%82%89%20%E3%82%88%E3%81%97%E3%81%B2%E3%81%A8%EF%BC%89" target="_blank" rel="noopener noreferrer">▶️ 鴨頭嘉人（かもがしら よしひと）の動画をYouTubeで検索</a></p>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたらYouTube検索と次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via YouTube search or the following URL:
+<a href="https://www.facebook.com/reel/2030814436950418?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">想像を超えた宇宙の広さ、地球のちっぽけさを体感してください。<br><span style="color:var(--muted);">Experience the vastness of space beyond imagination, and how tiny Earth truly is.</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/HXwtnUEga7M" title="想像を超えた宇宙の広さ、地球のちっぽけさを体感してください。 / Experience the vastness of space beyond imagination, and how tiny Earth truly is." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">動画が表示されない場合はこちらで検索 / If the video does not play, search here: <a href="https://www.youtube.com/results?search_query=%E6%83%B3%E5%83%8F%E3%82%92%E8%B6%85%E3%81%88%E3%81%9F%E5%AE%87%E5%AE%99%E3%81%AE%E5%BA%83%E3%81%95%E3%80%81%E5%9C%B0%E7%90%83%E3%81%AE%E3%81%A1%E3%81%A3%E3%81%BD%E3%81%91%E3%81%95%E3%82%92%E4%BD%93%E6%84%9F%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82" target="_blank" rel="noopener noreferrer">▶️ 想像を超えた宇宙の広さ、地球のちっぽけさを体感してください。 / Experience the vastness of space beyond imagination, and how tiny Earth truly is.</a></p>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたらYouTube検索と次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via YouTube search or the following URL:
+<a href="https://www.facebook.com/reel/1514589143178165?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">宇宙の大きさを体感できる動画<br><span style="color:var(--muted);">A Video to Experience the Scale of the Universe</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/jM02C3uSBXY" title="宇宙の大きさを体感できる動画 / A Video to Experience the Scale of the Universe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">動画が表示されない場合はこちらで検索 / If the video does not play, search here: <a href="https://www.youtube.com/results?search_query=%E5%AE%87%E5%AE%99%E3%81%AE%E5%A4%A7%E3%81%8D%E3%81%95%E3%82%92%E4%BD%93%E6%84%9F%E3%81%A7%E3%81%8D%E3%82%8B%E5%8B%95%E7%94%BB" target="_blank" rel="noopener noreferrer">▶️ 宇宙の大きさを体感できる動画 / A Video to Experience the Scale of the Universe</a></p>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたらYouTube検索と次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via YouTube search or the following URL:
+<a href="https://www.facebook.com/reel/2142495496668566?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>"##
+        .to_string()
+}
+
 /// 民間のガン治療法に関する報道記事の紹介セクション(2026-07-24追加)。
 /// ユーザーから提供された実際の報道見出し・リンクをそのまま紹介するのみに留め、
 /// 独自の医療的な効能・安全性の主張や推奨は一切追加しない。
@@ -521,6 +561,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let categories_html = render_categories();
     let repo_options = render_repo_options(&selected_repo);
     let flat_json = flat_items_json();
+    let video_sections = render_video_sections();
     let cancer_news_section = render_cancer_news_section();
 
     let body = format!(
@@ -570,6 +611,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   </div>
 
   {categories_html}
+
+  {video_sections}
 
   {cancer_news_section}
 
