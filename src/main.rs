@@ -563,6 +563,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let flat_json = flat_items_json();
     let video_sections = render_video_sections();
     let cancer_news_section = render_cancer_news_section();
+    let claude_code_desktop_search = youtube_search_link("AI駆動開発 CLAUDE CODE DESKTOP", "AI駆動開発 CLAUDE CODE DESKTOP");
 
     let body = format!(
         r#"<!DOCTYPE html>
@@ -598,6 +599,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="{ARUARU_EASYWEB_URL}" target="_blank" rel="noopener">🔧 aruaru-easyweb を開く</a>
     <a href="/help">❓ 困った時は</a>
     <a href="/open-aruaru-runo-iLumi">📚 プロジェクトシリーズ</a>
+    <br />
+    {claude_code_desktop_search}
     <br />
     {related_sites}
   </div>
