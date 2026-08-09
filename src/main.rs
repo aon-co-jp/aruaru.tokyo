@@ -573,7 +573,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 
   {cancer_news_section}
 
-  <p class="blog-link"><a href="{BLOG_POST3_URL}" target="_blank" rel="noopener">📝 {BLOG_POST3_TITLE_JA}</a></p>
+  <p class="blog-link" style="font-size:1.4rem;"><a href="{BLOG_POST3_URL}" target="_blank" rel="noopener">📝 {BLOG_POST3_TITLE_JA}</a></p>
 
   <section class="tool">
     <h2>📄 README/CLAUDE.md/PORTING.md → .rs 変換ビューア</h2>
