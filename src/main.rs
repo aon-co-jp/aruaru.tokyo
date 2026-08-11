@@ -822,6 +822,16 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   <a href="https://www.facebook.com/reel/1218746654048455?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
   </div>
 
+  <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+  <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">数多くの日本人を泣かせた伝説のCM</h2>
+  <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+  <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/qUqPhVLPB8c" title="数多くの日本人を泣かせた伝説のCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+  If the YouTube link breaks, you can also watch it via the following URL:
+  <a href="https://www.facebook.com/reel/1382447680598734" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+  </div>
+
   <footer>&copy; 2026 aruaru.tokyo (Rust + Poem)</footer>
 </main>
 <script>
@@ -871,6 +881,63 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
         else {{ ghEl.classList.add('hidden'); rsEl.classList.remove('hidden'); }}
       }});
     }});
+  }});
+
+  // YouTube埋め込みのプログレッシブ表示化(2026-08-12追加、ユーザー指示
+  // 「連続でYoutube動画埋め込みをしているとスクロールが早いと表示が
+  // 遅れる事があるので、サムネイルの埋め込み動画の写真を素早く表示する
+  // ようにプログレッシブな感じで」への対応)。
+  //
+  // 正直な開示: ページ内の全<iframe src="https://www.youtube.com/embed/...">
+  // を、実際のiframe(重いYouTubeプレイヤー本体)ではなく、YouTube公式の
+  // サムネイルCDN(img.youtube.com)から取得した軽量な静止画(再生ボタン
+  // オーバーレイ付き)へ自動的に差し替える(YouTube Facadeパターン、
+  // lite-youtube-embed等で広く使われている既知の手法)。サムネイル画像は
+  // ブラウザ標準の`loading="lazy"`で画面内に近づいた時のみ読み込まれる
+  // ため、22本の動画を一度に全部読み込む従来方式より大幅に軽くなる。
+  // クリックした時点で初めて実際のiframe(自動再生付き)へ差し替え、
+  // その動画だけを再生する——動画自体の視聴体験は変わらない。
+  document.querySelectorAll('iframe[src*="youtube.com/embed/"]').forEach(iframe => {{
+    const src = iframe.getAttribute('src');
+    const match = src.match(/embed\/([a-zA-Z0-9_-]+)/);
+    if (!match) return;
+    const videoId = match[1];
+    const title = iframe.getAttribute('title') || 'YouTube video';
+    const wrapper = iframe.parentElement;
+    if (!wrapper) return;
+
+    const facade = document.createElement('div');
+    facade.className = 'yt-facade';
+    facade.style.cssText = 'position:absolute; inset:0; cursor:pointer; background:#000;';
+    facade.setAttribute('role', 'button');
+    facade.setAttribute('aria-label', '▶ ' + title);
+
+    const img = document.createElement('img');
+    img.src = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
+    img.loading = 'lazy';
+    img.alt = title;
+    img.style.cssText = 'width:100%; height:100%; object-fit:cover; display:block;';
+    facade.appendChild(img);
+
+    const playBtn = document.createElement('div');
+    playBtn.textContent = '▶';
+    playBtn.style.cssText = 'position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:3rem; color:#fff; text-shadow:0 0 12px rgba(0,0,0,.8); pointer-events:none;';
+    facade.appendChild(playBtn);
+
+    facade.addEventListener('click', () => {{
+      const realIframe = document.createElement('iframe');
+      realIframe.width = '100%';
+      realIframe.height = '100%';
+      realIframe.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:6px;';
+      realIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+      realIframe.title = title;
+      realIframe.setAttribute('frameborder', '0');
+      realIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      realIframe.allowFullscreen = true;
+      wrapper.replaceChild(realIframe, facade);
+    }}, {{ once: true }});
+
+    wrapper.replaceChild(facade, iframe);
   }});
 </script>
 </body>
