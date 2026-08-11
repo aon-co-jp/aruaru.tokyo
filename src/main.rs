@@ -302,6 +302,40 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
 If the YouTube link breaks, you can also watch it via the following URL:
 <a href="https://www.facebook.com/reel/1079734318342948?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">東亜紀 童神<br><span style="color:var(--muted);">Toaki - Warabigami</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/FNUKj6qMQZw" title="東亜紀 童神" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ 冬のソナタの日本語版 最初から今まで<br><span style="color:var(--muted);">Utagokoro Rie - "From the Beginning Until Now" (Japanese version, Winter Sonata)</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/qVymStzDEjU" title="歌心りえ 冬のソナタの日本語版 最初から今まで" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/2273699263045573?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ 道化師のソネット<br><span style="color:var(--muted);">Utagokoro Rie - Doukeshi no Sonnet</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/iC1Y-1pwbm0" title="歌心りえ 道化師のソネット" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/1071996554862372?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ たしかなこと<br><span style="color:var(--muted);">Utagokoro Rie - Tashikana Koto</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/vPGm2q79px4" title="歌心りえ たしかなこと" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 </div>"##
         .to_string()
 }
