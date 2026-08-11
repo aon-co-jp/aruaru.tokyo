@@ -350,6 +350,10 @@ fn render_cancer_news_section() -> String {
     <p style="font-size:.85rem;color:var(--muted);">以下は報道・公開情報の紹介のみで、独自の医療的な効能・安全性の主張は行っていません。 /
     The items below are simply introduced as reported information; no independent medical claims are made.</p>
     <ul>
+      <li>癌の根治目指す「飲み薬」　狙うはノーベル賞！新薬の構造に迫る【ブレイクスルー】<br>
+      <span style="color:var(--muted);">A "Pill" Aiming for a Complete Cure for Cancer — Targeting a Nobel Prize! Examining the Structure of the New Drug [Breakthrough]</span><br>
+      <a href="https://youtu.be/ZKRBr5Zb6uY" target="_blank" rel="noopener noreferrer">▶️ YouTube</a> /
+      <a href="https://www.facebook.com/reel/1581437446958593?locale=ja_JP" target="_blank" rel="noopener noreferrer">📘 Facebook(予備 / backup)</a></li>
       <li>衝撃波で腫瘍を破壊「メスも針も使わない」肝臓がんの新治療法　大阪公立大の研究チームが特定臨床研究を開始　来年中の薬事承認を目指す<br>
       <span style="color:var(--muted);">Destroying Tumors with Shockwaves — a New "No Scalpel, No Needle" Liver Cancer Treatment: Osaka Metropolitan University Research Team Begins Specified Clinical Research, Aiming for Drug/Medical Device Approval Within the Next Year</span><br>
       <a href="https://www.youtube.com/watch?v=hRFXYCGX8Fo" target="_blank" rel="noopener noreferrer">▶️ YouTube</a> /
