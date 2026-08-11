@@ -802,6 +802,26 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="{GITHUB_ORG_URL}" target="_blank" rel="noopener">🏢 GitHub organization: {GITHUB_ORG} のトップを見る</a>
   </div>
 
+  <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+  <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">一番より大切なものを選んだ子</h2>
+  <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+  <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/np9DpR9dWfM" title="一番より大切なものを選んだ子" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+  If the YouTube link breaks, you can also watch it via the following URL:
+  <a href="https://www.facebook.com/reel/1345482087666813?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+  </div>
+
+  <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+  <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">「日本の若者は全てを知っている…」日本だけ宗教戦争がない理由を、日本人JKが完全論破</h2>
+  <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+  <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/ckPntNHlSI8" title="日本だけ宗教戦争がない理由を、日本人JKが完全論破" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+  If the YouTube link breaks, you can also watch it via the following URL:
+  <a href="https://www.facebook.com/reel/1218746654048455?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+  </div>
+
   <footer>&copy; 2026 aruaru.tokyo (Rust + Poem)</footer>
 </main>
 <script>
