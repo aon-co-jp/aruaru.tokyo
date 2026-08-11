@@ -262,6 +262,46 @@ If the YouTube link breaks, you can also watch it via YouTube search or the foll
 <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたらYouTube検索と次のURLでもご視聴になれます。 /
 If the YouTube link breaks, you can also watch it via YouTube search or the following URL:
 <a href="https://www.facebook.com/reel/2142495496668566?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">日本にイスラエルのダビデ王家の子孫が生きている。中心はダビデ(大避〈おおさけ〉)神社である。<br><span style="color:var(--muted);">Descendants of the House of David are said to be living in Japan, centered on Osake (Ōsake) Shrine.</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/gBAqOBrKwFA" title="日本にイスラエルのダビデ王家の子孫が生きている。中心はダビデ(大避)神社である。" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/4618844761723076?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">「神秘すぎて、もはや怖い…」伊勢神宮で日本の宗教観を知ったイスラム教徒の夫婦。結果、イスラム教を辞める<br><span style="color:var(--muted);">"Too mysterious, almost frightening…" A Muslim couple learns of Japan's religious worldview at Ise Grand Shrine — and as a result, leaves Islam.</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/x44VLHDQ8_g" title="伊勢神宮で日本の宗教観を知ったイスラム教徒の夫婦。結果、イスラム教を辞める" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/954906917654955?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">東亜紀 君を乗せて<br><span style="color:var(--muted);">Toaki - Kimi wo Nosete</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/rxu7SU53zJ4" title="東亜紀 君を乗せて" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/1046062047914231?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">東亜樹 いつも何度でも<br><span style="color:var(--muted);">Toaki - Itsumo Nando Demo</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/dRQl07pSfpU" title="東亜樹 いつも何度でも" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
+If the YouTube link breaks, you can also watch it via the following URL:
+<a href="https://www.facebook.com/reel/1079734318342948?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>"##
         .to_string()
 }
