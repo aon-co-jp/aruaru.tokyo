@@ -2,6 +2,7 @@
 //! audiocafe.tokyo (PHP) とは異なり、こちらはpoem-cosmo-tauriのエコシステム
 //! 方針に合わせてRust+Poemで実装する。DB非依存・1バイナリ完結。
 
+use poem::endpoint::StaticFileEndpoint;
 use poem::listener::TcpListener;
 use poem::web::{Html, Query};
 use poem::{get, handler, Route, Server};
@@ -158,6 +159,25 @@ const RELATED_SITES: &[RelatedSite] = &[
 /// セクションの間に掲載する。
 fn render_video_sections() -> String {
     r##"<p class="blog-link" style="font-size:1.4rem;"><a href="https://www.youtube.com/results?search_query=%E3%83%89%E3%82%A4%E3%83%84%E4%BC%81%E6%A5%AD%E3%81%AFIT%20WEB%20AI%E6%B4%BB%E7%94%A8%E3%81%A7%E6%99%82%E7%9F%AD%E5%8B%A4%E5%8B%99%20%E6%9C%89%E7%B5%A6%E6%B6%88%E5%8C%96%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84%20%E9%80%B1%E4%BC%913%E6%97%A5" target="_blank" rel="noopener noreferrer">▶️ ドイツ企業はIT WEB AI活用で時短勤務 有給消化率が高い 週休3日</a></p>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/0zFcPiy6K10" title="【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">7%</h2>
+<div class="local-video-player" style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0; background: #000; border-radius: 6px; overflow: hidden;" onclick="this.innerHTML='&lt;video style=&quot;position:absolute;top:0;left:0;width:100%;height:100%;&quot; controls autoplay playsinline src=&quot;/video/7-percent.mp4&quot;&gt;&lt;/video&gt;';">
+<span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<span style="width: 68px; height: 48px; background: #ff0000; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+<span style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid #fff; margin-left: 4px;"></span>
+</span>
+</span>
+</div>
+</div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">AI × 電話が作り出す衝撃的すぎる販売方法</h2>
@@ -1025,7 +1045,8 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/help", get(help_page))
         .at("/api/repos", get(api_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
-        .at("/open-aruaru-runo", get(meta_index_page));
+        .at("/open-aruaru-runo", get(meta_index_page))
+        .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
