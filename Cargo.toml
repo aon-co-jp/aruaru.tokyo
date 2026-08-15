@@ -8,7 +8,7 @@ name = "aruaru-tokyo-server"
 path = "src/main.rs"
 
 [dependencies]
-poem = "3.1"
+poem = { version = "3.1", features = ["static-files"] }
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
