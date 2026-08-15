@@ -166,6 +166,7 @@ fn render_video_sections() -> String {
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/0zFcPiy6K10" title="【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+<p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -182,17 +183,6 @@ fn render_video_sections() -> String {
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/kErqo1sG4vw" title="【漫画】俺を嫌う社長息子にクレーム地獄の最下位スーパーへ左遷されたが店内を見て回り俺は「改善できますね」と改革を進めることに…【恋愛マンガ動画】" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <p><a href="https://www.facebook.com/reel/2307818063323329?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
-</div>
-
-<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
-<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">7%</h2>
-<div class="local-video-player" style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0; background: #000; border-radius: 6px; overflow: hidden;" onclick="this.innerHTML='&lt;video style=&quot;position:absolute;top:0;left:0;width:100%;height:100%;&quot; controls autoplay playsinline src=&quot;/video/7-percent.mp4&quot;&gt;&lt;/video&gt;';">
-<span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-<span style="width: 68px; height: 48px; background: #ff0000; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-<span style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid #fff; margin-left: 4px;"></span>
-</span>
-</span>
-</div>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
