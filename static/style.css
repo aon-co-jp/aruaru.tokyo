@@ -1,0 +1,85 @@
+/* ==========================================================================
+   aruaru.tokyo 共有スタイルシート
+   旧 src/main.rs の `STYLE` 定数(TOPページ・/helpページ)を抽出したもの。
+   ========================================================================== */
+:root { color-scheme: light dark; --bg:#fdf6ec; --bg-card:#ffffff; --fg:#2c2418; --muted:#8a7f6b; --accent:#ff7a45; --accent-2:#2f6fed; --border:#eadfc9; }
+@media (prefers-color-scheme: dark) { :root { --bg:#1a1712; --bg-card:#24201a; --fg:#f1ece0; --muted:#b3a893; --accent:#ff9466; --accent-2:#6ea1ff; --border:#3a3327; } }
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.7; }
+a { color:var(--fg); }
+a:visited { color:var(--fg); }
+main { max-width:780px; margin:0 auto; padding:2.5rem 1.25rem 5rem; }
+header { text-align:center; margin-bottom:1.25rem; }
+header h1 { font-size:2rem; margin:0 0 .4rem; letter-spacing:-.02em; }
+header h1 span { color:var(--accent); }
+header p { color:var(--muted); margin:0; }
+.blog-link { text-align:center; font-size:.85rem; margin:0 0 1rem; }
+.blog-link a { color:var(--accent-2); text-decoration:none; font-weight:600; }
+.quick-links { text-align:center; margin-bottom:2rem; }
+.quick-links a { display:inline-block; text-decoration:none; font-weight:600; background:var(--accent-2); color:#fff; border-radius:999px; padding:.55rem 1.4rem; margin:.2rem; font-size:.9rem; }
+.shuffle-bar { text-align:center; margin:1.5rem 0 2.5rem; }
+button { cursor:pointer; font:inherit; font-weight:600; background:var(--accent); color:#fff; border:none; border-radius:999px; padding:.7rem 1.6rem; box-shadow:0 2px 8px rgba(0,0,0,.12); }
+#shuffle-result { display:none; background:var(--bg-card); border:1px solid var(--border); border-radius:.75rem; padding:1.25rem 1.5rem; margin:1.5rem auto 0; max-width:640px; text-align:center; }
+#shuffle-result .cat { color:var(--accent-2); font-size:.8rem; font-weight:600; }
+#shuffle-result .txt { font-size:1.15rem; margin-top:.4rem; }
+.category { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.5rem; margin-bottom:1.25rem; }
+.category h2 { font-size:1.05rem; margin:0 0 .75rem; color:var(--accent-2); }
+.category ul { margin:0; padding-left:1.2rem; }
+.category li { margin-bottom:.5rem; }
+/* GitHub風README表示は横幅いっぱいに使うため、main の780px制約から
+   意図的にbreak-outさせる(vw基準の中央寄せトリック)。 */
+section.tool { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.75rem; margin:2.5rem 0; width:94vw; max-width:1400px; position:relative; left:50%; transform:translateX(-50%); }
+section.tool h2 { font-size:1.1rem; margin:0 0 .5rem; color:var(--accent-2); }
+section.tool p.desc { color:var(--muted); font-size:.85rem; margin:0 0 1rem; }
+.repo-form { display:flex; gap:.6rem; flex-wrap:wrap; }
+.repo-form select { flex:1; min-width:200px; font:inherit; padding:.5rem .7rem; border-radius:.5rem; border:1px solid var(--border); background:var(--bg); color:var(--fg); }
+.repo-form button { padding:.5rem 1.2rem; }
+pre.rs-output { margin-top:1.25rem; background:#1e1e1e; color:#d4d4d4; border-radius:.6rem; padding:1.25rem 1.5rem; overflow-x:auto; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; line-height:1.5; max-height:70vh; width:100%; }
+.rs-error { color:#c0392b; font-size:.85rem; margin-top:1rem; }
+.repo-file-block { margin-top:1.5rem; }
+.repo-file-block h3 { font-size:.9rem; margin:0 0 .4rem; color:var(--muted); }
+.repo-link { margin:0 0 1rem; font-size:.9rem; }
+.repo-fetch-row { display:flex; align-items:center; gap:.6rem; margin-bottom:.75rem; flex-wrap:wrap; }
+.repo-fetch-row button { padding:.4rem 1rem; font-size:.85rem; }
+.repo-fetch-status { font-size:.8rem; color:var(--muted); }
+.view-toggle { display:flex; gap:.4rem; margin-bottom:.5rem; }
+.view-toggle-btn { background:transparent; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.3rem .9rem; font-size:.78rem; font-weight:600; box-shadow:none; }
+.view-toggle-btn.active { background:var(--accent-2); color:#fff; border-color:var(--accent-2); }
+.hidden { display:none !important; }
+.markdown-body { background:var(--bg-card); border:1px solid var(--border); border-radius:.6rem; padding:1.5rem 2rem; overflow-x:auto; max-height:70vh; overflow-y:auto; width:100%; }
+.markdown-body img { max-width:100%; }
+.markdown-body ul, .markdown-body ol { padding-left:1.6rem; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3 { border-bottom:1px solid var(--border); padding-bottom:.3rem; }
+.markdown-body code { background:rgba(148,163,184,.18); padding:.1rem .35rem; border-radius:.3rem; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.85em; }
+.markdown-body pre { background:#1e1e1e; color:#d4d4d4; padding:.8rem 1rem; border-radius:.5rem; overflow-x:auto; }
+.markdown-body pre code { background:none; padding:0; }
+.markdown-body table { border-collapse:collapse; width:100%; font-size:.88rem; }
+.markdown-body th, .markdown-body td { border:1px solid var(--border); padding:.4rem .6rem; }
+.markdown-body blockquote { border-left:3px solid var(--accent); margin:0; padding:.2rem 1rem; color:var(--muted); }
+.markdown-body a { color:var(--accent-2); }
+.org-link { text-align:center; margin:2rem 0; }
+.org-link a { color:var(--accent-2); font-weight:600; text-decoration:none; }
+footer { text-align:center; color:var(--muted); font-size:.8rem; margin-top:3rem; }
+
+/* ==========================================================================
+   /open-aruaru-runo-iLumi (メタ索引ページ) 専用スタイル
+   旧 src/meta_index.rs の `META_INDEX_STYLE` 定数を抽出したもの。
+   ========================================================================== */
+.meta-index main { max-width: 980px; }
+.lang-switch { text-align:center; font-size:.78rem; margin-bottom:1.5rem; line-height:2; }
+.lang-switch a { text-decoration:none; color:var(--muted); margin:0 .15rem; }
+.lang-switch a.current { color:var(--accent-2); font-weight:700; }
+.meta-intro { color:var(--muted); font-size:.9rem; margin-bottom:2rem; }
+.repo-card { background:var(--bg-card); border:1px solid var(--border); border-radius:.75rem; padding:1.1rem 1.4rem; margin-bottom:1.1rem; }
+.repo-card h3 { margin:0 0 .4rem; font-size:1.02rem; }
+.repo-card h3 a { text-decoration:none; }
+.repo-card p.role { color:var(--muted); font-size:.85rem; margin:0 0 .75rem; line-height:1.6; }
+ul.file-list { list-style:none; margin:0 0 .75rem; padding:0; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; }
+ul.file-list li { padding:.25rem 0; border-bottom:1px dashed var(--border); }
+ul.file-list li:last-child { border-bottom:none; }
+ul.file-list a { text-decoration:none; color:var(--accent-2); }
+.file-missing { color:var(--muted); font-style:italic; }
+.live-fetch-row { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+.live-fetch-btn { font-size:.78rem; padding:.35rem .9rem; }
+.live-fetch-result { font-size:.78rem; color:var(--muted); }
+.live-fetch-result .ok { color:var(--fg); }
