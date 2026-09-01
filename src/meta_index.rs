@@ -217,33 +217,20 @@ fn render_lang_switcher(current: Lang, path: &str) -> String {
         .join(" · ")
 }
 
-pub const META_INDEX_STYLE: &str = r#"
-  .meta-index main { max-width: 980px; }
-  .lang-switch { text-align:center; font-size:.78rem; margin-bottom:1.5rem; line-height:2; }
-  .lang-switch a { text-decoration:none; color:var(--muted); margin:0 .15rem; }
-  .lang-switch a.current { color:var(--accent-2); font-weight:700; }
-  .meta-intro { color:var(--muted); font-size:.9rem; margin-bottom:2rem; }
-  .repo-card { background:var(--bg-card); border:1px solid var(--border); border-radius:.75rem; padding:1.1rem 1.4rem; margin-bottom:1.1rem; }
-  .repo-card h3 { margin:0 0 .4rem; font-size:1.02rem; }
-  .repo-card h3 a { text-decoration:none; }
-  .repo-card p.role { color:var(--muted); font-size:.85rem; margin:0 0 .75rem; line-height:1.6; }
-  ul.file-list { list-style:none; margin:0 0 .75rem; padding:0; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; }
-  ul.file-list li { padding:.25rem 0; border-bottom:1px dashed var(--border); }
-  ul.file-list li:last-child { border-bottom:none; }
-  ul.file-list a { text-decoration:none; color:var(--accent-2); }
-  .file-missing { color:var(--muted); font-style:italic; }
-  .live-fetch-row { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
-  .live-fetch-btn { font-size:.78rem; padding:.35rem .9rem; }
-  .live-fetch-result { font-size:.78rem; color:var(--muted); }
-  .live-fetch-result .ok { color:var(--fg); }
-"#;
-
 /// `/open-aruaru-runo-iLumi`ページ本体のHTMLを組み立てる。
 pub fn render_page(lang: Lang, canonical_path: &str) -> String {
     let s = index_strings(lang);
     let dir = if lang.is_rtl() { "rtl" } else { "ltr" };
     let cards = PROJECTS.iter().map(|p| render_project_card(p, &s)).collect::<Vec<_>>().join("\n  ");
     let lang_switch = render_lang_switcher(lang, canonical_path);
+    let page_data_json = serde_json::json!({
+        "loading": s.fetch_loading,
+        "stars": s.field_stars,
+        "updated": s.field_updated,
+        "branch": s.field_default_branch,
+        "fail": s.fetch_fail,
+    })
+    .to_string();
 
     format!(
         r#"<!DOCTYPE html>
@@ -253,7 +240,7 @@ pub fn render_page(lang: Lang, canonical_path: &str) -> String {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content="{intro}">
-<style>{STYLE}{META_INDEX_STYLE}</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body class="meta-index">
 <main>
@@ -277,30 +264,8 @@ pub fn render_page(lang: Lang, canonical_path: &str) -> String {
 
   <footer>&copy; 2026 aruaru.tokyo (Rust + Poem) — meta index for the open-cosmo ecosystem</footer>
 </main>
-<script>
-  document.querySelectorAll('.live-fetch-btn').forEach(btn => {{
-    const repo = btn.getAttribute('data-repo');
-    const resultEl = document.querySelector('.live-fetch-result[data-repo-result="' + repo + '"]');
-    btn.addEventListener('click', async () => {{
-      resultEl.textContent = {loading_json};
-      try {{
-        const res = await fetch('https://api.github.com/repos/' + repo, {{
-          headers: {{ 'Accept': 'application/vnd.github+json' }}
-        }});
-        if (!res.ok) throw new Error('status ' + res.status);
-        const data = await res.json();
-        const stars = data.stargazers_count;
-        const updated = data.pushed_at || data.updated_at;
-        const branch = data.default_branch;
-        resultEl.innerHTML = '<span class="ok">' + {stars_label_json} + ': ' + stars +
-          ' / ' + {updated_label_json} + ': ' + new Date(updated).toLocaleDateString() +
-          ' / ' + {branch_label_json} + ': ' + branch + '</span>';
-      }} catch (e) {{
-        resultEl.textContent = {fail_json};
-      }}
-    }});
-  }});
-</script>
+<script type="application/json" id="page-data">{page_data_json}</script>
+<script src="/meta-index.js" defer></script>
 </body>
 </html>
 "#,
@@ -308,17 +273,11 @@ pub fn render_page(lang: Lang, canonical_path: &str) -> String {
         dir = dir,
         title = html_escape(s.title),
         intro = html_escape(s.intro),
-        STYLE = crate::STYLE,
-        META_INDEX_STYLE = META_INDEX_STYLE,
         h1 = html_escape(s.h1),
         lang_switch = lang_switch,
         org_link_label = html_escape(s.org_link_label),
         cards = cards,
         back_to_top = html_escape(s.back_to_top),
-        loading_json = serde_json::to_string(s.fetch_loading).unwrap_or_default(),
-        stars_label_json = serde_json::to_string(s.field_stars).unwrap_or_default(),
-        updated_label_json = serde_json::to_string(s.field_updated).unwrap_or_default(),
-        branch_label_json = serde_json::to_string(s.field_default_branch).unwrap_or_default(),
-        fail_json = serde_json::to_string(s.fetch_fail).unwrap_or_default(),
+        page_data_json = page_data_json,
     )
 }

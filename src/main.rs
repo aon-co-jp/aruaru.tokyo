@@ -671,67 +671,6 @@ fn flat_items_json() -> String {
     serde_json::to_string(&items).unwrap_or_else(|_| "[]".to_string())
 }
 
-pub(crate) const STYLE: &str = r#"
-  :root { color-scheme: light dark; --bg:#fdf6ec; --bg-card:#ffffff; --fg:#2c2418; --muted:#8a7f6b; --accent:#ff7a45; --accent-2:#2f6fed; --border:#eadfc9; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#1a1712; --bg-card:#24201a; --fg:#f1ece0; --muted:#b3a893; --accent:#ff9466; --accent-2:#6ea1ff; --border:#3a3327; } }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.7; }
-  a { color:var(--fg); }
-  a:visited { color:var(--fg); }
-  main { max-width:780px; margin:0 auto; padding:2.5rem 1.25rem 5rem; }
-  header { text-align:center; margin-bottom:1.25rem; }
-  header h1 { font-size:2rem; margin:0 0 .4rem; letter-spacing:-.02em; }
-  header h1 span { color:var(--accent); }
-  header p { color:var(--muted); margin:0; }
-  .blog-link { text-align:center; font-size:.85rem; margin:0 0 1rem; }
-  .blog-link a { color:var(--accent-2); text-decoration:none; font-weight:600; }
-  .quick-links { text-align:center; margin-bottom:2rem; }
-  .quick-links a { display:inline-block; text-decoration:none; font-weight:600; background:var(--accent-2); color:#fff; border-radius:999px; padding:.55rem 1.4rem; margin:.2rem; font-size:.9rem; }
-  .shuffle-bar { text-align:center; margin:1.5rem 0 2.5rem; }
-  button { cursor:pointer; font:inherit; font-weight:600; background:var(--accent); color:#fff; border:none; border-radius:999px; padding:.7rem 1.6rem; box-shadow:0 2px 8px rgba(0,0,0,.12); }
-  #shuffle-result { display:none; background:var(--bg-card); border:1px solid var(--border); border-radius:.75rem; padding:1.25rem 1.5rem; margin:1.5rem auto 0; max-width:640px; text-align:center; }
-  #shuffle-result .cat { color:var(--accent-2); font-size:.8rem; font-weight:600; }
-  #shuffle-result .txt { font-size:1.15rem; margin-top:.4rem; }
-  .category { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.5rem; margin-bottom:1.25rem; }
-  .category h2 { font-size:1.05rem; margin:0 0 .75rem; color:var(--accent-2); }
-  .category ul { margin:0; padding-left:1.2rem; }
-  .category li { margin-bottom:.5rem; }
-  /* GitHub風README表示は横幅いっぱいに使うため、main の780px制約から
-     意図的にbreak-outさせる(vw基準の中央寄せトリック)。 */
-  section.tool { background:var(--bg-card); border:1px solid var(--border); border-radius:.9rem; padding:1.25rem 1.75rem; margin:2.5rem 0; width:94vw; max-width:1400px; position:relative; left:50%; transform:translateX(-50%); }
-  section.tool h2 { font-size:1.1rem; margin:0 0 .5rem; color:var(--accent-2); }
-  section.tool p.desc { color:var(--muted); font-size:.85rem; margin:0 0 1rem; }
-  .repo-form { display:flex; gap:.6rem; flex-wrap:wrap; }
-  .repo-form select { flex:1; min-width:200px; font:inherit; padding:.5rem .7rem; border-radius:.5rem; border:1px solid var(--border); background:var(--bg); color:var(--fg); }
-  .repo-form button { padding:.5rem 1.2rem; }
-  pre.rs-output { margin-top:1.25rem; background:#1e1e1e; color:#d4d4d4; border-radius:.6rem; padding:1.25rem 1.5rem; overflow-x:auto; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.82rem; line-height:1.5; max-height:70vh; width:100%; }
-  .rs-error { color:#c0392b; font-size:.85rem; margin-top:1rem; }
-  .repo-file-block { margin-top:1.5rem; }
-  .repo-file-block h3 { font-size:.9rem; margin:0 0 .4rem; color:var(--muted); }
-  .repo-link { margin:0 0 1rem; font-size:.9rem; }
-  .repo-fetch-row { display:flex; align-items:center; gap:.6rem; margin-bottom:.75rem; flex-wrap:wrap; }
-  .repo-fetch-row button { padding:.4rem 1rem; font-size:.85rem; }
-  .repo-fetch-status { font-size:.8rem; color:var(--muted); }
-  .view-toggle { display:flex; gap:.4rem; margin-bottom:.5rem; }
-  .view-toggle-btn { background:transparent; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:.3rem .9rem; font-size:.78rem; font-weight:600; box-shadow:none; }
-  .view-toggle-btn.active { background:var(--accent-2); color:#fff; border-color:var(--accent-2); }
-  .hidden { display:none !important; }
-  .markdown-body { background:var(--bg-card); border:1px solid var(--border); border-radius:.6rem; padding:1.5rem 2rem; overflow-x:auto; max-height:70vh; overflow-y:auto; width:100%; }
-  .markdown-body img { max-width:100%; }
-  .markdown-body ul, .markdown-body ol { padding-left:1.6rem; }
-  .markdown-body h1, .markdown-body h2, .markdown-body h3 { border-bottom:1px solid var(--border); padding-bottom:.3rem; }
-  .markdown-body code { background:rgba(148,163,184,.18); padding:.1rem .35rem; border-radius:.3rem; font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; font-size:.85em; }
-  .markdown-body pre { background:#1e1e1e; color:#d4d4d4; padding:.8rem 1rem; border-radius:.5rem; overflow-x:auto; }
-  .markdown-body pre code { background:none; padding:0; }
-  .markdown-body table { border-collapse:collapse; width:100%; font-size:.88rem; }
-  .markdown-body th, .markdown-body td { border:1px solid var(--border); padding:.4rem .6rem; }
-  .markdown-body blockquote { border-left:3px solid var(--accent); margin:0; padding:.2rem 1rem; color:var(--muted); }
-  .markdown-body a { color:var(--accent-2); }
-  .org-link { text-align:center; margin:2rem 0; }
-  .org-link a { color:var(--accent-2); font-weight:600; text-decoration:none; }
-  footer { text-align:center; color:var(--muted); font-size:.8rem; margin-top:3rem; }
-"#;
-
 #[handler]
 async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let selected_repo = q.repo.unwrap_or_default();
@@ -742,6 +681,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let categories_html = render_categories();
     let repo_options = render_repo_options(&selected_repo);
     let flat_json = flat_items_json();
+    let page_data_json = format!(r#"{{"items":{flat_json}}}"#);
     let video_sections = render_video_sections();
     let cancer_news_section = render_cancer_news_section();
     let claude_code_desktop_search = youtube_search_link("AI駆動開発 CLAUDE CODE DESKTOP", "AI駆動開発 CLAUDE CODE DESKTOP");
@@ -754,7 +694,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>aruaru.tokyo | みんなの「あるある」集めました</title>
 <meta name="description" content="IT・在宅ワーク・SNS・日本の会社など、誰もが頷く「あるある」をジャンル別にまとめたサイト。GitHubリポジトリのREADMEを.rs風に変換して表示する機能も搭載。Rust+Poem製。">
-<style>{STYLE}</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <main>
@@ -860,112 +800,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 
   <footer>&copy; 2026 aruaru.tokyo (Rust + Poem)</footer>
 </main>
-<script>
-  const items = {flat_json};
-  const btn = document.getElementById('shuffle-btn');
-  const result = document.getElementById('shuffle-result');
-  btn.addEventListener('click', () => {{
-    const pick = items[Math.floor(Math.random() * items.length)];
-    result.querySelector('.cat').textContent = pick.category;
-    result.querySelector('.txt').textContent = pick.text;
-    result.style.display = 'block';
-  }});
-
-  // ボタンを押した瞬間にGitHub組織の最新リポジトリ一覧をAPI経由で取得し、
-  // <select>を動的に差し替える。
-  const fetchBtn = document.getElementById('fetch-repos-btn');
-  const fetchStatus = document.getElementById('fetch-repos-status');
-  const repoSelect = document.getElementById('repo-select');
-  fetchBtn.addEventListener('click', async () => {{
-    fetchStatus.textContent = '取得中… / Fetching…';
-    try {{
-      const res = await fetch('/api/repos');
-      const data = await res.json();
-      if (data.error) {{ fetchStatus.textContent = '❌ ' + data.error; return; }}
-      const repos = data.repos || [];
-      const current = repoSelect.value;
-      repoSelect.innerHTML = '<option value="">リポジトリを選択…</option>' +
-        repos.map(r => `<option value="${{r}}">${{r}}</option>`).join('');
-      if (repos.includes(current)) repoSelect.value = current;
-      fetchStatus.textContent = `✅ ${{repos.length}}件取得しました。`;
-    }} catch (e) {{
-      fetchStatus.textContent = '❌ 取得に失敗しました。';
-    }}
-  }});
-
-  // GitHub風表示 / .rs形式 の切替タブ配線。
-  document.querySelectorAll('.view-toggle').forEach(toggle => {{
-    const tabId = toggle.getAttribute('data-tab');
-    const ghEl = document.getElementById('gh-' + tabId);
-    const rsEl = document.getElementById('rs-' + tabId);
-    toggle.querySelectorAll('.view-toggle-btn').forEach(b => {{
-      b.addEventListener('click', () => {{
-        toggle.querySelectorAll('.view-toggle-btn').forEach(x => x.classList.remove('active'));
-        b.classList.add('active');
-        const view = b.getAttribute('data-view');
-        if (view === 'gh') {{ ghEl.classList.remove('hidden'); rsEl.classList.add('hidden'); }}
-        else {{ ghEl.classList.add('hidden'); rsEl.classList.remove('hidden'); }}
-      }});
-    }});
-  }});
-
-  // YouTube埋め込みのプログレッシブ表示化(2026-08-12追加、ユーザー指示
-  // 「連続でYoutube動画埋め込みをしているとスクロールが早いと表示が
-  // 遅れる事があるので、サムネイルの埋め込み動画の写真を素早く表示する
-  // ようにプログレッシブな感じで」への対応)。
-  //
-  // 正直な開示: ページ内の全<iframe src="https://www.youtube.com/embed/...">
-  // を、実際のiframe(重いYouTubeプレイヤー本体)ではなく、YouTube公式の
-  // サムネイルCDN(img.youtube.com)から取得した軽量な静止画(再生ボタン
-  // オーバーレイ付き)へ自動的に差し替える(YouTube Facadeパターン、
-  // lite-youtube-embed等で広く使われている既知の手法)。サムネイル画像は
-  // ブラウザ標準の`loading="lazy"`で画面内に近づいた時のみ読み込まれる
-  // ため、22本の動画を一度に全部読み込む従来方式より大幅に軽くなる。
-  // クリックした時点で初めて実際のiframe(自動再生付き)へ差し替え、
-  // その動画だけを再生する——動画自体の視聴体験は変わらない。
-  document.querySelectorAll('iframe[src*="youtube.com/embed/"]').forEach(iframe => {{
-    const src = iframe.getAttribute('src');
-    const match = src.match(/embed\/([a-zA-Z0-9_-]+)/);
-    if (!match) return;
-    const videoId = match[1];
-    const title = iframe.getAttribute('title') || 'YouTube video';
-    const wrapper = iframe.parentElement;
-    if (!wrapper) return;
-
-    const facade = document.createElement('div');
-    facade.className = 'yt-facade';
-    facade.style.cssText = 'position:absolute; inset:0; cursor:pointer; background:#000;';
-    facade.setAttribute('role', 'button');
-    facade.setAttribute('aria-label', '▶ ' + title);
-
-    const img = document.createElement('img');
-    img.src = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg';
-    img.loading = 'lazy';
-    img.alt = title;
-    img.style.cssText = 'width:100%; height:100%; object-fit:cover; display:block;';
-    facade.appendChild(img);
-
-    const playBtn = document.createElement('div');
-    playBtn.textContent = '▶';
-    playBtn.style.cssText = 'position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:3rem; color:#fff; text-shadow:0 0 12px rgba(0,0,0,.8); pointer-events:none;';
-    facade.appendChild(playBtn);
-
-    facade.addEventListener('click', () => {{
-      const realIframe = document.createElement('iframe');
-      realIframe.width = '100%';
-      realIframe.height = '100%';
-      realIframe.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:6px;';
-      realIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-      realIframe.title = title;
-      realIframe.setAttribute('frameborder', '0');
-      realIframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      realIframe.allowFullscreen = true;
-      wrapper.replaceChild(realIframe, facade);
-    }}, {{ once: true }});
-
-    wrapper.replaceChild(facade, iframe);
-  }});
-</script>
+<script type="application/json" id="page-data">{page_data_json}</script>
+<script src="/app.js" defer></script>
 </body>
 </html>
 "#
@@ -992,55 +828,6 @@ fn healthz() -> &'static str {
     "ok"
 }
 
-#[handler]
-fn help_page() -> Html<String> {
-    Html(format!(
-        r#"<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>困った時は | aruaru.tokyo</title>
-<style>{STYLE}</style>
-</head>
-<body>
-<main>
-<header><h1>困った時は</h1></header>
-
-<h2>Google Chromeで「保護されていない通信」と出る場合</h2>
-<p>Edge(Windowsの証明書ストアを使用)では正常なのに対し、Chromeは独自の
-「Chrome Root Store」という、Windowsとは別の信頼済みルート証明書リストを
-持っています。新しいLet's Encryptのルート証明書がまだお使いのChromeの
-バージョンに反映されていない可能性があります。</p>
-<p><strong>対処法:</strong> Chromeを<code>chrome://settings/help</code>から更新し、
-再起動(タスクマネージャーでプロセスが残っていないか確認)してから再度アクセスしてください。</p>
-
-<h2>サイトが表示されない場合(DNS_PROBE_FINISHED_NXDOMAIN等)</h2>
-<p>お使いのDNS(特にCloudflareの1.1.1.1)が、ドメインの権威サーバーに
-一時的に到達できないことがあります。Google(8.8.8.8)・Quad9(9.9.9.9)
-など別のDNSでは問題なく解決できることが多いです。</p>
-<p><strong>対処法:</strong> スマホのモバイル回線(Wi-Fiオフ)で試すか、
-Windowsの設定(ネットワークとインターネット → プロパティ → DNSサーバーの
-割り当てを「手動」)でDNSサーバーを変更してください。
-<strong>優先DNS</strong>欄に<code>8.8.8.8</code>のみ、<strong>代替DNS</strong>欄に
-<code>8.8.4.4</code>をそれぞれ別々に入力してください
-(1つの欄に<code>8.8.8.8 / 8.8.4.4</code>とまとめて入力すると
-「無効なエントリ」エラーになります)。「HTTPS経由のDNS」が
-「オン(手動テンプレート)」の場合はまず「オフ」にしてから保存を試してください。
-スマホでWi-Fi経由の場合は、静的IP化不要で「プライベートDNS」設定だけ
-変更できます(設定 → ネットワークとインターネット、機種によっては
-Wi-Fi → 詳細設定の中にある場合も → 「プライベートDNS」→
-「プロバイダのホスト名」を選択 → <code>dns.google</code> と入力して保存)。
-それでも解決しない場合は、単純にDNSの反映待ち(通常数分〜1時間程度)
-であることも多いです。</p>
-
-<div class="org-link"><a href="/">← TOP</a></div>
-</main>
-</body>
-</html>"#
-    ))
-}
-
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     tracing_subscriber::fmt::init();
@@ -1048,7 +835,10 @@ async fn main() -> Result<(), std::io::Error> {
     let app = Route::new()
         .at("/", get(top))
         .at("/healthz", get(healthz))
-        .at("/help", get(help_page))
+        .at("/help", StaticFileEndpoint::new("static/help.html"))
+        .at("/style.css", StaticFileEndpoint::new("static/style.css"))
+        .at("/app.js", StaticFileEndpoint::new("static/app.js"))
+        .at("/meta-index.js", StaticFileEndpoint::new("static/meta-index.js"))
         .at("/api/repos", get(api_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
