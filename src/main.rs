@@ -837,6 +837,8 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/healthz", get(healthz))
         .at("/help", StaticFileEndpoint::new("static/help.html"))
         .at("/style.css", StaticFileEndpoint::new("static/style.css"))
+        .at("/p", StaticFileEndpoint::new("static/p.html"))
+        .at("/k", StaticFileEndpoint::new("static/k.html"))
         .at("/app.js", StaticFileEndpoint::new("static/app.js"))
         .at("/meta-index.js", StaticFileEndpoint::new("static/meta-index.js"))
         .at("/api/repos", get(api_repos))
