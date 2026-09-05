@@ -719,6 +719,11 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
     <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
+    <p style="font-size:0.85rem;">気功。KIKOU. 自ら"気"を感じながら相手に流す練習法(動画)。<br>
+    <video controls preload="metadata" style="max-width:100%;width:480px;">
+    <source src="/video/kikou-practice.mp4" type="video/mp4">
+    お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
+    </video></p>
   </header>
 
   <div class="quick-links">
@@ -850,7 +855,8 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/api/repos", get(api_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
-        .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"));
+        .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
+        .at("/video/kikou-practice.mp4", StaticFileEndpoint::new("video/kikou-practice.mp4"));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
