@@ -713,6 +713,12 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
+    <p style="font-size:0.85rem;">イエス・キリスト</p>
+    <p style="font-size:0.85rem;">気功</p>
+    <p style="font-size:0.85rem;">気功。KIKOU.<br>
+    <a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
+    <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
+    <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
   </header>
 
   <div class="quick-links">
