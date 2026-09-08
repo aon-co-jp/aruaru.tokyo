@@ -717,9 +717,10 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </video></p>
     <div class="space-video" style="margin: 1.5rem 0; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
-    <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
-    <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/0zFcPiy6K10" title="【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <video controls preload="metadata" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;">
+    <source src="/video/NIHON-KOKUSAI.mp4" type="video/mp4">
+    お使いのブラウザは動画再生に対応していません。<a href="/video/NIHON-KOKUSAI.mp4">動画ファイルを直接開く</a>
+    </video>
     <p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
     <p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
     </div>
@@ -855,7 +856,8 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
         .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
-        .at("/video/kikou-practice.mp4", StaticFileEndpoint::new("video/kikou-practice.mp4"));
+        .at("/video/kikou-practice.mp4", StaticFileEndpoint::new("video/kikou-practice.mp4"))
+        .at("/video/NIHON-KOKUSAI.mp4", StaticFileEndpoint::new("video/NIHON-KOKUSAI.mp4"));
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
