@@ -153,6 +153,41 @@ const RELATED_SITES: &[RelatedSite] = &[
     },
 ];
 
+/// 新規事業提案(不動産電子契約・AUDIOルーム/シアタールームリフォーム・
+/// 各種保険・酪農家黒字化の人工授精士の話・植林〈杉より高級木材〉・
+/// 商工会議所&民生委員のSET創業支援&AI駆動プログラマー育成)の
+/// 日本語原文+英訳(2026-09-09追加、ユーザー指示によりrunno.tokyoと同じ
+/// 内容をaruaru.tokyoにも掲載)。
+const PROPOSAL_TEXT_JA_1: &str = "新規提案として、Amazon倉庫、コンビニ、スーパーなどのコーヒーの自動販売機コーナーや、イートインコーナーなどで、新規企画で始められるなら不動産の売買、賃貸などの電子契約、建設会社＆AUDIOルーム、IMAXシアターや4DXシアターの家庭版や住宅の壁や天井にスピーカーを埋め込んで映画館の様にリフォームしたり、それを一戸建て注文住宅として建設する工務店サービス、それを本物の映画館やコンサートホールとして建設する建設会社のサービス。AFLACやNISSAYやSONY損保などの人間やペットや火災保険、地震保険、自動車保険、ちなみに海外の自動車保険のセールスマンは自動車の新車も中古車の売買も行ないますし、お買い得な売出し中の一戸建て注文住宅も、建売物件もご紹介可能らしいです。";
+
+const PROPOSAL_TEXT_JA_2: &str = "ちなみ、先祖にレモン牛乳を作った関東牛乳の創業者がいますが、酪農家が黒字になる話として、まずは、人工授精士と言う資格の講座を受講して頂き、一生懸命ノートに講座の内容を書いてメモして、そしてTESTを受けてみごと合格して頂き、和牛の精子と卵子の受精卵を乳牛のメスに移植して妊娠すれば、乳牛が和牛と乳牛の両方の子牛を出産して牛乳とそれらの加工品と合わせて出荷する事で、酪農家が黒字なりやすいです。と言うお話もしておきます。ちなみに北海道くらい広い土地なら、なるべくフラットに平らに整地して、冬の豪雪が解けるタイミングで放牧の牛糞と雪が解けていっしょになると処理が大変な時に、あらかじめ、泥もじゃりも一緒に流し込めて、リサイクル土や肥料として出荷して販売してもらう前提で、排水溝や下水溝を建設する企画もご提案しておきます。";
+
+const PROPOSAL_TEXT_JA_3: &str = "日本の国土の7割は、山間部でして、植林をさせるのでしたら、杉の木よりも、花粉が舞わないように品種改良してヒノキやその他、丈夫な木で一戸建て注文住宅を建てたい人も多い黒檀やその他、白檀など高級木材は沢山の種類が御座います。日本全国や世界中の材木屋さんや建設会社や不動産会社と一緒にSETで工務店も経営したり、大工さんと業務提携すれば、杉の木よりは、比較的良い値段で売れやすいのではないでしょうか？";
+
+const PROPOSAL_TEXT_JA_4: &str = "日本全国の商工会議所と民生委員の方には是非国家公務員と民間の外郭団体の両方からお給料がもらえる様な必要なら法改正もして頂き、その他、商工会議所と民生委員と市区町村役場の方が、植林組合と大工さんと不動産会社と工務店とリフォーム会社や外壁塗装のサービスやAFLACや自動車などの保険と新車と中古車の販売会社も一緒にSETで創業し経営するノウハウを伝授したり次のサポートや業務提携やコンサルや就職サイトや不動産サイトも経営して頂き、企業誘致や工場誘致にはドローン空撮してその動画をYoutubeにUPしてそのリンクを市区町村のホームページなどでも紹介して頂いたり、その他、TOYOTAやLEXUSが中国の無人運転技術に完全に依存している問題は、得にAI駆動プログラマー育成を含む、国内のエンジニア育成をしていく得に、未経験者を企業研修しながら育成していく為の助成金や、補助金やその様なお金で、CLAUDE　CODE DESKTOP利用料を無償化してAI　先生として利用出来ると良い提案になると思っております。TOYOTAの様に中国の工場での生産コストと同等か、もしくは、それ以下に、日本の工場での生産コストを抑える為に、エンジンの一部を3Dプリンターで製造したり、搬入ロボットやロボットアームを含む生産ロボットなどの導入して実現しておりますので、Made in Japanのフル復活の為にも、なるべくやすく、壊れにくくメンテナンスもトラックから製造工場への搬入するロボットも含めて、国策、政策の一部に、日本全国の皆様のご協力が大切で不可欠だと思われます。";
+
+const PROPOSAL_TEXT_EN_1: &str = "As a new business proposal: at coffee vending-machine corners and eat-in areas inside Amazon warehouses, convenience stores, supermarkets and the like, new ventures could be launched — electronic contracts for real-estate sales and rentals; construction companies paired with audio rooms; home versions of IMAX or 4DX theaters, or renovation services that embed speakers into a house's walls and ceiling to turn it into a movie-theater-like space; local builders (koumuten) offering this as a custom-built house; and construction companies offering it as an actual movie theater or concert hall. Insurance such as AFLAC, Nissay, and Sony Sompo for people and pets, fire insurance, earthquake insurance, and auto insurance — incidentally, overseas auto-insurance salespeople reportedly also handle both new- and used-car sales, and can apparently introduce good-deal custom-order houses currently on the market as well as ready-built (spec) homes.";
+
+const PROPOSAL_TEXT_EN_2: &str = "By the way, one of my ancestors founded Kanto Milk, maker of \"lemon milk.\" Here's a story about how dairy farmers can turn a profit: first, take a course toward the \"artificial-insemination technician\" qualification, diligently write notes on the course content, sit the test, and pass it. Then, by implanting into a female dairy cow a fertilized egg made from Wagyu sperm and egg and having her become pregnant, the dairy cow gives birth to a calf that is part Wagyu and part dairy breed, and by shipping both the milk and these processed products together, it becomes much easier for the dairy farmer to turn a profit. I'll mention that as well. Also, on land as vast as Hokkaido, I'd propose leveling the ground as flat as possible, and building drainage/sewer channels designed so that, when winter's heavy snow melts and mixes with grazing cattle manure (which then becomes hard to handle), mud and gravel can be flushed in together too — on the premise that the resulting mixture is shipped and sold as recycled soil or fertilizer.";
+
+const PROPOSAL_TEXT_EN_3: &str = "About 70% of Japan's land is mountainous. If reforestation is to be carried out, rather than cedar (sugi), there are many other options — hinoki (Japanese cypress) bred not to scatter pollen, and other sturdy woods that many people want for building custom-order houses, as well as high-grade timbers such as ebony and sandalwood, of which there are many varieties. By also running a construction/building business as a \"set\" together with lumber merchants, construction companies, and real-estate companies across Japan and around the world, and by forming business partnerships with carpenters, wouldn't these be relatively easier to sell at a better price than cedar?";
+
+const PROPOSAL_TEXT_EN_4: &str = "I'd like to see chambers of commerce and civil welfare commissioners (minsei-iin) all across Japan be able to receive salaries from both national civil-service positions and private-sector affiliated organizations — amending the law if necessary. Beyond that, I'd like chambers of commerce, civil welfare commissioners, and municipal government staff to pass on the know-how for founding and running a combined (\"set\") business together with a reforestation cooperative, carpenters, real-estate companies, builders (koumuten), renovation companies, exterior-wall painting services, AFLAC and auto insurance, and new/used car dealers — and to also run the follow-up support, business partnerships, consulting, job-placement sites, and real-estate sites that go with it. For attracting companies and factories, I'd like them to shoot drone aerial footage, upload the videos to YouTube, and introduce those links on municipal websites as well. On another note, regarding the problem that Toyota and Lexus have become completely dependent on Chinese autonomous-driving technology: I think it would make a great proposal to use subsidies and grants for training domestic engineers — including especially training AI-driven programmers — by putting inexperienced people through in-house company training, and using that funding to make Claude Code Desktop free to use as an AI teacher. Just as Toyota has managed to keep production costs in its Japanese factories at or below the level of its Chinese factories by manufacturing part of the engine with 3D printers and introducing delivery robots, robot arms, and other production robots, I believe nationwide cooperation from everyone across Japan is essential, as part of national and government policy, toward a full revival of \"Made in Japan\" — including robots, as cheap and durable as possible with easy maintenance, that carry parts all the way from the truck into the factory.";
+
+fn render_proposal_section() -> String {
+    format!(
+        r#"<section class="block" id="proposal"><h2>新規事業提案 / New Business Proposal</h2><p>{ja1}</p><p>{ja2}</p><p>{ja3}</p><p>{ja4}</p><h3>English</h3><p>{en1}</p><p>{en2}</p><p>{en3}</p><p>{en4}</p></section>"#,
+        ja1 = PROPOSAL_TEXT_JA_1,
+        ja2 = PROPOSAL_TEXT_JA_2,
+        ja3 = PROPOSAL_TEXT_JA_3,
+        ja4 = PROPOSAL_TEXT_JA_4,
+        en1 = PROPOSAL_TEXT_EN_1,
+        en2 = PROPOSAL_TEXT_EN_2,
+        en3 = PROPOSAL_TEXT_EN_3,
+        en4 = PROPOSAL_TEXT_EN_4,
+    )
+}
+
 /// aon.tokyoに掲載済みの3本の動画セクション(鴨頭さんのマクドナルド動画・
 /// 宇宙の広さ体感動画・宇宙の大きさを体感できる動画)をそのままコピーした
 /// もの(2026-08-08追加、ユーザー指示)。カテゴリ一覧とガン治療報道
@@ -674,6 +709,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     let flat_json = flat_items_json();
     let page_data_json = format!(r#"{{"items":{flat_json}}}"#);
     let video_sections = render_video_sections();
+    let proposal_section = render_proposal_section();
     let cancer_news_section = render_cancer_news_section();
     let claude_code_desktop_search = youtube_search_link("AI駆動開発 CLAUDE CODE DESKTOP", "AI駆動開発 CLAUDE CODE DESKTOP");
 
@@ -749,6 +785,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   {categories_html}
 
   {video_sections}
+
+  {proposal_section}
 
   {cancer_news_section}
 
