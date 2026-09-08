@@ -715,7 +715,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <source src="/video/kikou-practice.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
     </video></p>
-    <div class="space-video" style="margin: 1.5rem 0; text-align: center; max-width: 640px;">
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
     <video controls preload="metadata" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;">
     <source src="/video/NIHON-KOKUSAI.mp4" type="video/mp4">
