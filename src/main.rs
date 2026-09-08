@@ -721,6 +721,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <source src="/video/NIHON-KOKUSAI.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。<a href="/video/NIHON-KOKUSAI.mp4">動画ファイルを直接開く</a>
     </video>
+    <p><a href="https://www.youtube.com/watch?v=0zFcPiy6K10" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=0zFcPiy6K10</a></p>
     <p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
     <p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
     </div>
