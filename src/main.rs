@@ -711,7 +711,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
     <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. 自ら"気"を感じながら相手に流す練習法(動画)。<br>
-    <video controls preload="metadata" style="max-width:100%;width:480px;">
+    <video controls preload="metadata" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;">
     <source src="/video/kikou-practice.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
     </video></p>
