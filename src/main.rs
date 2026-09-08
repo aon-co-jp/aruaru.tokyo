@@ -161,15 +161,6 @@ fn render_video_sections() -> String {
     r##"<p class="blog-link" style="font-size:1.4rem;"><a href="https://www.youtube.com/results?search_query=%E3%83%89%E3%82%A4%E3%83%84%E4%BC%81%E6%A5%AD%E3%81%AFIT%20WEB%20AI%E6%B4%BB%E7%94%A8%E3%81%A7%E6%99%82%E7%9F%AD%E5%8B%A4%E5%8B%99%20%E6%9C%89%E7%B5%A6%E6%B6%88%E5%8C%96%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84%20%E9%80%B1%E4%BC%913%E6%97%A5" target="_blank" rel="noopener noreferrer">▶️ ドイツ企業はIT WEB AI活用で時短勤務 有給消化率が高い 週休3日</a></p>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
-<h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
-<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
-<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/0zFcPiy6K10" title="【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
-<p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
-</div>
-
-<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【2ch馴れ初め】クレーム地獄の最下位スーパーに左遷された俺 →実はみんな優秀だったので本社を見返した結果 【ゆっくり】</h2>
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/In-Zf9LlUGs" title="【2ch馴れ初め】クレーム地獄の最下位スーパーに左遷された俺 →実はみんな優秀だったので本社を見返した結果 【ゆっくり】" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -724,6 +715,14 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <source src="/video/kikou-practice.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
     </video></p>
+    <div class="space-video" style="margin: 1.5rem 0; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
+    <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+    <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/0zFcPiy6K10" title="【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+    <p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
+    </div>
   </header>
 
   <div class="quick-links">
