@@ -131,6 +131,22 @@ pub const PROJECTS: &[Project] = &[
         role_ja: "「第二のKUSANAGI」——アプリのアップロード後にIPアドレスで起動し、ドメイン登録・HTTPS化を簡単に自動適用できる運用ツール(Rust → WebAssembly、フレームワーク不使用)。",
     },
     Project {
+        name: "open-english",
+        repo: "aon-co-jp/open-english",
+        has_readme: true,
+        has_porting: true,
+        has_claude: true,
+        role_ja: "ブラウザ製の静的フロントエンド+aruaru-llmのローカル常駐サーバーを組み合わせた「PC/Android向け英会話AI学習アプリ」。オンライン/オフライン両対応のハイブリッド構成、共有デモ環境+配信サーバーを持つ。学習(Study)ジャンル。",
+    },
+    Project {
+        name: "open-english-pc",
+        repo: "aon-co-jp/open-english-pc",
+        has_readme: true,
+        has_porting: true,
+        has_claude: true,
+        role_ja: "open-englishのクライアント(デスクトップ Windows/Linux/macOS・タブレット・モバイル)を本体(共有デモ+配信サーバー)から分離集約するモノレポ(pc/ tablet/ mobile/)。2026-09-10新設、骨組みのみで資産移設は作業中。学習(Study)ジャンル。",
+    },
+    Project {
         name: "open-raid-z",
         repo: "aon-co-jp/open-raid-z",
         has_readme: true,
