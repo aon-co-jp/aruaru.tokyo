@@ -771,6 +771,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <br />
     <a href="https://www.youtube.com/watch?v=mrCAz7mU9Zo" target="_blank" rel="noopener noreferrer">▶️ 【1日密着】Claude Codeに取り憑かれたエンジニア｜その衝撃の開発手法に迫る</a>
     <br />
+    <a href="https://www.facebook.com/reel/1753405299237847?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook Backup</a>
+    <br />
     {claude_code_desktop_search}
     <br />
     {related_sites}
