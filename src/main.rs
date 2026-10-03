@@ -776,7 +776,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <div style="margin-top:1rem;">
     <p>個人的バックアップ用</p>
     <p><a href="https://drive.google.com/file/d/1XEpYGPhKF7zWCoWfG_Nv2qrTBlXUhmnU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive(予備 / backup)</a></p>
-    <div style="margin-top:1rem;text-align:left;font-size:0.9rem;">
+    <div style="margin-top:1rem;text-align:left;font-size:1.05rem;">
     <p><b>所さん事件ですよ TKGが海外で大人気 与えるエサ 発酵薬膳の熟成海鮮リゾットのレシピと作り方が知りたい</b></p>
     <p>番組の回は見つかりましたが、「発酵薬膳の熟成海鮮リゾット」のレシピは見つかりませんでした。</p>
     <p><b>分かったこと</b></p>
