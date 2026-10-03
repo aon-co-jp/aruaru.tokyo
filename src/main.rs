@@ -868,6 +868,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p style="margin-top:1rem;">Google検索ワード：<b>セルロース　カーボン ファイバー バッテリー</b><br>その検索結果は<a href="https://www.google.com/search?q=%E3%82%BB%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B9%E3%80%80%E3%82%AB%E3%83%BC%E3%83%9C%E3%83%B3+%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC+%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC" target="_blank" rel="noopener noreferrer">こちら</a></p>
     <p><a href="https://www.google.com/search?q=%E3%82%BB%E3%83%AB%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%8A%E3%83%8E%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%EF%BC%88CNF%EF%BC%89+%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC" target="_blank" rel="noopener noreferrer">セルロースナノファイバー（CNF） バッテリー</a></p>
     <p><a href="https://www.youtube.com/results?search_query=%E3%83%87%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%9C%E3%83%B3%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC" target="_blank" rel="noopener noreferrer">デュアルカーボンバッテリー</a></p>
+    <p>デュアルカーボンファイバーバッテリー<br><a href="https://ameblo.jp/www-aon/entry-12980558678.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12980558678.html</a></p>
     </div>
     </div>
     </div>
