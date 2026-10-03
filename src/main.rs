@@ -824,6 +824,22 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <li>薬膳らしくしたい場合は、なつめ、陳皮（みかんの皮）、松の実を少量加えてもよいです。</li>
     </ul>
     </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/7wp8UYDx0dY" target="_blank" rel="noopener noreferrer">トヨタが全固体電池を超えた新電池を開発して米中EV絶望で世界中大パニック</a></h2>
+    <div id="toyota-box" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;">
+    <a id="toyota-link" href="https://www.youtube.com/shorts/7wp8UYDx0dY" target="_blank" rel="noopener noreferrer" title="トヨタが全固体電池を超えた新電池を開発して米中EV絶望で世界中大パニック" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/7wp8UYDx0dY/hqdefault.jpg" alt="トヨタが全固体電池を超えた新電池を開発して米中EV絶望で世界中大パニック" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <script>
+    document.getElementById('toyota-link').addEventListener('click',function(e){{
+      e.preventDefault();
+      document.getElementById('toyota-box').innerHTML='<iframe src="https://www.youtube.com/embed/7wp8UYDx0dY?autoplay=1" title="トヨタが全固体電池を超えた新電池を開発して米中EV絶望で世界中大パニック" style="width:100%;height:100%;border:0;" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    }});
+    </script>
+    <p><a href="https://www.youtube.com/shorts/7wp8UYDx0dY" target="_blank" rel="noopener noreferrer">https://www.youtube.com/shorts/7wp8UYDx0dY</a></p>
+    </div>
     </div>
     <script>
     (function(){{
