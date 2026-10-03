@@ -839,6 +839,33 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     }});
     </script>
     <p><a href="https://www.youtube.com/shorts/7wp8UYDx0dY" target="_blank" rel="noopener noreferrer">https://www.youtube.com/shorts/7wp8UYDx0dY</a></p>
+    <div style="margin-top:1rem;text-align:left;font-size:1.05rem;">
+    <p><b>AI による概要</b><br>トヨタが開発している「ファイバー電池」および同時期に注目されている次世代電池（全固体電池など）の特性について、項目ごとに解説します。なお、トヨタ中央研究所が2024年に発表した「ファイバー電池（同心円状の電極構造を持つ小型リチウムイオン電池）」は、主にドローンやウェアラブル機器、デバイスの骨格自体をバッテリーにする技術として研究が進められています。</p>
+    <p><b>1. 温度耐性（低い温度・高い温度）</b></p>
+    <ul>
+    <li><b>低い温度（低温耐性）：</b> 従来の液体リチウムイオン電池は、氷点下になると電解液の粘度が上がり性能が著しく低下します。一方、ファイバー電池は極細の同心円構造によってイオンの移動経路が非常に短いため、低温環境でも効率よくイオンを拡散させやすく、性能低下を抑えられるポテンシャルを持っています。</li>
+    <li><b>高い温度（高温耐性）：</b> ファイバー電池は従来の液体電解質（有機溶媒）をベースにしているため、極端な高温（一般的に80℃以上）環境では熱暴走のリスクがあり、全固体電池ほどの超高温耐性はありません。</li>
+    </ul>
+    <p><b>2. 急速充電</b></p>
+    <ul>
+    <li>非常に高い急速充放電性能を誇ります。</li>
+    <li>ファイバー電池は、中心の炭素繊維（負極）の周りをセパレーターと正極で覆う「3次元の同心円状構造」を採用しています。これにより、従来のシートを重ねるタイプの電池に比べて電極の対向面積が圧倒的に広く、イオンの移動距離が短いため、大電流を一気に流す「急速充電」や「高出力な放電」が構造上得意となっています。</li>
+    </ul>
+    <p><b>3. 安全性</b></p>
+    <ul>
+    <li><b>形状自由度によるフェイルセーフ：</b> 糸のように細いユニットを束ねて使用するため、万が一どこか1本が破損・短絡（ショート）しても、電池全体が一気に熱暴走を起こすリスクを分散・軽減しやすい構造をしています。</li>
+    <li><b>電解質の制約：</b> 構造的な強みはあるものの、内部に可燃性の液体電解質を使用している点では従来のリチウムイオン電池と同じです。そのため、電解質自体が燃えない固体でできている「全固体電池」と比較すると、根本的な発火リスクの低さ（安全性）という面では一歩譲ります。</li>
+    </ul>
+    <p><b>💡 補足：EV用の「全固体電池」との違い</b><br>トヨタの次世代電池のニュースでは、EV（電気自動車）向けに2027〜2028年の実用化を目指している「全固体電池」も有名です。これらは以下のように特性や用途が住み分けられると予想されています。</p>
+    <table style="border-collapse:collapse;width:100%;font-size:0.95rem;">
+    <tr><th style="border:1px solid #888;padding:6px;">項目</th><th style="border:1px solid #888;padding:6px;">ファイバー電池（中研開発）</th><th style="border:1px solid #888;padding:6px;">全固体電池（EV向け本命）</th></tr>
+    <tr><td style="border:1px solid #888;padding:6px;">主な用途</td><td style="border:1px solid #888;padding:6px;">ドローン、ロボット、ウェアラブル機器</td><td style="border:1px solid #888;padding:6px;">電気自動車（EV）</td></tr>
+    <tr><td style="border:1px solid #888;padding:6px;">構造の特徴</td><td style="border:1px solid #888;padding:6px;">糸状（繊維）で、デバイスの骨格に組み込める</td><td style="border:1px solid #888;padding:6px;">電解質をすべて固体（セラミクス等）に置き換え</td></tr>
+    <tr><td style="border:1px solid #888;padding:6px;">温度耐性</td><td style="border:1px solid #888;padding:6px;">短い経路により低温に強いが、高温は並み</td><td style="border:1px solid #888;padding:6px;">低温から高温まで極めて広い範囲で安定</td></tr>
+    <tr><td style="border:1px solid #888;padding:6px;">急速充電</td><td style="border:1px solid #888;padding:6px;">イオン移動距離が短いため非常に速い</td><td style="border:1px solid #888;padding:6px;">高温に強く大電流を流せるため10分以下</td></tr>
+    <tr><td style="border:1px solid #888;padding:6px;">安全性</td><td style="border:1px solid #888;padding:6px;">破損時のリスク分散構造</td><td style="border:1px solid #888;padding:6px;">液漏れせず、絶対に燃えない高い安全性</td></tr>
+    </table>
+    </div>
     </div>
     </div>
     <script>
