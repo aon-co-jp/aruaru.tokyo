@@ -772,6 +772,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <div id="tokoro-video" style="display:none;margin-top:1rem;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">所さん！事件ですよ　ＴＫＧが海外で大人気！？　ニッポンの卵が大進化</h2>
     <video id="tokoro-player" controls preload="none" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;"></video>
+    </div>
+    <div style="margin-top:1rem;">
     <p>個人的バックアップ用</p>
     <p><a href="https://drive.google.com/file/d/1XEpYGPhKF7zWCoWfG_Nv2qrTBlXUhmnU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive(予備 / backup)</a></p>
     </div>
