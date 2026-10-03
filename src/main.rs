@@ -4,8 +4,9 @@
 
 use poem::endpoint::StaticFileEndpoint;
 use poem::listener::TcpListener;
-use poem::web::{Html, Query};
-use poem::{get, handler, Route, Server};
+use poem::http::StatusCode;
+use poem::web::{Html, Json, Query};
+use poem::{get, handler, post, EndpointExt, Route, Server};
 use rand::seq::SliceRandom;
 use serde::Deserialize;
 
@@ -760,6 +761,37 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p><a href="https://www.youtube.com/watch?v=0zFcPiy6K10" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=0zFcPiy6K10</a></p>
     <p><a href="https://www.facebook.com/reel/1589704945870968?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
     <p><a href="/video/7-percent.mp4" target="_blank" rel="noopener noreferrer">動画(mp4、予備 / backup)</a></p>
+    <div id="tokoro-gate" style="margin-top:1rem;">
+    <p>パスワードを入力して下さい。</p>
+    <form id="tokoro-form" autocomplete="off">
+    <input type="password" id="tokoro-pw" autocomplete="off" aria-label="パスワード" style="padding:0.4rem;font-size:1rem;">
+    <button type="submit">入力完了</button>
+    </form>
+    <p id="tokoro-msg" style="color:#c00;font-size:0.9rem;"></p>
+    </div>
+    <div id="tokoro-video" style="display:none;margin-top:1rem;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">所さん！事件ですよ　ＴＫＧが海外で大人気！？　ニッポンの卵が大進化</h2>
+    <video id="tokoro-player" controls preload="none" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;"></video>
+    <p><a href="https://drive.google.com/file/d/1XEpYGPhKF7zWCoWfG_Nv2qrTBlXUhmnU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive(予備 / backup)</a></p>
+    </div>
+    <script>
+    (function(){{
+      var f=document.getElementById('tokoro-form');
+      f.addEventListener('submit',function(e){{
+        e.preventDefault();
+        var m=document.getElementById('tokoro-msg');
+        m.textContent='';
+        fetch('/api/tokoro-unlock',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{password:document.getElementById('tokoro-pw').value}})}})
+          .then(function(r){{return r.ok?r.json():Promise.reject();}})
+          .then(function(j){{
+            document.getElementById('tokoro-player').src='/video/tokoro.mp4?t='+encodeURIComponent(j.token);
+            document.getElementById('tokoro-gate').style.display='none';
+            document.getElementById('tokoro-video').style.display='block';
+          }})
+          .catch(function(){{m.textContent='パスワードが違います。';}});
+      }});
+    }})();
+    </script>
     </div>
   </header>
 
@@ -882,6 +914,31 @@ fn healthz() -> &'static str {
     "ok"
 }
 
+static TOKORO_TOKENS: std::sync::Mutex<Vec<String>> = std::sync::Mutex::new(Vec::new());
+
+#[derive(serde::Deserialize)]
+struct TokoroUnlock {
+    password: String,
+}
+
+/// パスワードは環境変数`ARUARU_TOKYO_TOKORO_PASSWORD`(ソースには置かない)。未設定なら常に拒否。
+#[handler]
+async fn tokoro_unlock(Json(body): Json<TokoroUnlock>) -> poem::Result<Json<serde_json::Value>> {
+    let expected = std::env::var("ARUARU_TOKYO_TOKORO_PASSWORD").unwrap_or_default();
+    let expected = expected.trim();
+    if expected.is_empty() || body.password.trim() != expected {
+        tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        return Err(poem::Error::from_status(StatusCode::UNAUTHORIZED));
+    }
+    let token: String = (0..4).map(|_| format!("{:016x}", rand::random::<u64>())).collect();
+    let mut tokens = TOKORO_TOKENS.lock().unwrap();
+    if tokens.len() >= 1000 {
+        tokens.clear();
+    }
+    tokens.push(token.clone());
+    Ok(Json(serde_json::json!({ "token": token })))
+}
+
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     tracing_subscriber::fmt::init();
@@ -900,7 +957,18 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/open-aruaru-runo", get(meta_index_page))
         .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
         .at("/video/kikou-practice.mp4", StaticFileEndpoint::new("video/kikou-practice.mp4"))
-        .at("/video/NIHON-KOKUSAI.mp4", StaticFileEndpoint::new("video/NIHON-KOKUSAI.mp4"));
+        .at("/video/NIHON-KOKUSAI.mp4", StaticFileEndpoint::new("video/NIHON-KOKUSAI.mp4"))
+        .at("/api/tokoro-unlock", post(tokoro_unlock))
+        .at(
+            "/video/tokoro.mp4",
+            StaticFileEndpoint::new("video/所さん！事件ですよ　ＴＫＧが海外で大人気！？　ニッポンの卵が大進化.mp4").before(|req| async move {
+                let t = req.uri().query().and_then(|q| q.split('&').find_map(|kv| kv.strip_prefix("t=")));
+                match t {
+                    Some(t) if TOKORO_TOKENS.lock().unwrap().iter().any(|x| x == t) => Ok(req),
+                    _ => Err(poem::Error::from_status(StatusCode::FORBIDDEN)),
+                }
+            }),
+        );
     tracing::info!(%bind, "starting aruaru-tokyo-server");
     Server::new(TcpListener::bind(&bind)).run(app).await
 }
