@@ -753,10 +753,11 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
     </video></p>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
-    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【簡単】気を強力に出して気功治療もできる【気功講座12】</h2>
-    <div class="fb-click" data-href="https://www.facebook.com/reel/932810149903379" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:linear-gradient(135deg,#1c2b4a,#0b1020);border-radius:6px;overflow:hidden;cursor:pointer;">
-    <a href="https://www.facebook.com/reel/932810149903379?locale=ja_JP" target="_blank" rel="noopener noreferrer" title="【簡単】気を強力に出して気功治療もできる【気功講座12】" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#fff;text-decoration:none;">
-    <span style="font-size:4rem;text-shadow:0 0 12px #000;">▶</span>
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=7BKeQN4HeDM" target="_blank" rel="noopener noreferrer">【簡単】気を強力に出して気功治療もできる【気功講座12】</a></h2>
+    <div class="yt-click" data-id="7BKeQN4HeDM" data-title="【簡単】気を強力に出して気功治療もできる【気功講座12】" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=7BKeQN4HeDM" target="_blank" rel="noopener noreferrer" title="【簡単】気を強力に出して気功治療もできる【気功講座12】" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/7BKeQN4HeDM/hqdefault.jpg" alt="【簡単】気を強力に出して気功治療もできる【気功講座12】" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
     </a>
     </div>
     <p><a href="https://www.facebook.com/reel/932810149903379?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/932810149903379?locale=ja_JP</a></p>
@@ -993,7 +994,6 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
         b.appendChild(f);
       }});
     }});
-    </script>
     </script>
     </div>
     <script>
