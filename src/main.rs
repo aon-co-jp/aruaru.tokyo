@@ -766,6 +766,15 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=zNqA9q9l5M0" target="_blank" rel="noopener noreferrer">【経絡に気を流す方法】十二経脈を活性化しよう【気功講座31】</a></h2>
+    <div class="yt-click" data-id="zNqA9q9l5M0" data-title="【経絡に気を流す方法】十二経脈を活性化しよう【気功講座31】" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=zNqA9q9l5M0" target="_blank" rel="noopener noreferrer" title="【経絡に気を流す方法】十二経脈を活性化しよう【気功講座31】" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/zNqA9q9l5M0/hqdefault.jpg" alt="【経絡に気を流す方法】十二経脈を活性化しよう【気功講座31】" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
     <video controls preload="metadata" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;">
     <source src="/video/NIHON-KOKUSAI.mp4" type="video/mp4">
