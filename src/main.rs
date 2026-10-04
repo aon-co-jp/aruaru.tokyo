@@ -994,19 +994,6 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
       }});
     }});
     </script>
-    <script>
-    document.querySelectorAll('.fb-click').forEach(function(b){{
-      b.querySelector('a').addEventListener('click',function(e){{
-        e.preventDefault();
-        var f=document.createElement('iframe');
-        f.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent(b.dataset.href)+'&show_text=false&autoplay=true';
-        f.style.cssText='width:100%;height:100%;border:0;';
-        f.allow='autoplay; encrypted-media; picture-in-picture';
-        f.allowFullscreen=true;
-        b.innerHTML='';
-        b.appendChild(f);
-      }});
-    }});
     </script>
     </div>
     <script>
