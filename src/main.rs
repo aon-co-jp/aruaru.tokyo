@@ -871,6 +871,61 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p>デュアルカーボンファイバーバッテリー<br><a href="https://ameblo.jp/www-aon/entry-12980558678.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12980558678.html</a></p>
     </div>
     </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=p0j1ULzUadQ" target="_blank" rel="noopener noreferrer">8割の面積が消えた回路／日清紡がシリコンマザーボードを発表／チップレットで載せきれない受動部品までICと1枚に</a></h2>
+    <div class="yt-click" data-id="p0j1ULzUadQ" data-title="8割の面積が消えた回路／日清紡がシリコンマザーボードを発表／チップレットで載せきれない受動部品までICと1枚に" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=p0j1ULzUadQ" target="_blank" rel="noopener noreferrer" title="8割の面積が消えた回路／日清紡がシリコンマザーボードを発表／チップレットで載せきれない受動部品までICと1枚に" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/p0j1ULzUadQ/hqdefault.jpg" alt="8割の面積が消えた回路／日清紡がシリコンマザーボードを発表／チップレットで載せきれない受動部品までICと1枚に" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/1123034143705564?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1123034143705564?locale=ja_JP</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=wUHR7L9LwM0" target="_blank" rel="noopener noreferrer">空中発射型ロケット実験成功（2021年1月19日）</a></h2>
+    <div class="yt-click" data-id="wUHR7L9LwM0" data-title="空中発射型ロケット実験成功（2021年1月19日）" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=wUHR7L9LwM0" target="_blank" rel="noopener noreferrer" title="空中発射型ロケット実験成功（2021年1月19日）" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/wUHR7L9LwM0/hqdefault.jpg" alt="空中発射型ロケット実験成功（2021年1月19日）" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/1799737474697368?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1799737474697368?locale=ja_JP</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=BEDhnuk4kJg" target="_blank" rel="noopener noreferrer">空飛ぶロケット発射機【世界最大の飛行機】極超音速飛行体の空中発射母機</a></h2>
+    <div class="yt-click" data-id="BEDhnuk4kJg" data-title="空飛ぶロケット発射機【世界最大の飛行機】極超音速飛行体の空中発射母機" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=BEDhnuk4kJg" target="_blank" rel="noopener noreferrer" title="空飛ぶロケット発射機【世界最大の飛行機】極超音速飛行体の空中発射母機" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/BEDhnuk4kJg/hqdefault.jpg" alt="空飛ぶロケット発射機【世界最大の飛行機】極超音速飛行体の空中発射母機" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/943388708419201?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/943388708419201?locale=ja_JP</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=Xm1faoNSYK4" target="_blank" rel="noopener noreferrer">【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！</a></h2>
+    <div class="yt-click" data-id="Xm1faoNSYK4" data-title="【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=Xm1faoNSYK4" target="_blank" rel="noopener noreferrer" title="【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/Xm1faoNSYK4/hqdefault.jpg" alt="【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/1778440423261550?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1778440423261550?locale=ja_JP</a></p>
+    </div>
+    <script>
+    document.querySelectorAll('.yt-click').forEach(function(b){{
+      b.querySelector('a').addEventListener('click',function(e){{
+        e.preventDefault();
+        var f=document.createElement('iframe');
+        f.src='https://www.youtube.com/embed/'+b.dataset.id+'?autoplay=1';
+        f.title=b.dataset.title;
+        f.style.cssText='width:100%;height:100%;border:0;';
+        f.allow='autoplay; encrypted-media; picture-in-picture';
+        f.allowFullscreen=true;
+        b.innerHTML='';
+        b.appendChild(f);
+      }});
+    }});
+    </script>
     </div>
     <script>
     (function(){{
