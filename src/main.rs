@@ -902,6 +902,47 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p><a href="https://www.facebook.com/reel/943388708419201?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/943388708419201?locale=ja_JP</a></p>
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/PiAzzP8vYp8" target="_blank" rel="noopener noreferrer">遠心力でロケットを打ち上げ!</a></h2>
+    <div class="yt-click" data-id="PiAzzP8vYp8" data-title="遠心力でロケットを打ち上げ!" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/PiAzzP8vYp8" target="_blank" rel="noopener noreferrer" title="遠心力でロケットを打ち上げ!" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/PiAzzP8vYp8/hqdefault.jpg" alt="遠心力でロケットを打ち上げ!" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/2274281903372044?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/2274281903372044?locale=ja_JP</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=10UgbgnsAcE" target="_blank" rel="noopener noreferrer">日本の新たな発見、コンクリートに取って代わる可能性</a></h2>
+    <div class="yt-click" data-id="10UgbgnsAcE" data-title="日本の新たな発見、コンクリートに取って代わる可能性" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=10UgbgnsAcE" target="_blank" rel="noopener noreferrer" title="日本の新たな発見、コンクリートに取って代わる可能性" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/10UgbgnsAcE/hqdefault.jpg" alt="日本の新たな発見、コンクリートに取って代わる可能性" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/2530793094085429?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/2530793094085429?locale=ja_JP</a></p>
+    <div style="text-align:left;font-size:1.05rem;">
+    <p>通常のコンクリートの場合は、セルロースナノファイバーを混ぜるとより頑丈になります。<br>更に固まる直前に、モバイルバイブマッサージャーなどで振動を与えて均一感を与えると、更に頑丈になります。</p>
+    </div>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/EifHEsWIBDU" target="_blank" rel="noopener noreferrer">人のウンチを混ぜたら強度42％アップ!?</a></h2>
+    <div class="yt-click" data-id="EifHEsWIBDU" data-title="人のウンチを混ぜたら強度42％アップ!?" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/EifHEsWIBDU" target="_blank" rel="noopener noreferrer" title="人のウンチを混ぜたら強度42％アップ!?" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/EifHEsWIBDU/hqdefault.jpg" alt="人のウンチを混ぜたら強度42％アップ!?" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/4601253880112669?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/4601253880112669?locale=ja_JP</a></p>
+    <div style="text-align:left;font-size:1.05rem;">
+    <p>2026年9月29日<br>2026年<br>人の排泄物から作ったバイオ炭を、コンクリートのセメントの一部として利用する研究が行われています。<br>10％を置き換えた実験では、91日後に圧縮強度が21％、曲げ強度が42％増加しました。<br>廃棄物を建築材料として活用できる可能性が研究されています。</p>
+    </div>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: left; max-width: 640px; font-size:1.05rem;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">奈良林直×加藤康子◆放射性廃棄物の無害化に成功！Part2 核技術界に激震!!! 原発の未来に光！</h2>
+    <p>信憑性は不明です。嘘とか不可能とか出来ないと言う動画も御座います。</p>
+    <p>Youtube検索結果は<a href="https://www.youtube.com/results?search_query=%E5%A5%88%E8%89%AF%E6%9E%97%E7%9B%B4%C3%97%E5%8A%A0%E8%97%A4%E5%BA%B7%E5%AD%90%E2%97%86%E6%94%BE%E5%B0%84%E6%80%A7%E5%BB%83%E6%A3%84%E7%89%A9%E3%81%AE%E7%84%A1%E5%AE%B3%E5%8C%96%E3%81%AB%E6%88%90%E5%8A%9F%EF%BC%81Part2+%E6%A0%B8%E6%8A%80%E8%A1%93%E7%95%8C%E3%81%AB%E6%BF%80%E9%9C%87!!!+%E5%8E%9F%E7%99%BA%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%81%AB%E5%85%89%EF%BC%81" target="_blank" rel="noopener noreferrer">こちら</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=Xm1faoNSYK4" target="_blank" rel="noopener noreferrer">【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！</a></h2>
     <div class="yt-click" data-id="Xm1faoNSYK4" data-title="【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
     <a href="https://www.youtube.com/watch?v=Xm1faoNSYK4" target="_blank" rel="noopener noreferrer" title="【朗報！】なんと大阪公立大学がレアアース回収に成功！南鳥島レアアースに追い風になる理由を解説します！！" style="display:block;width:100%;height:100%;">
