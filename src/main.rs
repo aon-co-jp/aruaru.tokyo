@@ -754,6 +754,11 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </video></p>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【簡単】気を強力に出して気功治療もできる【気功講座12】</h2>
+    <div class="fb-click" data-href="https://www.facebook.com/reel/932810149903379" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:linear-gradient(135deg,#1c2b4a,#0b1020);border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.facebook.com/reel/932810149903379?locale=ja_JP" target="_blank" rel="noopener noreferrer" title="【簡単】気を強力に出して気功治療もできる【気功講座12】" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#fff;text-decoration:none;">
+    <span style="font-size:4rem;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
     <p><a href="https://www.facebook.com/reel/932810149903379?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/932810149903379?locale=ja_JP</a></p>
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
@@ -981,6 +986,20 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
         var f=document.createElement('iframe');
         f.src='https://www.youtube.com/embed/'+b.dataset.id+'?autoplay=1';
         f.title=b.dataset.title;
+        f.style.cssText='width:100%;height:100%;border:0;';
+        f.allow='autoplay; encrypted-media; picture-in-picture';
+        f.allowFullscreen=true;
+        b.innerHTML='';
+        b.appendChild(f);
+      }});
+    }});
+    </script>
+    <script>
+    document.querySelectorAll('.fb-click').forEach(function(b){{
+      b.querySelector('a').addEventListener('click',function(e){{
+        e.preventDefault();
+        var f=document.createElement('iframe');
+        f.src='https://www.facebook.com/plugins/video.php?href='+encodeURIComponent(b.dataset.href)+'&show_text=false&autoplay=true';
         f.style.cssText='width:100%;height:100%;border:0;';
         f.allow='autoplay; encrypted-media; picture-in-picture';
         f.allowFullscreen=true;
