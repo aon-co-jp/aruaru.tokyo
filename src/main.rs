@@ -980,6 +980,15 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     <p><a href="https://www.facebook.com/reel/1778440423261550?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1778440423261550?locale=ja_JP</a></p>
     </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/APtgWQrH1mE" target="_blank" rel="noopener noreferrer">ブリキ缶とバカにされた日本のトラクターが北米でとんでもないことに…</a></h2>
+    <div class="yt-click" data-id="APtgWQrH1mE" data-title="ブリキ缶とバカにされた日本のトラクターが北米でとんでもないことに…" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/APtgWQrH1mE" target="_blank" rel="noopener noreferrer" title="ブリキ缶とバカにされた日本のトラクターが北米でとんでもないことに…" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/APtgWQrH1mE/hqdefault.jpg" alt="ブリキ缶とバカにされた日本のトラクターが北米でとんでもないことに…" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
       b.querySelector('a').addEventListener('click',function(e){{
