@@ -991,6 +991,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
+      var t=document.createElement('p');t.textContent=b.dataset.title;b.parentNode.insertBefore(t,b.nextSibling);
       b.querySelector('a').addEventListener('click',function(e){{
         e.preventDefault();
         var f=document.createElement('iframe');
