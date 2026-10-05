@@ -998,9 +998,6 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </a>
     </div>
     </div>
-    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
-    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/results?search_query=%E6%BA%B6%E6%8E%A5%E3%80%80%E9%87%91%E5%B1%9E%E3%80%803D%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer">溶接　金属　3Dプリンター　Youtube検索結果はこちら</a></h2>
-    </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
       var h=b.parentNode.querySelector('h2');
