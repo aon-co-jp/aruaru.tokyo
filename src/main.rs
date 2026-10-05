@@ -989,9 +989,22 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </a>
     </div>
     </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=l5qJAHhvvBs" target="_blank" rel="noopener noreferrer">ロボットで一括りにするな！ロボット業界（ファナック・安川電機）を完全解説。業界研究・企業研究・志望動機、これ1本！</a></h2>
+    <div class="yt-click" data-id="l5qJAHhvvBs" data-title="ロボットで一括りにするな！ロボット業界（ファナック・安川電機）を完全解説。業界研究・企業研究・志望動機、これ1本！" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=l5qJAHhvvBs" target="_blank" rel="noopener noreferrer" title="ロボットで一括りにするな！ロボット業界（ファナック・安川電機）を完全解説。業界研究・企業研究・志望動機、これ1本！" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/l5qJAHhvvBs/hqdefault.jpg" alt="ロボットで一括りにするな！ロボット業界（ファナック・安川電機）を完全解説。業界研究・企業研究・志望動機、これ1本！" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/results?search_query=%E6%BA%B6%E6%8E%A5%E3%80%80%E9%87%91%E5%B1%9E%E3%80%803D%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer">溶接　金属　3Dプリンター　Youtube検索結果はこちら</a></h2>
+    </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
-      var t=document.createElement('p');t.textContent=b.dataset.title;b.parentNode.insertBefore(t,b.nextSibling);
+      var h=b.parentNode.querySelector('h2');
+      if(!h||h.textContent.trim()!==b.dataset.title){{var t=document.createElement('p');t.textContent=b.dataset.title;b.parentNode.insertBefore(t,b.nextSibling);}}
       b.querySelector('a').addEventListener('click',function(e){{
         e.preventDefault();
         var f=document.createElement('iframe');
