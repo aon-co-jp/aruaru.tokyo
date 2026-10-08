@@ -57,6 +57,14 @@ fn google_video_search_link(label: &str, query: &str) -> String {
 /// だと分かりにくいため、別途分かりやすいラベルのリンクを追加する。
 const RUNO_TOKYO_URL: &str = "https://runo.tokyo/";
 
+/// AI駆動開発(WEBスキルが無くても母国語でWEBサイト・スマホアプリを開発する)の研究の一部として
+/// 紹介する記事(2026-10-08追加、ユーザー指示)。タイトルはユーザー提供の表記のまま、URLも表示する。
+const AI_DRIVEN_RESEARCH_HTML: &str = r#"<div class="ai-driven-research" style="margin:1rem auto;padding:.8rem 1rem;max-width:42rem;border:1px solid rgba(128,128,128,.5);border-radius:8px;text-align:left;">
+    <strong>🔬 研究中：Claudeによる、WEBスキルが無くても日本語（母国語）でWEBサイトやスマホアプリを開発する為のAI駆動開発（研究の一部）</strong><br />
+    📝 <a href="https://ameblo.jp/www-aon/entry-12973252437.html" target="_blank" rel="noopener noreferrer">プログラム言語やフレームワークなどの全てをRust（Poemやhyper）版に移植するメリット？</a><br />
+    <a href="https://ameblo.jp/www-aon/entry-12973252437.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12973252437.html</a>
+  </div>"#;
+
 /// トップページの「Claude / aruaru 紹介」リンク群の直前に出す、オンライン学習サイトの紹介
 /// (2026-10-08追加、ユーザー指示)。文言・URLはユーザー提供のものをそのまま使う。
 /// `format!`の置換対象に埋め込むため、波括弧は含めないこと。
@@ -1064,6 +1072,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="/open-aruaru-runo-iLumi">📚 プロジェクトシリーズ</a>
     <br />
     {ONLINE_LEARNING_HTML}
+    {AI_DRIVEN_RESEARCH_HTML}
     <a href="https://www.youtube.com/watch?v=mrCAz7mU9Zo" target="_blank" rel="noopener noreferrer">▶️ 【1日密着】Claude Codeに取り憑かれたエンジニア｜その衝撃の開発手法に迫る</a>
     <br />
     <a href="https://www.facebook.com/reel/1753405299237847?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook Backup</a>
