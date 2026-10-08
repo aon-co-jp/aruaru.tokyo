@@ -57,6 +57,23 @@ fn google_video_search_link(label: &str, query: &str) -> String {
 /// だと分かりにくいため、別途分かりやすいラベルのリンクを追加する。
 const RUNO_TOKYO_URL: &str = "https://runo.tokyo/";
 
+/// トップページの「Claude / aruaru 紹介」リンク群の直前に出す、オンライン学習サイトの紹介
+/// (2026-10-08追加、ユーザー指示)。文言・URLはユーザー提供のものをそのまま使う。
+/// `format!`の置換対象に埋め込むため、波括弧は含めないこと。
+const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin:1rem auto;padding:.8rem 1rem;max-width:42rem;border:1px solid rgba(128,128,128,.5);border-radius:8px;text-align:left;">
+    <strong>🎓 オンライン学習サイト / Online learning</strong><br />
+    AI駆動開発も学べます。WEBスキルなしで日本語でWEBサイトやスマホアプリが開発出来る様になります。<br />
+    <a href="https://progate.com/courses/feature/ai-driven-development/exercises/atmoSFuL468uLDi-Pd-lI" target="_blank" rel="noopener noreferrer">▶️ Progate「AI駆動開発」</a><br />
+    HTML,CSSを学ぼう<br />
+    <a href="https://progate.com/courses/feature/webpage/exercises/hJQNO8xPIcha_idvTX2dn" target="_blank" rel="noopener noreferrer">▶️ Progate「HTML・CSS」</a><br />
+    Pythonなら、無料ならPaizaの<br />
+    <a href="https://paiza.jp/works/search_courses/2208" target="_blank" rel="noopener noreferrer">▶️ paizaラーニング「Python3」入門講座一覧</a><br />
+    Python プロゲート<br />
+    <a href="https://progate.com/courses/python" target="_blank" rel="noopener noreferrer">▶️ Progate「Python入門」</a><br />
+    その他無料でPythonが学べます。<br />
+    <a href="https://www.python.jp/train/index.html" target="_blank" rel="noopener noreferrer">▶️ python.jp「Python入門講座」</a>
+  </div>"#;
+
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const BLOG_POST_URL: &str = "https://ameblo.jp/www-aon/entry-12973252437.html";
@@ -1046,6 +1063,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="/help">❓ 困った時は</a>
     <a href="/open-aruaru-runo-iLumi">📚 プロジェクトシリーズ</a>
     <br />
+    {ONLINE_LEARNING_HTML}
     <a href="https://www.youtube.com/watch?v=mrCAz7mU9Zo" target="_blank" rel="noopener noreferrer">▶️ 【1日密着】Claude Codeに取り憑かれたエンジニア｜その衝撃の開発手法に迫る</a>
     <br />
     <a href="https://www.facebook.com/reel/1753405299237847?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook Backup</a>
