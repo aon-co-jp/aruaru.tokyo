@@ -894,6 +894,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     }});
     </script>
     <p><a href="https://www.youtube.com/shorts/7wp8UYDx0dY" target="_blank" rel="noopener noreferrer">https://www.youtube.com/shorts/7wp8UYDx0dY</a></p>
+    <p><a href="https://www.facebook.com/reel/1626743582451474?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1626743582451474?locale=ja_JP</a></p>
     <div style="margin-top:1rem;text-align:left;font-size:1.05rem;">
     <p><b>AI による概要</b><br>トヨタが開発している「ファイバー電池」および同時期に注目されている次世代電池（全固体電池など）の特性について、項目ごとに解説します。なお、トヨタ中央研究所が2024年に発表した「ファイバー電池（同心円状の電極構造を持つ小型リチウムイオン電池）」は、主にドローンやウェアラブル機器、デバイスの骨格自体をバッテリーにする技術として研究が進められています。</p>
     <p><b>1. 温度耐性（低い温度・高い温度）</b></p>
