@@ -795,6 +795,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
     </a>
     </div>
+    <p><a href="https://www.facebook.com/reel/4626852324298766?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/4626852324298766?locale=ja_JP</a></p>
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=zNqA9q9l5M0" target="_blank" rel="noopener noreferrer">【経絡に気を流す方法】十二経脈を活性化しよう【気功講座31】</a></h2>
@@ -804,6 +805,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
     </a>
     </div>
+    <p><a href="https://www.facebook.com/reel/1029774840070283?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1029774840070283?locale=ja_JP</a></p>
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;">【金融シリーズ①】これを見逃すとエライことになります。日本国債＋リスクヘッジで7％の利息受取？</h2>
