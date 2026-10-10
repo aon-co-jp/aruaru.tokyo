@@ -1027,6 +1027,13 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/results?search_query=%E6%BA%B6%E6%8E%A5%E3%80%80%E9%87%91%E5%B1%9E%E3%80%803D%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer">溶接　金属　3Dプリンター</a></h2>
+    <div class="yt-click" data-id="CXWH8UpQSdo" data-title="人の考えが聞こえる能力" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/CXWH8UpQSdo" target="_blank" rel="noopener noreferrer" title="人の考えが聞こえる能力" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/CXWH8UpQSdo/hqdefault.jpg" alt="人の考えが聞こえる能力" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/2017519715630842?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/2017519715630842?locale=ja_JP</a></p>
     </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
