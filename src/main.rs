@@ -1035,6 +1035,16 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     <p><a href="https://www.facebook.com/reel/2017519715630842?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/2017519715630842?locale=ja_JP</a></p>
     </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=eOlpH_duoGw" target="_blank" rel="noopener noreferrer">【知らなきゃ損】身体の芯から力が湧き出る「腰割り」のやり方</a></h2>
+    <div class="yt-click" data-id="eOlpH_duoGw" data-title="【知らなきゃ損】身体の芯から力が湧き出る「腰割り」のやり方" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=eOlpH_duoGw" target="_blank" rel="noopener noreferrer" title="【知らなきゃ損】身体の芯から力が湧き出る「腰割り」のやり方" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/eOlpH_duoGw/hqdefault.jpg" alt="【知らなきゃ損】身体の芯から力が湧き出る「腰割り」のやり方" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    <p><a href="https://www.facebook.com/reel/1450275836916465?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1450275836916465?locale=ja_JP</a></p>
+    </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
       var h=b.parentNode.querySelector('h2');
