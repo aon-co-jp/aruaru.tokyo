@@ -766,22 +766,22 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
-    <p style="font-size:0.85rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
-    <p style="font-size:0.85rem;">気功。KIKOU.<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
+    <p style="font-size:1.2rem;">気功。KIKOU.<br>
     <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
-    <p style="font-size:0.85rem;">U.S PatentConcept: CNF Fiber Battery by Masahiro Ishizuka<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">U.S PatentConcept: CNF Fiber Battery by Masahiro Ishizuka<br>
     <a href="https://aon.co.jp" target="_blank" rel="noopener noreferrer">https://aon.co.jp</a><br>
     <a href="https://ameblo.jp/www-aon/page-5.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/page-5.html</a></p>
-    <p style="font-size:0.85rem;">特許アイデア:CNFファイバー電池(木質電池+ファイバーハイブリッド電池)発案者:石 塚 正 浩<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">特許アイデア:CNFファイバー電池(木質電池+ファイバーハイブリッド電池)発案者:石 塚 正 浩<br>
     <a href="https://ameblo.jp/www-aon/page-6.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/page-6.html</a></p>
-    <p style="font-size:0.85rem;"><a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
-    <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
-    <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
-    <p style="font-size:0.85rem;">気功。KIKOU. 自ら"気"を感じながら相手に流す練習法(動画)。<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">気功。KIKOU. 自ら"気"を感じながら相手に流す練習法(動画)。<br>
+    <a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a><br>
     <video controls preload="metadata" style="width:100%;max-width:640px;aspect-ratio:16/9;height:auto;background:#000;border-radius:6px;object-fit:contain;">
     <source src="/video/kikou-practice.mp4" type="video/mp4">
     お使いのブラウザは動画再生に対応していません。<a href="/video/kikou-practice.mp4">動画ファイルを直接開く</a>
     </video></p>
+    <p style="font-size:1.2rem;">気功。KIKOU. Facebook Backup.<br>
+    <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
     <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
     <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=7BKeQN4HeDM" target="_blank" rel="noopener noreferrer">【簡単】気を強力に出して気功治療もできる【気功講座12】</a></h2>
     <div class="yt-click" data-id="7BKeQN4HeDM" data-title="【簡単】気を強力に出して気功治療もできる【気功講座12】" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
