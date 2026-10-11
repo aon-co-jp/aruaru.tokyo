@@ -766,10 +766,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
-    <p style="font-size:0.85rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)<br>
-    <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
-    <p style="font-size:0.85rem;">気功。KIKOU.<br>
-    <a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
+<p style="font-size:0.85rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>    <p style="font-size:0.85rem;">気功。KIKOU.<br>    <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>    <p style="font-size:0.85rem;"><a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
     <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. 自ら"気"を感じながら相手に流す練習法(動画)。<br>
