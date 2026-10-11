@@ -769,6 +769,9 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p style="font-size:0.85rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
     <p style="font-size:0.85rem;">気功。KIKOU.<br>
     <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
+    <p style="font-size:0.85rem;">U.S PatentConcept: CNF Fiber Battery by Masahiro Ishizuka<br>
+    <a href="https://aon.co.jp" target="_blank" rel="noopener noreferrer">https://aon.co.jp</a><br>
+    <a href="https://ameblo.jp/www-aon/page-3.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/page-3.html</a></p>
     <p style="font-size:0.85rem;"><a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
     <a href="https://www.facebook.com/100000656454938/videos/566679491579232" target="_blank" rel="noopener noreferrer">https://www.facebook.com/100000656454938/videos/566679491579232</a></p>
