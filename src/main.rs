@@ -769,7 +769,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p style="font-size:1.2rem;margin-top:2.5rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
     <p style="font-size:1.2rem;">気功。KIKOU.<br>
     <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
-    <p style="font-size:0.85rem;">4 in 1 (A+B+C+D)＋E　High-Tech Fiber Hybrid Battery 　ハイテク・ファイバーハイブリッド電池　2026/10/11<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">4 in 1 (A+B+C+D)＋E　High-Tech Fiber Hybrid Battery 　ハイテク・ファイバーハイブリッド電池　2026/10/11<br>
     <a href="https://ameblo.jp/www-aon/entry-12981294981.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981294981.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">U.S PatentConcept: CNF Fiber Battery by Masahiro Ishizuka<br>
     <a href="https://aon.co.jp" target="_blank" rel="noopener noreferrer">https://aon.co.jp</a><br>
