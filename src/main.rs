@@ -766,8 +766,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
-    <p style="font-size:0.85rem;">イエス・キリスト</p>
-    <p style="font-size:0.85rem;">気功</p>
+    <p style="font-size:0.85rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)<br>
+    <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU.<br>
     <a href="https://youtu.be/WBUojmKng3M" target="_blank" rel="noopener noreferrer">https://youtu.be/WBUojmKng3M</a></p>
     <p style="font-size:0.85rem;">気功。KIKOU. Facebook Backup.<br>
