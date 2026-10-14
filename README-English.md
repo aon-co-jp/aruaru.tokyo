@@ -40,3 +40,24 @@ On the VPS it runs as a systemd service bound to `127.0.0.1:4100`, with nginx te
 Just before the "Claude / aruaru introduction" links on the top page, added five online-learning sites (Progate "AI-driven development", "HTML & CSS", "Python intro", paiza Learning Python, python.jp)
 and, as part of the research, the article on the benefits of porting to Rust (title, URL, link) (`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`). All five links were checked to be alive before publishing.
 **Moving servers**: production lives in `/root/url/aruaru.tokyo`: `cargo build --release` then `systemctl restart aruaru.tokyo.service`. The full procedure is "VPS migration guide" in `PORTING.md` of `audiocafe-tokyo`.
+
+## JSON handling policy: use `parse_secure_sonic` (fast type + secure) and `sonic-rs` everywhere they can be used (2026-10-14, user instruction)
+The source of truth is [`RS-JSON`](https://github.com/aon-co-jp/RS-JSON) (`README.md`, `PORTING.md`).
+
+**Policy**: wherever JSON is read, use `parse_secure_sonic` from `rust-json` (RS-JSON, the `fast` feature; the result is `sonic_rs::Value`) **everywhere it can be used**.
+Use `sonic-rs` directly where possible too (e.g. reading into typed structs). Where it cannot be used, use `parse_secure` (result: `serde_json::Value`).
+Untrusted input from outside (HTTP bodies, files over the network, uploads) **must always be read with size / depth / duplicate-key limits**.
+
+**Measured (7 MB, 40,000 records)**: `serde_json` 200 ms / `parse_secure` 217 ms / **`parse_secure_sonic` 83 ms (about 2.4x faster, with the defences)** / raw `sonic-rs` 33 ms (about 6x, no defences).
+Reading into `serde_json::Value` gives almost no speed-up even with SIMD (188 ms). **The speed comes from the value type that packs the result into contiguous memory.**
+
+**Where it can / cannot be used**
+- ✅ Read-heavy code that parses large or frequent JSON (cache JSON, config, API responses, logs, indexes).
+- ✅ Entrances for outside input (the goal there is defence rather than speed; `parse_secure` is fine).
+- ⚠️ Existing code that passes `serde_json::Value` between functions needs its type changed to `sonic_rs::Value` (methods from `JsonValueTrait` / `JsonContainerTrait`). Reading into `serde_json::Value` without that change is not faster.
+- ❌ WASM (`rust_json::light`, zero dependencies) and the JSON handling on the PHP / JavaScript side (Rust components cannot be used there).
+- Note: the `sonic-rs` dependency uses `unsafe` internally (our own code has none). For small JSON (a few KB) the difference is not noticeable; do speed-motivated rewrites where measurements show a benefit.
+
+**Adoption**: in `Cargo.toml`, `rust-json = { path = "../RS-JSON", features = ["fast"] }`. Example in `RS-JSON/README.md`.
+
+**Status in this repository**: Not yet applied (policy only). Code will be switched over place by place, starting where measurements show large or frequent JSON reads.
