@@ -90,3 +90,8 @@ Runs `cargo build --release` directly on the VPS (ConoHa, AlmaLinux), binding th
 `open-web-server` was added as an option for the "delivery engine (vhost)," but while `open-web-server` is not yet functioning as an Apache+Nginx hybrid web server, the Tomcat-like compatibility layer role is played by `open-runo` or `poem-cosmo-tauri`.
 
 These, together with `open-raid-z` and a VersionlessAPI, aim to function as a framework/middleware that fully backs mission-critical, 24/7/365 non-stop web development — for uses that must never lose data on the internet, such as 3D online game item purchases, online finance, online securities trading, and online credit card payments — by building a cutting-edge "quadruple-layer, quadruple-redundant" communication system combining `aruaru-db` (ACID- and ZFS-compatible) with a DUAL DATABASE configuration alongside PostgreSQL, on top of a database design that makes spec changes easy while maintaining versionless operation alongside version control and Git management.
+
+## Online-learning sites and the "AI-driven development research" article (2026-10-08)
+Just before the "Claude / aruaru introduction" links on the top page, added five online-learning sites (Progate "AI-driven development", "HTML & CSS", "Python intro", paiza Learning Python, python.jp)
+and, as part of the research, the article on the benefits of porting to Rust (title, URL, link) (`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`). All five links were checked to be alive before publishing.
+**Moving servers**: production lives in `/root/url/aruaru.tokyo`: `cargo build --release` then `systemctl restart aruaru.tokyo.service`. The full procedure is "VPS migration guide" in `PORTING.md` of `audiocafe-tokyo`.

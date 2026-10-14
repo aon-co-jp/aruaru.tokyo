@@ -106,3 +106,8 @@ location /some-path/ {
 ```
 
 同一VPS上に複数ドメインが同居している構成で、コンテンツを複製せずに別ドメインからも閲覧可能にしたい場合に再利用できる。
+
+## オンライン学習サイトの紹介と「AI駆動開発の研究」記事の掲載(2026-10-08)
+トップページの「Claude / aruaru 紹介」リンク群の直前に、オンライン学習サイト5件(Progate「AI駆動開発」「HTML・CSS」「Python入門」、paizaラーニングPython、python.jp)と、
+研究の一部としてのRust移植メリット記事(タイトル・URL・リンク)を追加(`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`)。5件のリンクは公開前に実在確認済み。
+**お引越し**: 本番は`/root/url/aruaru.tokyo`で`cargo build --release`→`systemctl restart aruaru.tokyo.service`。手順全体は`audiocafe-tokyo`の`PORTING.md`「VPS お引越し手順」。

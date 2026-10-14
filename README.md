@@ -35,3 +35,8 @@ VPS上ではsystemdサービスとして`127.0.0.1:4100`にバインドし、ngi
 - [open-raid-z](https://github.com/aon-co-jp/open-raid-z) — 開発ルールの正本
 - [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb) — OTP認証・サイト管理サーバー(tokio+hyper製)
 - [audiocafe.tokyo](https://github.com/aon-co-jp/audiocafe-tokyo)(PHP)
+
+## オンライン学習サイトの紹介と「AI駆動開発の研究」記事の掲載(2026-10-08)
+トップページの「Claude / aruaru 紹介」リンク群の直前に、オンライン学習サイト5件(Progate「AI駆動開発」「HTML・CSS」「Python入門」、paizaラーニングPython、python.jp)と、
+研究の一部としてのRust移植メリット記事(タイトル・URL・リンク)を追加(`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`)。5件のリンクは公開前に実在確認済み。
+**お引越し**: 本番は`/root/url/aruaru.tokyo`で`cargo build --release`→`systemctl restart aruaru.tokyo.service`。手順全体は`audiocafe-tokyo`の`PORTING.md`「VPS お引越し手順」。

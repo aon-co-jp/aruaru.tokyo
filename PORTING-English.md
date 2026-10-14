@@ -91,3 +91,8 @@ location /some-path/ {
 ```
 
 Reusable whenever multiple domains coexist on the same VPS and you want content viewable from another domain without duplicating it.
+
+## Online-learning sites and the "AI-driven development research" article (2026-10-08)
+Just before the "Claude / aruaru introduction" links on the top page, added five online-learning sites (Progate "AI-driven development", "HTML & CSS", "Python intro", paiza Learning Python, python.jp)
+and, as part of the research, the article on the benefits of porting to Rust (title, URL, link) (`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`). All five links were checked to be alive before publishing.
+**Moving servers**: production lives in `/root/url/aruaru.tokyo`: `cargo build --release` then `systemctl restart aruaru.tokyo.service`. The full procedure is "VPS migration guide" in `PORTING.md` of `audiocafe-tokyo`.

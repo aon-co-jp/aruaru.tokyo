@@ -35,3 +35,8 @@ On the VPS it runs as a systemd service bound to `127.0.0.1:4100`, with nginx te
 - [open-raid-z](https://github.com/aon-co-jp/open-raid-z) — canonical source of development rules
 - [aruaru-easyweb](https://github.com/aon-co-jp/aruaru-easyweb) — OTP auth / site-management server (tokio+hyper)
 - [audiocafe.tokyo](https://github.com/aon-co-jp/audiocafe-tokyo) (PHP)
+
+## Online-learning sites and the "AI-driven development research" article (2026-10-08)
+Just before the "Claude / aruaru introduction" links on the top page, added five online-learning sites (Progate "AI-driven development", "HTML & CSS", "Python intro", paiza Learning Python, python.jp)
+and, as part of the research, the article on the benefits of porting to Rust (title, URL, link) (`ONLINE_LEARNING_HTML` / `AI_DRIVEN_RESEARCH_HTML`). All five links were checked to be alive before publishing.
+**Moving servers**: production lives in `/root/url/aruaru.tokyo`: `cargo build --release` then `systemctl restart aruaru.tokyo.service`. The full procedure is "VPS migration guide" in `PORTING.md` of `audiocafe-tokyo`.
