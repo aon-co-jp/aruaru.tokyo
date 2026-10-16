@@ -171,6 +171,14 @@ pub const PROJECTS: &[Project] = &[
         role_ja: "Rustクレートの Cargo.toml メタデータからREADME.mdを自動生成するCLIツール(crates.io公開)。",
     },
     Project {
+        name: "RS-JSON",
+        repo: "aon-co-jp/RS-JSON",
+        has_readme: true,
+        has_porting: true,
+        has_claude: true,
+        role_ja: "RustのJSON処理ライブラリ。寛容モード(JSON5風)・厳密モード・部分抽出に加え、信頼できない入力向けの安全モード`parse_secure`(サイズ・深さ上限、重複キー拒否)と、速い値の型で読む`parse_secure_sonic`(`fast`機能、実測で`serde_json`の約2.4倍速い)を提供。旧`sonic-rs`(評価記録)を統合済み。型付き読み書き`fast::from_str`等と、RS-JSON<->JSON変換(最大約7倍速い)も提供。",
+    },
+    Project {
         name: "aon (旧称: open-aruaru-runo-iLumi)",
         repo: "aon-co-jp/aon",
         has_readme: true,
