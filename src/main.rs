@@ -776,6 +776,10 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">レジオネラ菌対策は、高濃度塩素の代わりに、過酸化水素（3%）や専用の配管洗浄剤で<br>
+    <a href="https://ameblo.jp/www-aon/entry-12981661256.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981661256.html</a></p>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">腰痛対策　ダイエット　腰振り<br>
+    <a href="https://ameblo.jp/www-aon/entry-12981627662.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981627662.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
     <p style="font-size:1.2rem;">気功。KIKOU.<br>
     <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
@@ -1074,6 +1078,24 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </a>
     </div>
     <p><a href="https://www.facebook.com/reel/1086159577540831?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1086159577540831?locale=ja_JP</a></p>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/jW5qS1ZQbsg" target="_blank" rel="noopener noreferrer">中韓には一生不可能な技術を日本がサクっと開発</a></h2>
+    <div class="yt-click" data-id="jW5qS1ZQbsg" data-title="中韓には一生不可能な技術を日本がサクっと開発" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/jW5qS1ZQbsg" target="_blank" rel="noopener noreferrer" title="中韓には一生不可能な技術を日本がサクっと開発" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/jW5qS1ZQbsg/hqdefault.jpg" alt="中韓には一生不可能な技術を日本がサクっと開発" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    </div>
+    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/tcknEiNp-zg" target="_blank" rel="noopener noreferrer">これは最も異例のヘリコプターだ</a></h2>
+    <div class="yt-click" data-id="tcknEiNp-zg" data-title="これは最も異例のヘリコプターだ" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/shorts/tcknEiNp-zg" target="_blank" rel="noopener noreferrer" title="これは最も異例のヘリコプターだ" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/tcknEiNp-zg/hqdefault.jpg" alt="これは最も異例のヘリコプターだ" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
     </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
