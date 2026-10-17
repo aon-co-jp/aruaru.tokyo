@@ -783,6 +783,15 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <p style="font-size:1.2rem;margin-top:2.5rem;">イエスキリスト(Jesus Christ) 気功療法 (Qigong therapy)</p>
     <p style="font-size:1.2rem;">気功。KIKOU.<br>
     <a href="https://ameblo.jp/www-aon/entry-12981249631.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981249631.html</a></p>
+    <div class="space-video" style="margin: 2.5rem auto 0; text-align: center; max-width: 640px;">
+    <h2 style="font-size: 1.2rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=auRYv7w1NOg" target="_blank" rel="noopener noreferrer">ロイヤル・レイモンド・ライフ博士の研究 Frequência Rife Mestre de Cura Geral (4 em 1) 10000 Hz, 880 Hz, 528 Hz &amp; 8 hz</a></h2>
+    <div class="yt-click" data-id="auRYv7w1NOg" data-title="ロイヤル・レイモンド・ライフ博士の研究 Frequência Rife Mestre de Cura Geral (4 em 1) 10000 Hz, 880 Hz, 528 Hz &amp; 8 hz" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
+    <a href="https://www.youtube.com/watch?v=auRYv7w1NOg" target="_blank" rel="noopener noreferrer" title="Frequência Rife Mestre de Cura Geral (4 em 1)" style="display:block;width:100%;height:100%;">
+    <img src="https://i.ytimg.com/vi/auRYv7w1NOg/hqdefault.jpg" alt="Frequência Rife Mestre de Cura Geral (4 em 1)" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
+    </a>
+    </div>
+    </div>
     <p style="font-size:1.2rem;margin-top:2.5rem;">政府は、LINEアプリ化して、99％リストラして少子高齢化と年金と後期高齢者無償化予算確保。<br>
     <a href="https://ameblo.jp/www-aon/entry-12981307682.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981307682.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">4 in 1 (A+B+C+D)＋E　High-Tech Fiber Hybrid Battery 　ハイテク・ファイバーハイブリッド電池　2026/10/11<br>
