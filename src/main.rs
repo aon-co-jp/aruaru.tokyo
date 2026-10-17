@@ -776,7 +776,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <a href="https://icpo.tokyo/">icpo.tokyo</a> ・
     <a href="https://fbi.tokyo/">fbi.tokyo</a> ・
 <a href="https://runo.tokyo/">runo.tokyo</a></p>
-    <p style="font-size:1.2rem;margin-top:2.5rem;">レジオネラ菌対策は、高濃度塩素の代わりに、過酸化水素（3%）や専用の配管洗浄剤で<br>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">レジオネラ菌対策は、高濃度塩素の代わりに、過酸化水素（3%）やフリップ・フラップ(A+B剤)で<br>
     <a href="https://ameblo.jp/www-aon/entry-12981661256.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981661256.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">腰痛対策　ダイエット　腰振り<br>
     <a href="https://ameblo.jp/www-aon/entry-12981627662.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981627662.html</a></p>
