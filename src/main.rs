@@ -802,6 +802,8 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </div>
     <p style="font-size:1.2rem;margin-top:2.5rem;">政府は、LINEアプリ化して、99％リストラして少子高齢化と年金と後期高齢者無償化予算確保。<br>
     <a href="https://ameblo.jp/www-aon/entry-12981307682.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981307682.html</a></p>
+    <p style="font-size:1.2rem;margin-top:2.5rem;">鉄にクロム、ニッケル、高濃度リンで数千年錆びにくい合金のパテント　石　塚　正　浩<br>
+    <a href="https://ameblo.jp/www-aon/entry-12981538464.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981538464.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">4 in 1 (A+B+C+D)＋E　High-Tech Fiber Hybrid Battery 　ハイテク・ファイバーハイブリッド電池　2026/10/11<br>
     <a href="https://ameblo.jp/www-aon/entry-12981294981.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981294981.html</a></p>
     <p style="font-size:1.2rem;margin-top:2.5rem;">U.S PatentConcept: CNF Fiber Battery by Masahiro Ishizuka<br>
