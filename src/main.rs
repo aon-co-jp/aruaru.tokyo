@@ -89,6 +89,14 @@ const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:360px
 <div style="position:relative;width:100%;max-width:270px;aspect-ratio:9/16;margin:0 auto;background:#000;border-radius:8px;overflow:hidden;">
 <button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/oPGV1n8niXw?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='今の上海は経済崩壊でシャッター街なの？';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/oPGV1n8niXw/hqdefault.jpg" alt="今の上海は経済崩壊でシャッター街なの？" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
 </div>
+<p style="font-size:1.2rem;font-weight:700;margin:1.2rem 0 .6rem;"><a href="https://www.youtube.com/shorts/jW5qS1ZQbsg" target="_blank" rel="noopener noreferrer">中韓には一生不可能な技術を日本がサクっと開発</a></p>
+<div style="position:relative;width:100%;max-width:270px;aspect-ratio:9/16;margin:0 auto;background:#000;border-radius:8px;overflow:hidden;">
+<button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/jW5qS1ZQbsg?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='中韓には一生不可能な技術を日本がサクっと開発';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/jW5qS1ZQbsg/hqdefault.jpg" alt="中韓には一生不可能な技術を日本がサクっと開発" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
+</div>
+<p style="font-size:1.2rem;font-weight:700;margin:1.2rem 0 .6rem;"><a href="https://www.youtube.com/shorts/tcknEiNp-zg" target="_blank" rel="noopener noreferrer">これは最も異例のヘリコプターだ</a></p>
+<div style="position:relative;width:100%;max-width:270px;aspect-ratio:9/16;margin:0 auto;background:#000;border-radius:8px;overflow:hidden;">
+<button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/tcknEiNp-zg?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='これは最も異例のヘリコプターだ';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/tcknEiNp-zg/hqdefault.jpg" alt="これは最も異例のヘリコプターだ" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
+</div>
 <p style="text-align:center;font-size:1.2rem;margin:1rem 0;">民間ガン治療法<br><br>ボランティア情報<br><br><a href="https://ameblo.jp/www-aon/entry-12981774738.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981774738.html</a></p>
 </section>
 "#;
@@ -1087,24 +1095,6 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     </a>
     </div>
     <p><a href="https://www.facebook.com/reel/1086159577540831?locale=ja_JP" target="_blank" rel="noopener noreferrer">https://www.facebook.com/reel/1086159577540831?locale=ja_JP</a></p>
-    </div>
-    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
-    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/jW5qS1ZQbsg" target="_blank" rel="noopener noreferrer">中韓には一生不可能な技術を日本がサクっと開発</a></h2>
-    <div class="yt-click" data-id="jW5qS1ZQbsg" data-title="中韓には一生不可能な技術を日本がサクっと開発" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
-    <a href="https://www.youtube.com/shorts/jW5qS1ZQbsg" target="_blank" rel="noopener noreferrer" title="中韓には一生不可能な技術を日本がサクっと開発" style="display:block;width:100%;height:100%;">
-    <img src="https://i.ytimg.com/vi/jW5qS1ZQbsg/hqdefault.jpg" alt="中韓には一生不可能な技術を日本がサクっと開発" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
-    </a>
-    </div>
-    </div>
-    <div class="space-video" style="margin: 1.5rem auto; text-align: center; max-width: 640px;">
-    <h2 style="font-size: 1.4rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/shorts/tcknEiNp-zg" target="_blank" rel="noopener noreferrer">これは最も異例のヘリコプターだ</a></h2>
-    <div class="yt-click" data-id="tcknEiNp-zg" data-title="これは最も異例のヘリコプターだ" style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;cursor:pointer;">
-    <a href="https://www.youtube.com/shorts/tcknEiNp-zg" target="_blank" rel="noopener noreferrer" title="これは最も異例のヘリコプターだ" style="display:block;width:100%;height:100%;">
-    <img src="https://i.ytimg.com/vi/tcknEiNp-zg/hqdefault.jpg" alt="これは最も異例のヘリコプターだ" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
-    <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:4rem;color:#fff;text-shadow:0 0 12px #000;">▶</span>
-    </a>
-    </div>
     </div>
     <script>
     document.querySelectorAll('.yt-click').forEach(function(b){{
