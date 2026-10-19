@@ -1222,7 +1222,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
   <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
   <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">数多くの日本人を泣かせた伝説のCM</h2>
   <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
-  <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/qUqPhVLPB8c" title="数多くの日本人を泣かせた伝説のCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/J_hH4zZ5Uvs" title="数多くの日本人を泣かせた伝説のCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
   If the YouTube link breaks, you can also watch it via the following URL:
