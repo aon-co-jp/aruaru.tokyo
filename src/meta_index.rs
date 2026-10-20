@@ -136,7 +136,15 @@ pub const PROJECTS: &[Project] = &[
         has_readme: true,
         has_porting: true,
         has_claude: true,
-        role_ja: "ブラウザ製の静的フロントエンド+aruaru-llmのローカル常駐サーバーを組み合わせた「PC/Android向け英会話AI学習アプリ」。オンライン/オフライン両対応のハイブリッド構成、共有デモ環境+配信サーバーを持つ。学習(Study)ジャンル。",
+        role_ja: "【2026-10-21 maid-cafe-englishへ改名・お引越し。この旧名のリポジトリも永久に残す】ブラウザ製の静的フロントエンド+aruaru-llmのローカル常駐サーバーを組み合わせた「PC/Android向け英会話AI学習アプリ」。オンライン/オフライン両対応のハイブリッド構成、共有デモ環境+配信サーバーを持つ。学習(Study)ジャンル。",
+    },
+    Project {
+        name: "maid-cafe-english",
+        repo: "aon-co-jp/maid-cafe-english",
+        has_readme: true,
+        has_porting: true,
+        has_claude: true,
+        role_ja: "open-englishの改名・お引越し先(2026-10-21、同一の履歴・内容)。更新は新旧の両方で配布し、アプリは両方を確認して新しい版を採用する。経緯と多言語の告知は旧リポジトリのRENAMED.md。学習(Study)ジャンル。",
     },
     Project {
         name: "open-english-pc",
