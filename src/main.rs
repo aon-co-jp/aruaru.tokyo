@@ -447,6 +447,13 @@ If the YouTube link breaks, you can also watch it via the following URL:
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=DKpwG6E5rok" target="_blank" rel="noopener noreferrer">歌心りえ　X　東亜樹　童神</a></h2>
+<div style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:1rem auto;background:#000;border-radius:6px;overflow:hidden;">
+<button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/DKpwG6E5rok?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='歌心りえ　X　東亜樹　童神';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/DKpwG6E5rok/hqdefault.jpg" alt="歌心りえ　X　東亜樹　童神" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ 冬のソナタの日本語版 最初から今まで<br><span style="color:var(--muted);">Utagokoro Rie - "From the Beginning Until Now" (Japanese version, Winter Sonata)</span></h2>
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/qVymStzDEjU" title="歌心りえ 冬のソナタの日本語版 最初から今まで" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
