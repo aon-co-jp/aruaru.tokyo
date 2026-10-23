@@ -85,6 +85,7 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:360px;margin:1rem auto;text-align:center;">
+<p style="font-size:1.2rem;margin:0 0 1.2rem;">ラピダスより重要OIST　EUV露光装置をASMLと比較　消費電力1/10　装置本体コスト1/4<br><a href="https://ameblo.jp/www-aon/entry-12982430784.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12982430784.html</a></p>
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://www.youtube.com/watch?v=5MFwZbfpKEk" target="_blank" rel="noopener noreferrer">この世界最大のタブー〝YHWH〟の正体がついに暴露されました。理想社会「弥勒の世」を実現する鍵は日本人が大切にしてきた〇〇だった！？この動画から時代がさらに動きます。</a></p>
 <p style="font-size:1.2rem;margin:0 0 .6rem;">出口王仁三郎のひ孫の出口光（ひかる）さんがYHWHと一体になれる体験をビデオにまとめてくれております。</p>
 <div style="position:relative;width:100%;aspect-ratio:16/9;margin:0 auto 1.2rem;background:#000;border-radius:8px;overflow:hidden;">
