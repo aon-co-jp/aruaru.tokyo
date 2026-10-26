@@ -266,3 +266,10 @@ open-web-serverがApache＋Nginxのハイブリッド仕様のWebサーバーと
 **導入**: `Cargo.toml`に `rust-json = { path = "../RS-JSON", features = ["fast"] }`。使用例は`RS-JSON/README.md`。
 
 **このリポジトリでの適用状況**: 未適用(方針のみ)。コードの切り替えは、JSONを大きく・頻繁に読む所から実測して順に行う。
+
+- **2026-10-26 索引ページをメタ索引(`aon-co-jp/RUNO`の`README.md`)に同期**: `src/meta_index.rs`の`PROJECTS`を、索引READMEの表(40行)から再生成した。
+  追加21件(aruaru-IME・aruaru-search・aruaru-vpn・open-github-backup・backup-to-discord-by-github・open-bar・open-av・open-mqa-dsd・open-audio-sr・open-music-llm・open-LiveKit・open-tv-chat・
+  open-vsc-claude・open-directx・maid-cafe-se・360-speaker・version-control・webeditor-sftp・realdata.pro・rs-dpiAwareness・aruaru-db-archive)、
+  削除2件(削除済みの`open-english-pc`、旧称の`aon`→`RUNO`行に置換)、サイト独自の`aruaru.tokyo`は残した。役割文はREADMEの表から記号(`**`・バッククォート・リンク)を除いたもの。
+  再生成スクリプトは使い捨て(リポジトリには入れていない)。**自動同期の仕組みは無いまま**なので、索引READMEを変えたら再度同期が要る。
+  検証: `cargo test`は通過(テストは0件)。実機でページを開いての表示確認は未実施(ブラウザのプレビュー起動が自動で止められたため)。
