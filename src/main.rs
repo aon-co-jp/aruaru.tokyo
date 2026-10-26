@@ -85,6 +85,12 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const TOP_VIDEO_HTML: &str = r#"<div class="pixel-intro">
+<div class="google-proposal" style="max-width:420px;margin:1rem auto .6rem;padding:.7rem 1rem;border:2px solid rgba(128,128,128,.6);border-radius:10px;text-align:left;line-height:1.6;">
+<p style="margin:0 0 .1rem;"><strong>📣 Google様へのご提案！</strong></p>
+<p style="margin:0 0 .5rem;">AppleのiPhoneのOS標準の「いつでも拡大縮小」機能を、Androidスマホとタブレットの全ての機種で、OS標準としてアップデートで対応してほしいです。</p>
+<p lang="en" style="margin:0 0 .1rem;font-size:.9rem;opacity:.9;"><strong>📣 A proposal to Google!</strong></p>
+<p lang="en" style="margin:0;font-size:.9rem;opacity:.9;">We would like the always-available zoom feature built into Apple's iPhone OS to be added as a standard OS feature, via an update, on all Android smartphones and tablets.</p>
+</div>
 <p style="text-align:center;margin:1rem auto .1rem;max-width:420px;font-size:.95rem;">💡 SMSのワンタイムパスワードが受け取れない場合に、設定から仮想メモリーを4GBから8GBに変更すると受け取れるようになる場合がございますので、お試しください。</p>
 <p lang="en" style="text-align:center;margin:0 auto .6rem;max-width:420px;font-size:.88rem;opacity:.85;">💡 If you cannot receive SMS one-time passwords, changing the virtual memory from 4GB to 8GB in Settings may fix it. Please give it a try.</p>
 <h2 style="font-size:1.3rem;margin:1rem 0 .2rem;text-align:center;">📱 2026年10月 スマホ紹介(楽天モバイル)<br><small lang="en" style="font-size:.8em;font-weight:600;">October 2026 Smartphone Picks (Rakuten Mobile)</small></h2>
