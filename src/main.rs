@@ -84,7 +84,7 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
-const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:360px;margin:1rem auto;text-align:center;">
+const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://www.youtube.com/watch?v=4jQRmHMk9hU" target="_blank" rel="noopener noreferrer">米国の新発明が銅を完全に置き換える？ 中国が危機感を強める理由</a></p>
 <div style="position:relative;width:100%;aspect-ratio:16/9;margin:0 auto 1.2rem;background:#000;border-radius:8px;overflow:hidden;">
 <button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/4jQRmHMk9hU?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='米国の新発明が銅を完全に置き換える？ 中国が危機感を強める理由';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/4jQRmHMk9hU/hqdefault.jpg" alt="米国の新発明が銅を完全に置き換える？ 中国が危機感を強める理由" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
