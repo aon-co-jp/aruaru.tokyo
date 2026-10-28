@@ -85,6 +85,12 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
+<div style="max-width:640px;margin:0 auto 1.4rem;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;">
+<p style="margin:0 0 .6rem;font-weight:700;">2026/10/28　19:00 から　19:25くらいまで、<br>ヒューレット・パッカード　市ヶ谷本社と八王子と北八王子関係者があきる野市に民泊しながら、大声で、以下の内容をおっしゃりました。</p>
+<p style="margin:0 0 .6rem;">私、石　塚　正　浩が、以前、北八王子のヒューレットパッカード（今は、キーサイト）にお仕事で、HP-UXのOSを10GBしかないHDDへのインストール依頼があったので、インストールと設定は成功したので、報告して帰った後に、社員がアプリを追加でインストールしようとしたら容量不足でインストール出来なかったと言うクレームを頂いた事がありました。</p>
+<p style="margin:0 0 .6rem;">ヒューレットパッカード　市ケ谷本社に出向していた期間には、486SXと言うノートパソコンを最新のノートパソコンだから大切に使う様に言われて使いましたが、それで一生懸命お仕事しましたが、仕事が遅いとクレームを受けた事がありました。</p>
+<p style="margin:0;">品川のソフトウェーブ経由で、ヒューレットパッカードの仕事で九州へ出張があっても、新幹線代とホテル代も出ませんでした。</p>
+</div>
 <div style="max-width:360px;margin:0 auto 1.4rem;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://youtube.com/shorts/atA0yTg6-YE" target="_blank" rel="noopener noreferrer">Googleを落ちた高卒の23歳が世界を変えた実話</a><br><small lang="en" style="font-weight:400;">The true story of a 23-year-old high-school graduate who failed Google and changed the world</small></p>
 <div style="position:relative;width:100%;aspect-ratio:9/16;background:#000;border-radius:8px;overflow:hidden;">
