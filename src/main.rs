@@ -823,6 +823,15 @@ If the YouTube link breaks, you can also watch it via the following URL:
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ 道化師のソネット　ライブ<br><span style="color:var(--muted);">Utagokoro Rie - Doukeshi no Sonnet (Live)</span></h2>
+<p style="font-size: 0.9rem; color: var(--muted);">미소로 행복을 전하는🤗💕 우타고코로 리에 ‘어릿광대의 소네트’♪🤡 TV CHOSUN 251231 방송 | [한일슈퍼콘서트 2회] | TV조선</p>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/nr97b5xnzZ0" title="歌心りえ 道化師のソネット　ライブ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=nr97b5xnzZ0" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ たしかなこと<br><span style="color:var(--muted);">Utagokoro Rie - Tashikana Koto</span></h2>
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/vPGm2q79px4" title="歌心りえ たしかなこと" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
