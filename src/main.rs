@@ -830,6 +830,30 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <p style="font-size: 0.85rem; color: var(--muted);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 /
 If the YouTube link breaks, you can also watch it via the following URL:
 <a href="https://www.facebook.com/reel/1339787288201605?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ ＆ エノク　Casablanca<br><span style="color:var(--muted);">Utagokoro Rie &amp; Enoch - Casablanca</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/v52UNMJH7tg" title="歌心りえ ＆ エノク　Casablanca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=v52UNMJH7tg" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ ＆ ソンテジン　Rainy Blue<br><span style="color:var(--muted);">Utagokoro Rie &amp; Sung Tae-jin - Rainy Blue</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/p70qdkpf6jw" title="歌心りえ ＆ ソンテジン　Rainy Blue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=p70qdkpf6jw" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ ＆ シン·スンテ　川の流れのように（美空ひばりさんのカバー）<br><span style="color:var(--muted);">Utagokoro Rie &amp; Shin Seung-tae - Kawa no Nagare no Yo ni (cover of Misora Hibari)</span></h2>
+<div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
+<iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/vVzQVcnib1w" title="歌心りえ ＆ シン·スンテ　川の流れのように（美空ひばりさんのカバー）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=vVzQVcnib1w" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
 </div>"##
         .to_string()
 }
