@@ -856,6 +856,7 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <div style="position:relative;width:100%;aspect-ratio:16/9;margin:1rem 0;background:#000;border-radius:6px;overflow:hidden;">
 <button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/9uRNlZENWbA?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='[공연실황] 아즈마아키(東亜樹)-Que Sera Sera(ケセラセラ) I 스테이지엠 영화음악 콘서트';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/9uRNlZENWbA/hqdefault.jpg" alt="[공연실황] 아즈마아키(東亜樹)-Que Sera Sera(ケセラセラ) I 스테이지엠 영화음악 콘서트" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
 </div>
+<p style="font-size: 0.85rem; color: var(--muted, #94a3b8);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 / If the YouTube link breaks, you can also watch it via the following URL:<br><a href="https://www.facebook.com/reel/29467881546163845?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
