@@ -85,6 +85,11 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
+<div style="max-width:720px;margin:0 auto 1.6rem;text-align:center;">
+<p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;">立沢君、平野君、次の写真の文章内のCADメーカーを全部買収して</p>
+<p lang="en" style="font-size:.9rem;opacity:.85;margin:0 0 .8rem;">Tatsuzawa-kun, Hirano-kun, please acquire all of the CAD makers mentioned in the text in the photo below.</p>
+<img src="/cad-ai-list.jpg" alt="AI連携に優れたCADの一覧 / List of CAD tools with strong AI integration" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</div>
 <div style="max-width:640px;margin:0 auto 1.4rem;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;">
 <p style="margin:0 0 .6rem;font-weight:700;font-size:1.1rem;">消費税とは?</p>
 <p style="margin:0 0 .6rem;">法人税が約40%だった時に、将来約20%まで下げる約束で導入された税金で、財源は、法人税だったのです。</p>
@@ -1757,6 +1762,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/help", StaticFileEndpoint::new("static/help.html"))
         .at("/style.css", StaticFileEndpoint::new("static/style.css"))
         .at("/p", StaticFileEndpoint::new("static/p.html"))
+        .at("/cad-ai-list.jpg", StaticFileEndpoint::new("static/cad-ai-list.jpg"))
         .at("/k", StaticFileEndpoint::new("static/k.html"))
         .at("/app.js", StaticFileEndpoint::new("static/app.js"))
         .at("/meta-index.js", StaticFileEndpoint::new("static/meta-index.js"))
