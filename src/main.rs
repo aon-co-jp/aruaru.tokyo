@@ -863,6 +863,7 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <div style="position:relative;width:100%;aspect-ratio:16/9;margin:1rem 0;background:#000;border-radius:6px;overflow:hidden;">
 <button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/DKpwG6E5rok?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='歌心りえ　X　東亜樹　童神';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/DKpwG6E5rok/hqdefault.jpg" alt="歌心りえ　X　東亜樹　童神" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
 </div>
+<p style="font-size: 0.85rem; color: var(--muted, #94a3b8);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 / If the YouTube link breaks, you can also watch it via the following URL:<br><a href="https://www.facebook.com/reel/1129537502877613?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -943,7 +944,7 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/v52UNMJH7tg" title="歌心りえ ＆ エノク　Casablanca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=v52UNMJH7tg" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+<p style="font-size: 0.85rem; color: var(--muted, #94a3b8);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 / If the YouTube link breaks, you can also watch it via the following URL:<br><a href="https://www.facebook.com/reel/1132188675859844?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
@@ -959,7 +960,7 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/vVzQVcnib1w" title="歌心りえ ＆ シン·スンテ　川の流れのように（美空ひばりさんのカバー）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=vVzQVcnib1w" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+<p style="font-size: 0.85rem; color: var(--muted, #94a3b8);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 / If the YouTube link breaks, you can also watch it via the following URL:<br><a href="https://www.facebook.com/reel/1599732914645635?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
