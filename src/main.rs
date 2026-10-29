@@ -952,7 +952,7 @@ If the YouTube link breaks, you can also watch it via the following URL:
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/p70qdkpf6jw" title="歌心りえ ＆ ソンテジン　Rainy Blue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<p style="font-size: 0.85rem;"><a href="https://www.youtube.com/watch?v=p70qdkpf6jw" target="_blank" rel="noopener noreferrer">▶️ YouTube</a></p>
+<p style="font-size: 0.85rem; color: var(--muted, #94a3b8);">YouTubeのリンクが切れたら次のURLでもご視聴になれます。 / If the YouTube link breaks, you can also watch it via the following URL:<br><a href="https://www.facebook.com/reel/3352339781624239?locale=ja_JP" target="_blank" rel="noopener noreferrer">Facebook(予備 / backup)</a></p>
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
