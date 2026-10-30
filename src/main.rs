@@ -85,6 +85,7 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
 const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
+<p style="font-size:1.4rem;font-weight:700;text-align:center;margin:0 auto 1.2rem;"><a href="https://www.youtube.com/results?search_query=100%E5%86%86%E3%80%80%E5%8C%85%E4%B8%81+%E7%A0%94%E3%81%8E%E5%99%A8%E3%80%80%E3%83%8F%E3%82%B5%E3%83%9F%E3%80%80%E9%9B%BB%E5%8B%95" target="_blank" rel="noopener noreferrer">100円　包丁 研ぎ器　ハサミ　電動</a></p>
 <div style="max-width:720px;margin:0 auto 1.6rem;text-align:center;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;">立沢君、平野君、次の写真の文章内のCADメーカーを全部買収して</p>
 <p lang="en" style="font-size:.9rem;opacity:.85;margin:0 0 .8rem;">Tatsuzawa-kun, Hirano-kun, please acquire all of the CAD makers mentioned in the text in the photo below.</p>
