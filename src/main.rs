@@ -84,7 +84,8 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
-const TOP_VIDEO_HTML: &str = r#"<div style="max-width:960px;margin:0 auto 1.4rem;padding:1.4rem 1.6rem;background:#fff;color:#1e2a5e;border-radius:12px;text-align:left;line-height:1.6;box-shadow:0 1px 6px rgba(0,0,0,.25);">
+const TOP_VIDEO_HTML: &str = r#"<p style="max-width:960px;margin:1rem auto .8rem;font-size:1.3rem;font-weight:700;text-align:center;">ネットから転載致しました。</p>
+<div style="max-width:960px;margin:0 auto 1.4rem;padding:1.4rem 1.6rem;background:#fff;color:#1e2a5e;border-radius:12px;text-align:left;line-height:1.6;box-shadow:0 1px 6px rgba(0,0,0,.25);">
 <p style="margin:0 0 .3rem;font-weight:700;color:#e07b39;font-size:1rem;">フリーランス市場の現在地</p>
 <h2 style="margin:0 0 .5rem;font-size:clamp(1.5rem,4.2vw,2.3rem);line-height:1.3;color:#1e2a5e;">案件は減っていない。求められる役割が変わった。</h2>
 <p style="margin:0 0 1rem;color:#5a6178;font-size:1rem;">直近半年でエンジニア歴の長い方ほど実感されている変化を、市場データと合わせて整理しました。</p>
