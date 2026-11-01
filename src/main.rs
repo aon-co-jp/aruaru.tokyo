@@ -84,7 +84,39 @@ const ONLINE_LEARNING_HTML: &str = r#"<div class="online-learning" style="margin
 
 /// ユーザー提供のブログ記事(タイトルをリンクテキストにし、URLそのものは
 /// 表示しない、2026-07-20追記)。
-const TOP_VIDEO_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
+const TOP_VIDEO_HTML: &str = r#"<div style="max-width:960px;margin:0 auto 1.4rem;padding:1.4rem 1.6rem;background:#fff;color:#1e2a5e;border-radius:12px;text-align:left;line-height:1.6;box-shadow:0 1px 6px rgba(0,0,0,.25);">
+<p style="margin:0 0 .3rem;font-weight:700;color:#e07b39;font-size:1rem;">フリーランス市場の現在地</p>
+<h2 style="margin:0 0 .5rem;font-size:clamp(1.5rem,4.2vw,2.3rem);line-height:1.3;color:#1e2a5e;">案件は減っていない。求められる役割が変わった。</h2>
+<p style="margin:0 0 1rem;color:#5a6178;font-size:1rem;">直近半年でエンジニア歴の長い方ほど実感されている変化を、市場データと合わせて整理しました。</p>
+<div style="display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:1.2rem;">
+<div style="flex:1 1 220px;background:#f3f5fb;border-radius:10px;padding:.9rem 1.1rem;"><div style="font-size:1.9rem;font-weight:800;color:#1e2a5e;">横ばい</div><div style="font-weight:700;margin-top:.2rem;">案件の母数</div><div style="color:#5a6178;font-size:.9rem;">総数は減っていない</div></div>
+<div style="flex:1 1 220px;background:#f3f5fb;border-radius:10px;padding:.9rem 1.1rem;"><div style="font-size:1.9rem;font-weight:800;color:#e07b39;">減少</div><div style="font-weight:700;margin-top:.2rem;">実装がメインの案件</div><div style="color:#5a6178;font-size:.9rem;">AI による代替が進行</div></div>
+<div style="flex:1 1 220px;background:#f3f5fb;border-radius:10px;padding:.9rem 1.1rem;"><div style="font-size:1.9rem;font-weight:800;color:#1e2a5e;">増加</div><div style="font-weight:700;margin-top:.2rem;">上流・設計の案件</div><div style="color:#5a6178;font-size:.9rem;">「何をどう作るか」</div></div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:stretch;margin-bottom:1.1rem;">
+<div style="flex:1 1 280px;"><p style="margin:0 0 .4rem;font-weight:700;color:#4a5170;">これまで求められていたもの</p><div style="border:1px solid #cfd5e6;border-radius:10px;padding:.9rem 1rem;color:#3a4160;"><ul style="margin:0;padding-left:1.3rem;color:#3a4160;"><li style="margin:.35rem 0;">技術に詳しく、任せれば実装しきれる人</li><li style="margin:.35rem 0;">決まった仕様を、漏れなく品質高く形にする</li><li style="margin:.35rem 0;">言語・フレームワークの経験年数で評価</li><li style="margin:.35rem 0;">チームの一員としての開発工数の提供</li></ul></div></div>
+<div style="align-self:center;color:#e07b39;font-size:2rem;">&#10140;</div>
+<div style="flex:1 1 280px;"><p style="margin:0 0 .4rem;font-weight:700;color:#e07b39;">いま求められているもの</p><div style="background:#1e2a5e;border-radius:10px;padding:.9rem 1rem;color:#fff;"><ul style="margin:0;padding-left:1.3rem;color:#fff;"><li style="margin:.35rem 0;">ビジネス側と伴走し、要求を仕様に落とせる</li><li style="margin:.35rem 0;">ふわっとした依頼を組み替えて形にする柔軟性</li><li style="margin:.35rem 0;">複雑なドメイン・業務フローを理解しにいける</li><li style="margin:.35rem 0;">実装は AI 前提。人は意思決定と設計に時間を使う</li></ul></div></div>
+</div>
+<div style="background:#fbeee4;border-radius:10px;padding:.8rem 1rem;color:#3a4160;"><b style="color:#e07b39;">同時に起きていること</b>　企業側の内製化で業務委託枠が縮小／PoC 止まりの AI 案件も減り、実務に組み込んで効果を出すフェーズへ</div>
+</div>
+<div style="max-width:960px;margin:0 auto 1.4rem;padding:1.4rem 1.6rem;background:#fff;color:#1e2a5e;border-radius:12px;text-align:left;line-height:1.6;box-shadow:0 1px 6px rgba(0,0,0,.25);">
+<p style="margin:0 0 .3rem;font-weight:700;color:#e07b39;font-size:1rem;">条件面のリアル</p>
+<h2 style="margin:0 0 .5rem;font-size:clamp(1.5rem,4.2vw,2.3rem);line-height:1.3;color:#1e2a5e;">報酬・稼働・選考、この半年で動いた 3 つの数字</h2>
+<p style="margin:0 0 1rem;color:#5a6178;font-size:1rem;">下がったのは「入口」。稼働後の単価アップの水準は以前と大きく変わっていません。</p>
+<div style="display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:1.2rem;">
+<div style="flex:1 1 320px;"><p style="margin:0 0 .5rem;font-weight:700;">① 報酬レンジ（税別・週 5 稼働）</p><div style="background:#f3f5fb;border-radius:10px;padding:1rem 1.1rem;"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;"><div><div style="color:#7a8199;font-size:.85rem;">以前</div><div style="font-size:1.7rem;font-weight:800;color:#9aa1b8;">80～90 万</div></div><div style="color:#b6bfd6;font-size:1.6rem;">&#10140;</div><div><div style="color:#e07b39;font-size:.85rem;font-weight:700;">現在</div><div style="font-size:2rem;font-weight:800;">70～85 万</div></div></div><div style="margin-top:.8rem;background:#fbeee4;border-radius:8px;padding:.5rem .8rem;font-size:.9rem;">開発メイン案件は 10～15 万ダウン。予算は AI 関連の投資へ移動。</div></div></div>
+<div style="flex:1 1 320px;"><p style="margin:0 0 .5rem;font-weight:700;">② 稼働形態の内訳</p>
+<div style="display:flex;align-items:center;gap:.6rem;margin:.5rem 0;"><div style="width:9.5rem;text-align:right;font-size:.9rem;">フルリモート</div><div style="height:26px;width:15%;background:#c9d8fb;"></div><div style="font-size:.9rem;font-weight:700;">15%</div></div>
+<div style="display:flex;align-items:center;gap:.6rem;margin:.5rem 0;"><div style="width:9.5rem;text-align:right;font-size:.9rem;">常駐</div><div style="height:26px;width:20%;background:#7a86ab;"></div><div style="font-size:.9rem;font-weight:700;">20%</div></div>
+<div style="display:flex;align-items:center;gap:.6rem;margin:.5rem 0;"><div style="width:9.5rem;text-align:right;font-size:.9rem;">出社・リモート併用</div><div style="height:26px;width:65%;background:#1e2a5e;"></div><div style="font-size:.9rem;font-weight:700;">65%</div></div>
+<p style="margin:.6rem 0 0;color:#5a6178;font-size:.9rem;">「月 1～週 1 なら出社可」と言えるだけで、決まるスピードが段違いに変わります。</p></div>
+</div>
+<p style="margin:0 0 .5rem;font-weight:700;">③ 選考の通り方（10 件エントリーした場合の目安）</p>
+<div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem;"><div style="flex:1 1 150px;background:#1e2a5e;color:#fff;border-radius:10px;padding:.9rem 1rem;"><div style="font-size:1.6rem;font-weight:800;">10 件</div><div style="font-size:.9rem;">エントリー</div></div><div style="align-self:center;color:#b6bfd6;font-size:1.6rem;">&#9654;</div><div style="flex:1 1 150px;background:#1e2a5e;color:#fff;border-radius:10px;padding:.9rem 1rem;"><div style="font-size:1.6rem;font-weight:800;">10～15%</div><div style="font-size:.9rem;">書類通過率</div></div><div style="align-self:center;color:#b6bfd6;font-size:1.6rem;">&#9654;</div><div style="flex:1 1 150px;background:#c9d8fb;color:#1e2a5e;border-radius:10px;padding:.9rem 1rem;"><div style="font-size:1.6rem;font-weight:800;">1～2 件</div><div style="font-size:.9rem;">企業面談</div></div><div style="align-self:center;color:#b6bfd6;font-size:1.6rem;">&#9654;</div><div style="flex:1 1 150px;background:#e07b39;color:#fff;border-radius:10px;padding:.9rem 1rem;"><div style="font-size:1.6rem;font-weight:800;">約 30%</div><div style="font-size:.9rem;">面談後の内定率</div></div></div>
+<div style="background:#f3f5fb;border-radius:10px;padding:.8rem 1rem;"><b>難所は「書類」</b>　経歴書が AI できれいに作れるようになり、「まず会って判断」から「書かれていなければ見送り」へ。</div>
+</div>
+<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
 <div style="max-width:360px;margin:0 auto 1.4rem;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://www.youtube.com/shorts/FiW4F_XqHdc" target="_blank" rel="noopener noreferrer">ポーランド美女が一番嬉しかった瞬間？</a></p>
 <div style="position:relative;width:100%;aspect-ratio:9/16;background:#000;border-radius:8px;overflow:hidden;">
