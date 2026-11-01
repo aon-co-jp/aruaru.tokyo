@@ -1126,6 +1126,13 @@ If the YouTube link breaks, you can also watch it via the following URL:
 </div>
 
 <div class="space-video" style="margin: 1.5rem 0; text-align: center;">
+<h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;"><a href="https://www.youtube.com/watch?v=Tl7EbkDnj7Y" target="_blank" rel="noopener noreferrer">木蘭の涙　歌心りえ　人生、歌がある　今週のイチオシ　歌心りえ (2025.11.15)</a></h2>
+<div style="position:relative;width:100%;aspect-ratio:16/9;margin:1rem 0;background:#000;border-radius:6px;overflow:hidden;">
+<button type="button" aria-label="動画を再生 / Play video" style="all:unset;position:absolute;inset:0;cursor:pointer;" onclick="var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/Tl7EbkDnj7Y?autoplay=1&amp;playsinline=1&amp;rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='木蘭の涙　歌心りえ　人生、歌がある　今週のイチオシ　歌心りえ (2025.11.15)';f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';this.replaceWith(f)"><img src="https://i.ytimg.com/vi/Tl7EbkDnj7Y/hqdefault.jpg" alt="木蘭の涙　歌心りえ　人生、歌がある　今週のイチオシ　歌心りえ (2025.11.15)" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:64px;text-align:center;">▶</span></button>
+</div>
+</div>
+
+<div class="space-video" style="margin: 1.5rem 0; text-align: center;">
 <h2 style="font-size: 1.15rem; border-bottom: none; margin-top: 0;">歌心りえ ＆ エノク　Casablanca<br><span style="color:var(--muted);">Utagokoro Rie &amp; Enoch - Casablanca</span></h2>
 <div style="position: relative; width: 100%; padding-top: 56.25%; margin: 1rem 0;">
 <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;" src="https://www.youtube.com/embed/v52UNMJH7tg" title="歌心りえ ＆ エノク　Casablanca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
