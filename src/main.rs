@@ -122,7 +122,10 @@ const TOP_VIDEO_HTML: &str = r#"<p style="max-width:960px;margin:1rem auto .8rem
 <p lang="en" style="margin:0 0 .8rem;font-size:1.15rem;opacity:.9;">RPoem is a Rust platform centered on GraphQL Federation, with compatible Poem and Tauri functionality built from scratch in Rust. Its admin UI uses neither TypeScript nor Node.js; it is built in Rust and compiled to WebAssembly.</p>
 <p style="margin:0;font-size:.95rem;">リソース元 / Sources: <a href="https://github.com/aon-co-jp/RPoem" target="_blank" rel="noopener noreferrer">RPoem リポジトリ / repository</a> ・ <a href="https://github.com/aon-co-jp/RPoem/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md</a> ・ <a href="https://github.com/aon-co-jp/RPoem/blob/main/PORTING.md" target="_blank" rel="noopener noreferrer">PORTING.md</a> ・ <a href="https://github.com/aon-co-jp/RPoem/blob/main/CLAUDE.md" target="_blank" rel="noopener noreferrer">CLAUDE.md</a> ・ <a href="https://github.com/aon-co-jp/RPoem/blob/main/docs/poem-parity.md" target="_blank" rel="noopener noreferrer">docs/poem-parity.md</a> ・ <a href="https://github.com/aon-co-jp/RPoem/blob/main/docs/tauri-parity.md" target="_blank" rel="noopener noreferrer">docs/tauri-parity.md</a></p>
 </div>
-<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
+"#;
+
+/// 上の定数の続き(動画・レシピなど)。RPoemの説明の直下に自己紹介などを出すため分割した(2026-11-01)。
+const TOP_VIDEO_REST_HTML: &str = r#"<section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
 <div style="max-width:360px;margin:0 auto 1.4rem;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://www.youtube.com/shorts/FiW4F_XqHdc" target="_blank" rel="noopener noreferrer">ポーランド美女が一番嬉しかった瞬間？</a></p>
 <div style="position:relative;width:100%;aspect-ratio:9/16;background:#000;border-radius:8px;overflow:hidden;">
@@ -1571,6 +1574,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
     <br />
     {related_sites_top}
     </p>
+{TOP_VIDEO_REST_HTML}
 {TOP_VIDEO_HTML_B}
   <p class="blog-link"><a href="{BLOG_POST2_URL}" target="_blank" rel="noopener">📝 {BLOG_POST2_TITLE_JA}</a></p>
 
