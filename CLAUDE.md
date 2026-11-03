@@ -273,3 +273,6 @@ open-web-serverがApache＋Nginxのハイブリッド仕様のWebサーバーと
   削除2件(削除済みの`open-english-pc`、旧称の`aon`→`RUNO`行に置換)、サイト独自の`aruaru.tokyo`は残した。役割文はREADMEの表から記号(`**`・バッククォート・リンク)を除いたもの。
   再生成スクリプトは使い捨て(リポジトリには入れていない)。**自動同期の仕組みは無いまま**なので、索引READMEを変えたら再度同期が要る。
   検証: `cargo test`は通過(テストは0件)。実機でページを開いての表示確認は未実施(ブラウザのプレビュー起動が自動で止められたため)。
+
+## 依存の更新(2026-11-03)
+reqwest 0.13(`rustls-tls`→`rustls`)、rand 0.10(`thread_rng`→`rng()`、`choose`は`IndexedRandom`)、pulldown-cmark 0.13。ビルド・テスト39件通過。VPSへの反映(build)は未実施。

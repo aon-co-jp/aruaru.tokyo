@@ -7,7 +7,7 @@ use poem::listener::TcpListener;
 use poem::http::StatusCode;
 use poem::web::{Html, Json, Query};
 use poem::{get, handler, post, EndpointExt, Route, Server};
-use rand::seq::SliceRandom;
+use rand::seq::IndexedRandom;
 use serde::Deserialize;
 
 mod i18n;
@@ -1579,7 +1579,7 @@ fn flat_items_json() -> String {
         }
     }
     // shuffle server-side once at render time is unnecessary; client shuffles on click.
-    let _ = items.choose(&mut rand::thread_rng());
+    let _ = items.choose(&mut rand::rng());
     serde_json::to_string(&items).unwrap_or_else(|_| "[]".to_string())
 }
 
