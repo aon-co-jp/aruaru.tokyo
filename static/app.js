@@ -33,9 +33,9 @@
     fetchBtn.addEventListener('click', async () => {
       fetchStatus.textContent = '取得中… / Fetching…';
       try {
-        const res = await fetch('/api/repos');
+        const res = await fetch('/aruaru.tokyo.v1.Site/ListRepos', {method:'POST', headers:{'Content-Type':'application/json'}, body:'{}'});
         const data = await res.json();
-        if (data.error) { fetchStatus.textContent = '❌ ' + data.error; return; }
+        if (!res.ok || data.code) { fetchStatus.textContent = '❌ ' + (data.message || data.code); return; }
         const repos = data.repos || [];
         const current = repoSelect.value;
         repoSelect.innerHTML = '<option value="">リポジトリを選択…</option>' +

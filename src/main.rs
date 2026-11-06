@@ -5,7 +5,7 @@
 use poem::endpoint::StaticFileEndpoint;
 use poem::listener::TcpListener;
 use poem::http::StatusCode;
-use poem::web::{Html, Json, Query};
+use poem::web::{Html, Query};
 use poem::{get, handler, post, EndpointExt, Route, Server};
 use rand::seq::IndexedRandom;
 use serde::Deserialize;
@@ -1492,12 +1492,41 @@ async fn fetch_org_repos(client: &reqwest::Client) -> Result<Vec<String>, String
     Ok(names)
 }
 
+/// Connect形式のエラー応答 `{"code","message"}`。
+fn connect_err(status: StatusCode, code: &str, message: &str) -> poem::Response {
+    poem::Response::builder()
+        .status(status)
+        .content_type("application/json")
+        .body(serde_json::json!({ "code": code, "message": message }).to_string())
+}
+
+fn connect_ok(v: serde_json::Value) -> poem::Response {
+    poem::Response::builder().content_type("application/json").body(v.to_string())
+}
+
+/// 本文を上限つきで読む(Connectの単純呼び出しは `content-type: application/json` のみ受ける)。
+async fn connect_body(req: &poem::Request, body: poem::Body, max: usize) -> Result<serde_json::Value, poem::Response> {
+    let ct = req.content_type().unwrap_or("").to_ascii_lowercase();
+    if !ct.starts_with("application/json") {
+        return Err(connect_err(StatusCode::UNSUPPORTED_MEDIA_TYPE, "invalid_argument", "content-type must be application/json"));
+    }
+    let bytes = body
+        .into_bytes_limit(max)
+        .await
+        .map_err(|_| connect_err(StatusCode::BAD_REQUEST, "invalid_argument", "body too large or unreadable"))?;
+    serde_json::from_slice(&bytes).map_err(|_| connect_err(StatusCode::BAD_REQUEST, "invalid_argument", "invalid json"))
+}
+
+/// `POST /aruaru.tokyo.v1.Site/ListRepos`(旧 `GET /api/repos`)
 #[handler]
-async fn api_repos() -> poem::web::Json<serde_json::Value> {
+async fn rpc_list_repos(req: &poem::Request, body: poem::Body) -> poem::Response {
+    if let Err(r) = connect_body(req, body, 4096).await {
+        return r;
+    }
     let client = reqwest::Client::new();
     match fetch_org_repos(&client).await {
-        Ok(names) => poem::web::Json(serde_json::json!({ "repos": names })),
-        Err(e) => poem::web::Json(serde_json::json!({ "error": e })),
+        Ok(names) => connect_ok(serde_json::json!({ "repos": names })),
+        Err(e) => connect_err(StatusCode::BAD_GATEWAY, "unavailable", &e),
     }
 }
 
@@ -2031,7 +2060,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
         e.preventDefault();
         var m=document.getElementById('tokoro-msg');
         m.textContent='';
-        fetch('/api/tokoro-unlock',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{password:document.getElementById('tokoro-pw').value}})}})
+        fetch('/aruaru.tokyo.v1.Site/TokoroUnlock',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{password:document.getElementById('tokoro-pw').value}})}})
           .then(function(r){{return r.ok?r.json():Promise.reject();}})
           .then(function(j){{
             document.getElementById('tokoro-player').src='/video/tokoro.mp4?t='+encodeURIComponent(j.token);
@@ -2174,19 +2203,22 @@ fn healthz() -> &'static str {
 
 static TOKORO_TOKENS: std::sync::Mutex<Vec<String>> = std::sync::Mutex::new(Vec::new());
 
-#[derive(serde::Deserialize)]
-struct TokoroUnlock {
-    password: String,
-}
-
+/// `POST /aruaru.tokyo.v1.Site/TokoroUnlock`(旧 `POST /api/tokoro-unlock`)。
 /// パスワードは環境変数`ARUARU_TOKYO_TOKORO_PASSWORD`(ソースには置かない)。未設定なら常に拒否。
 #[handler]
-async fn tokoro_unlock(Json(body): Json<TokoroUnlock>) -> poem::Result<Json<serde_json::Value>> {
+async fn rpc_tokoro_unlock(req: &poem::Request, body: poem::Body) -> poem::Response {
+    let v = match connect_body(req, body, 4096).await {
+        Ok(v) => v,
+        Err(r) => return r,
+    };
+    let Some(pw) = v.get("password").and_then(|x| x.as_str()) else {
+        return connect_err(StatusCode::BAD_REQUEST, "invalid_argument", "password is required");
+    };
     let expected = std::env::var("ARUARU_TOKYO_TOKORO_PASSWORD").unwrap_or_default();
     let expected = expected.trim();
-    if expected.is_empty() || body.password.trim() != expected {
+    if expected.is_empty() || pw.trim() != expected {
         tokio::time::sleep(std::time::Duration::from_secs(1)).await;
-        return Err(poem::Error::from_status(StatusCode::UNAUTHORIZED));
+        return connect_err(StatusCode::UNAUTHORIZED, "unauthenticated", "wrong password");
     }
     let token: String = (0..4).map(|_| format!("{:016x}", rand::random::<u64>())).collect();
     let mut tokens = TOKORO_TOKENS.lock().unwrap();
@@ -2194,7 +2226,7 @@ async fn tokoro_unlock(Json(body): Json<TokoroUnlock>) -> poem::Result<Json<serd
         tokens.clear();
     }
     tokens.push(token.clone());
-    Ok(Json(serde_json::json!({ "token": token })))
+    connect_ok(serde_json::json!({ "token": token }))
 }
 
 #[tokio::main]
@@ -2212,7 +2244,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/k", StaticFileEndpoint::new("static/k.html"))
         .at("/app.js", StaticFileEndpoint::new("static/app.js"))
         .at("/meta-index.js", StaticFileEndpoint::new("static/meta-index.js"))
-        .at("/api/repos", get(api_repos))
+        .at("/aruaru.tokyo.v1.Site/ListRepos", post(rpc_list_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
         .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
@@ -2224,7 +2256,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/video/fukuyama/fukuyama-hotaru.mp4", StaticFileEndpoint::new("video/fukuyama/fukuyama-hotaru.mp4"))
         .at("/video/fukuyama/fukuyama-sakurazaka-2005.mp4", StaticFileEndpoint::new("video/fukuyama/fukuyama-sakurazaka-2005.mp4"))
         .at("/video/fukuyama/shibasaki-sakurazaka-itsukushima.mp4", StaticFileEndpoint::new("video/fukuyama/shibasaki-sakurazaka-itsukushima.mp4"))
-        .at("/api/tokoro-unlock", post(tokoro_unlock))
+        .at("/aruaru.tokyo.v1.Site/TokoroUnlock", post(rpc_tokoro_unlock))
         .at(
             "/video/tokoro.mp4",
             StaticFileEndpoint::new("video/所さん！事件ですよ　ＴＫＧが海外で大人気！？　ニッポンの卵が大進化.mp4").before(|req| async move {
