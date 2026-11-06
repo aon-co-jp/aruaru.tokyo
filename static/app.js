@@ -33,7 +33,7 @@
     fetchBtn.addEventListener('click', async () => {
       fetchStatus.textContent = '取得中… / Fetching…';
       try {
-        const res = await fetch('/aruaru.tokyo.v1.Site/ListRepos', {method:'POST', headers:{'Content-Type':'application/json'}, body:'{}'});
+        const res = await fetch('/tokyo_aruaru.v1.Site/ListRepos', {method:'POST', headers:{'Content-Type':'application/json'}, body:'{}'});
         const data = await res.json();
         if (!res.ok || data.code) { fetchStatus.textContent = '❌ ' + (data.message || data.code); return; }
         const repos = data.repos || [];

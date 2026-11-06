@@ -1517,7 +1517,7 @@ async fn connect_body(req: &poem::Request, body: poem::Body, max: usize) -> Resu
     serde_json::from_slice(&bytes).map_err(|_| connect_err(StatusCode::BAD_REQUEST, "invalid_argument", "invalid json"))
 }
 
-/// `POST /aruaru.tokyo.v1.Site/ListRepos`(旧 `GET /api/repos`)
+/// `POST /tokyo_aruaru.v1.Site/ListRepos`(旧 `GET /api/repos`)
 #[handler]
 async fn rpc_list_repos(req: &poem::Request, body: poem::Body) -> poem::Response {
     if let Err(r) = connect_body(req, body, 4096).await {
@@ -2060,7 +2060,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
         e.preventDefault();
         var m=document.getElementById('tokoro-msg');
         m.textContent='';
-        fetch('/aruaru.tokyo.v1.Site/TokoroUnlock',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{password:document.getElementById('tokoro-pw').value}})}})
+        fetch('/tokyo_aruaru.v1.Site/TokoroUnlock',{{method:'POST',headers:{{'Content-Type':'application/json'}},body:JSON.stringify({{password:document.getElementById('tokoro-pw').value}})}})
           .then(function(r){{return r.ok?r.json():Promise.reject();}})
           .then(function(j){{
             document.getElementById('tokoro-player').src='/video/tokoro.mp4?t='+encodeURIComponent(j.token);
@@ -2203,7 +2203,7 @@ fn healthz() -> &'static str {
 
 static TOKORO_TOKENS: std::sync::Mutex<Vec<String>> = std::sync::Mutex::new(Vec::new());
 
-/// `POST /aruaru.tokyo.v1.Site/TokoroUnlock`(旧 `POST /api/tokoro-unlock`)。
+/// `POST /tokyo_aruaru.v1.Site/TokoroUnlock`(旧 `POST /api/tokoro-unlock`)。
 /// パスワードは環境変数`ARUARU_TOKYO_TOKORO_PASSWORD`(ソースには置かない)。未設定なら常に拒否。
 #[handler]
 async fn rpc_tokoro_unlock(req: &poem::Request, body: poem::Body) -> poem::Response {
@@ -2244,7 +2244,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/k", StaticFileEndpoint::new("static/k.html"))
         .at("/app.js", StaticFileEndpoint::new("static/app.js"))
         .at("/meta-index.js", StaticFileEndpoint::new("static/meta-index.js"))
-        .at("/aruaru.tokyo.v1.Site/ListRepos", post(rpc_list_repos))
+        .at("/tokyo_aruaru.v1.Site/ListRepos", post(rpc_list_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
         .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
@@ -2256,7 +2256,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/video/fukuyama/fukuyama-hotaru.mp4", StaticFileEndpoint::new("video/fukuyama/fukuyama-hotaru.mp4"))
         .at("/video/fukuyama/fukuyama-sakurazaka-2005.mp4", StaticFileEndpoint::new("video/fukuyama/fukuyama-sakurazaka-2005.mp4"))
         .at("/video/fukuyama/shibasaki-sakurazaka-itsukushima.mp4", StaticFileEndpoint::new("video/fukuyama/shibasaki-sakurazaka-itsukushima.mp4"))
-        .at("/aruaru.tokyo.v1.Site/TokoroUnlock", post(rpc_tokoro_unlock))
+        .at("/tokyo_aruaru.v1.Site/TokoroUnlock", post(rpc_tokoro_unlock))
         .at(
             "/video/tokoro.mp4",
             StaticFileEndpoint::new("video/所さん！事件ですよ　ＴＫＧが海外で大人気！？　ニッポンの卵が大進化.mp4").before(|req| async move {
