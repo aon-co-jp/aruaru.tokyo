@@ -1692,6 +1692,10 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 </head>
 <body>
 <main>
+<p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001653816/" target="_blank" rel="noopener noreferrer">HDDコーナー　2TB</a></p>
+<p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651227/" target="_blank" rel="noopener noreferrer">HDDコーナー　4TB</a></p>
+<p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651228/" target="_blank" rel="noopener noreferrer">HDDコーナー　6TB</a></p>
+<p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001654550/" target="_blank" rel="noopener noreferrer">HDDコーナー　8TB</a></p>
 {AEON_TRAINING_HTML}
 {TOP_VIDEO_HTML}
 {TOP_INTRO_HTML}
@@ -1711,10 +1715,6 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 {TOP_VIDEO_HTML_B}
   <p class="blog-link"><a href="{BLOG_POST2_URL}" target="_blank" rel="noopener">📝 {BLOG_POST2_TITLE_JA}</a></p>
 
-  <p class="blog-link"><a href="https://kakaku.com/item/K0001653816/" target="_blank" rel="noopener noreferrer">HDDコーナー　2TB</a></p>
-  <p class="blog-link"><a href="https://kakaku.com/item/K0001651227/" target="_blank" rel="noopener noreferrer">HDDコーナー　4TB</a></p>
-  <p class="blog-link"><a href="https://kakaku.com/item/K0001651228/" target="_blank" rel="noopener noreferrer">HDDコーナー　6TB</a></p>
-  <p class="blog-link"><a href="https://kakaku.com/item/K0001654550/" target="_blank" rel="noopener noreferrer">HDDコーナー　8TB</a></p>
 
   <header>
     <h1>aruaru<span>.tokyo</span></h1>
