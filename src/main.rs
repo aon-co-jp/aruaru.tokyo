@@ -1696,6 +1696,12 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 </head>
 <body>
 <main>
+<div class="mynavi-job" style="max-width:42rem;margin:1rem auto;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;font-size:1.1rem">
+<p style="margin:0 0 .4rem;font-weight:700">8年連続ホワイト企業で【プロジェクト管理】平均年収636万円</p>
+<p style="margin:0 0 .4rem">アイアール株式会社</p>
+<p style="margin:0 0 .6rem">＼8割以上が未経験スタート／年間休日125日★東証プライム企業G</p>
+<p style="margin:0"><a href="https://tenshoku.mynavi.jp/jobinfo-303689-1-61-1/adv25/?ty=eer" target="_blank" rel="noopener noreferrer">マイナビ転職の求人ページ（写真・詳細はこちら）</a></p>
+</div>
 <details class="hdd-corner" style="max-width:42rem;margin:.6rem auto;text-align:center"><summary style="cursor:pointer;font-size:1.4rem;font-weight:700">HDDコーナー</summary><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001653816/" target="_blank" rel="noopener noreferrer">HDDコーナー　2TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651227/" target="_blank" rel="noopener noreferrer">HDDコーナー　4TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651228/" target="_blank" rel="noopener noreferrer">HDDコーナー　6TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001654550/" target="_blank" rel="noopener noreferrer">HDDコーナー　8TB</a></p></details>
 <p style="margin:0;line-height:1.2">&nbsp;</p>
 <section class="digital-art-museum" style="max-width:42rem;margin:1rem auto;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;font-size:1.1rem">
