@@ -1700,7 +1700,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <p style="margin:0 0 .4rem;font-weight:700">8年連続ホワイト企業で【プロジェクト管理】平均年収636万円</p>
 <p style="margin:0 0 .4rem">アイアール株式会社</p>
 <p style="margin:0 0 .6rem">＼8割以上が未経験スタート／年間休日125日★東証プライム企業G</p>
-<p style="margin:0"><a href="https://tenshoku.mynavi.jp/jobinfo-303689-1-61-1/adv25/?ty=eer" target="_blank" rel="noopener noreferrer">マイナビ転職の求人ページ（写真・詳細はこちら）</a></p>
+<p style="margin:0"><a href="https://tenshoku.mynavi.jp/jobinfo-303689-1-61-1/adv25/?ty=eer" target="_blank" rel="noopener noreferrer">マイナビ転職の求人ページ（写真・詳細はこちら）</a></p><p style="margin:.6rem 0 0"><a href="https://tenshoku.mynavi.jp/jobinfo-303689-1-61-1/adv25/?ty=eer" target="_blank" rel="noopener noreferrer"><img src="https://aruaru.tokyo/img/ai-r-recruit.jpg" alt="アイアール株式会社の求人（マイナビ転職掲載）" loading="lazy" style="width:100%;height:auto;display:block;border-radius:8px"></a></p>
 </div>
 <details class="hdd-corner" style="max-width:42rem;margin:.6rem auto;text-align:center"><summary style="cursor:pointer;font-size:1.4rem;font-weight:700">HDDコーナー</summary><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001653816/" target="_blank" rel="noopener noreferrer">HDDコーナー　2TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651227/" target="_blank" rel="noopener noreferrer">HDDコーナー　4TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001651228/" target="_blank" rel="noopener noreferrer">HDDコーナー　6TB</a></p><p class="blog-link" style="font-size:1.4rem;text-align:center"><a href="https://kakaku.com/item/K0001654550/" target="_blank" rel="noopener noreferrer">HDDコーナー　8TB</a></p></details>
 <p style="margin:0;line-height:1.2">&nbsp;</p>
@@ -2346,6 +2346,7 @@ async fn main() -> Result<(), std::io::Error> {
         .at("/tokyo_aruaru.v1.Site/ListRepos", post(rpc_list_repos))
         .at("/open-aruaru-runo-iLumi", get(meta_index_page))
         .at("/open-aruaru-runo", get(meta_index_page))
+        .at("/img/ai-r-recruit.jpg", StaticFileEndpoint::new("img/ai-r-recruit.jpg"))
         .at("/video/7-percent.mp4", StaticFileEndpoint::new("video/7%.mp4"))
         .at("/video/kikou-practice.mp4", StaticFileEndpoint::new("video/kikou-practice.mp4"))
         .at("/video/NIHON-KOKUSAI.mp4", StaticFileEndpoint::new("video/NIHON-KOKUSAI.mp4"))
