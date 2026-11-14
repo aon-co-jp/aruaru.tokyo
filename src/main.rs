@@ -1696,6 +1696,14 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 </head>
 <body>
 <main>
+<section class="top-minkan" style="max-width:42rem;margin:1rem auto;text-align:center;">
+<p style="font-size:1.2rem;margin:1rem 0;">民間ガン治療法<br><br>ボランティア情報<br><br><a href="https://ameblo.jp/www-aon/entry-12981774738.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981774738.html</a></p>
+</section>
+<section class="top-rakuno" style="max-width:42rem;margin:1rem auto;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;">
+<p style="margin:0 0 .5rem;font-weight:700;font-size:1.2rem">酪農家が黒字になる話</p>
+<p style="margin:0 0 .5rem">資格の名前は、人工授精師で、大学に行かなくても講座をノートにビッシリとメモを取りながら受講してTESTを受けて合格すれば資格は取れます。</p>
+<p style="margin:0">和牛か乳牛の精子と卵子の受精卵を乳牛のメスの子宮に人工授精師が移植して、和牛か乳牛の子牛を出産出来て乳製品と一緒に出荷して、北海道くらい広い土地なら、冬の雪で放牧の場合は、牛フンと雪が一緒に解けますので、排水溝、下水溝を牛糞もドロも砂利も石も土も流し込んでもは畑の肥料として再利用出来るように流し込んでも大丈夫な様に下水溝を建設するべきで、その再利用した肥料も合わせて出荷して売上を出して、経費や給料や固定資産税などを引いて一年トータルで黒字になれば毎年法人税も収められます。</p>
+</section>
 <section class="top-direct" style="max-width:640px;margin:1rem auto;text-align:center;">
 <p style="font-size:1.2rem;font-weight:700;margin:0 0 .6rem;"><a href="https://www.youtube.com/watch?v=yq0yDVBjqVM" target="_blank" rel="noopener noreferrer">アメリカ政府による日本支配問題。ダイレクト出版。</a></p>
 <div style="position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;">
