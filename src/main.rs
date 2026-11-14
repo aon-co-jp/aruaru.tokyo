@@ -680,7 +680,6 @@ const TOP_VIDEO_REST_HTML: &str = r#"<section class="top-news" style="max-width:
 <p style="text-align:center;margin:0 0 1rem;"><small>(価格・条件は2026-10-26時点の楽天モバイル公式ページ記載。最新は公式で確認。Pixel 11・10aの分)<br><span lang="en">Prices and terms as listed on the Rakuten Mobile official pages on 2026-10-26 (Pixel 11 and 10a). Please check the official pages for the latest.</span></small></p>
 </div>
 <section class="top-news" style="max-width:640px;margin:1rem auto;text-align:center;">
-<p style="font-size:1.2rem;margin:1rem 0;">面白そうなカフェ　検索ワード<br><a href="https://ameblo.jp/www-aon/entry-12981863547.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981863547.html</a></p>
 <p style="text-align:center;font-size:1.2rem;margin:1rem 0;"><br>民間ガン治療法<br><br>ボランティア情報<br><br><a href="https://ameblo.jp/www-aon/entry-12981774738.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981774738.html</a></p>
 </section>"#;
 
@@ -1832,6 +1831,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <p style="margin:0;line-height:1.2">&nbsp;</p>
 <section class="digital-art-museum" style="max-width:42rem;margin:1rem auto;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;font-size:1.1rem">
 <h2 style="font-size:1.35rem;border-bottom:none;margin:0 0 .6rem;line-height:1.5">Digital Art Museum （デジタル美術館のアイデア）＆　保育園＆幼稚園＆小中高校＆　小学生と中学生向け学童保育　＆　スーパー銭湯　＆JAZZカフェレストラン（学校給食＆社食）＆　３WAYカーオーディオは、フロントのピラーに（スーパー）ツィーター＆スコーカー埋め込み対応をイエローハット＆オートバックスのお店も一緒に経営して行なうサービス＆不動産と建設と工務店と新車と中古車の自動車の売買と保険の融合店のアイデア</h2>
+<p style="font-size:1.2rem;margin:0 0 .8rem;">面白そうなカフェ　検索ワード<br><a href="https://ameblo.jp/www-aon/entry-12981863547.html" target="_blank" rel="noopener noreferrer">https://ameblo.jp/www-aon/entry-12981863547.html</a></p>
 <p style="margin:0 0 .8rem"><a href="https://www.youtube.com/results?search_query=%E3%82%B4%E3%83%83%E3%83%9B+%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88" target="_blank" rel="noopener noreferrer">ゴッホ　デジタルアートのYouTube検索結果</a></p>
 <p style="margin:0 0 .8rem">絵画やバッハ、ベートーベン、モーツァルトなどの音楽家やMANGA（漫画）、アニメなどのAUDIO&amp;VISUAL（IMAX＆4DAXシアター対応）デジタルコンテンツをプロジェクションマッピングなどで体験出来る美術館の様な物を世界中に建設したり、</p>
 <p style="margin:0 0 .8rem">コミケ　コスプレ　アニソン、<br><a href="https://www.youtube.com/results?search_query=%E3%82%B3%E3%83%9F%E3%82%B1%E3%80%80%E3%82%B3%E3%82%B9%E3%83%97%E3%83%AC%E3%80%80%E3%82%A2%E3%83%8B%E3%82%BD%E3%83%B3" target="_blank" rel="noopener noreferrer">アニメソングイベント</a></p>
