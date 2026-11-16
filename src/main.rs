@@ -2462,6 +2462,13 @@ async fn rpc_tokoro_unlock(req: &poem::Request, body: poem::Body) -> poem::Respo
     connect_ok(serde_json::json!({ "token": token }))
 }
 
+/// スマホ紹介コーナーの断片HTML(静的配信)。audiocafe.tokyoが定期的に取り込み、
+/// aruaru.tokyoを編集すると自動で連動して反映される(2026-11-16、ユーザー指示)。
+#[handler]
+fn smartphone_corner() -> Html<&'static str> {
+    Html(SMARTPHONE_CORNER_HTML)
+}
+
 #[tokio::main]
 async fn main() -> Result<(), std::io::Error> {
     tracing_subscriber::fmt::init();
@@ -2469,6 +2476,7 @@ async fn main() -> Result<(), std::io::Error> {
     let app = Route::new()
         .at("/", get(top))
         .at("/healthz", get(healthz))
+        .at("/smartphone-corner.html", get(smartphone_corner))
         .at("/help", StaticFileEndpoint::new("static/help.html"))
         .at("/style.css", StaticFileEndpoint::new("static/style.css"))
         .at("/p", StaticFileEndpoint::new("static/p.html"))
