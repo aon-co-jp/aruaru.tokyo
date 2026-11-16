@@ -539,6 +539,8 @@ const TOP_VIDEO_REST_HTML: &str = r#"<section class="top-news" style="max-width:
 <li>About 182g, about 162 x 75 x 8.5mm</li>
 <li><strong>No wireless charging</strong> / headphone jack / Android 14</li>
 </ul>
+<p style="margin:.6rem 0 .2rem;padding:.5rem .7rem;border-left:3px solid rgba(128,128,128,.6);">💬 オンラインは売り切れですが、店頭のRakutenモバイルショップに在庫があり、1円で購入できればお買い得だと思います。</p>
+<p lang="en" style="font-size:.88rem;opacity:.85;margin:.1rem 0 .6rem;padding-left:.7rem;">💬 It is sold out online, but if a Rakuten Mobile shop has it in stock in store and you can buy it for 1 yen, I think it is a great deal.</p>
 <p style="margin:.3rem 0 0;"><small>未使用品の価格・在庫は販売店ごとに異なります。最新の情報はご自身でご確認ください。</small></p>
 <p lang="en" style="font-size:.88rem;opacity:.85;margin:.1rem 0 .5rem;">Prices and stock of unused units vary by seller. Please check the latest information yourself.</p>
 <p style="margin:.5rem 0 0;text-align:center;"><a href="https://www.google.com/search?q=%E5%AF%8C%E5%A3%AB%E9%80%9A+arrows+we2+plus+%E6%9C%AA%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener noreferrer">🔎 「富士通 arrows we2 plus 未使用」を検索 / Search</a><br><a href="https://network.mobile.rakuten.co.jp/product/smartphone/arrows-we2-plus/" target="_blank" rel="noopener noreferrer">▶️ 楽天モバイル arrows We2 Plus(仕様) / Specs</a></p>
