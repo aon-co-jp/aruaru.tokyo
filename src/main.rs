@@ -177,6 +177,8 @@ const TOP_VIDEO_HTML: &str = r#"<p style="max-width:960px;margin:1rem auto .8rem
 "#;
 
 /// スマホ紹介コーナー(2026-11-16: ページ最上部へ移動、ユーザー指示)。
+const EASYWEB_LINE_HTML: &str = r#"<p id="easy-web-line" style="margin:0;padding:.45rem .8rem;text-align:center;font-size:.95rem;border-bottom:1px solid rgba(128,128,128,.5);"><a href="https://easy-web.tokyo/" style="font-weight:bold;">🛠 作ったツールの紹介 / Tools we build: MFastAPI・RMojo・2FastAPI ほか → easy-web.tokyo</a></p>"#;
+
 const SMARTPHONE_CORNER_HTML: &str = r#"<div class="pixel-intro">
 <div class="google-proposal" style="max-width:420px;margin:1rem auto .6rem;padding:.7rem 1rem;border:2px solid rgba(128,128,128,.6);border-radius:10px;text-align:left;line-height:1.6;">
 <p style="margin:0 0 .1rem;"><strong>📣 Google様へのご提案！</strong></p>
@@ -1671,6 +1673,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+{EASYWEB_LINE_HTML}
 <main>
 {SMARTPHONE_CORNER_HTML}
 <section class="lawn-top" style="max-width:56rem;margin:1rem auto;padding:.8rem 1rem;border:1px solid rgba(128,128,128,.5);border-radius:10px;text-align:left;line-height:1.8;font-size:1.1rem;"><style>.lawn-top table{{border-collapse:collapse;width:100%;font-size:.9rem;margin:.6rem 0}}.lawn-top th,.lawn-top td{{border:1px solid rgba(128,128,128,.5);padding:.35rem .5rem;text-align:center}}.lawn-top th{{background:rgba(120,160,100,.25)}}.lawn-top .tw{{overflow-x:auto}}</style>
