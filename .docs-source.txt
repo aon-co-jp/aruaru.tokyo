@@ -1,0 +1,3 @@
+source: aon-co-jp/aruaru.tokyo
+commit: 0019bc1b340b48b5f94871efc4855f1a95cdf971
+updated: 2026-11-20T05:21:48Z
