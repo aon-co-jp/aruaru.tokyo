@@ -316,3 +316,7 @@ location /some-path/ {
 
 **Paste-ready resume message**:
 "Continuing the REST abolition for `aruaru-IME` and `aruaru-tokyo`. Read the 'Resume message' section in README / CLAUDE / PORTING. (1) The IME legacy-route Release and VPS update is on hold until 2026-12-06 by the user's decision; do not do it until I (the user) say so. (2) When the time comes: version bump → Release → VPS (engine, downloads/VERSION) → measure legacy routes = 404 → confirm recovery of an older TSF DLL and the phone. (3) Survey the unconfirmed auto-restart items (macOS, open-backup, etc.). Chat in Japanese only."
+
+## 2026-11-20 依存の脆弱性修正 / Dependency security fix
+**日本語**: quinn-udp 0.5.16(RUSTSEC-2026-0538) を更新し、`cargo test --locked` が全件成功しました(本番反映は別途)。
+**English**: Updated quinn-udp 0.5.16(RUSTSEC-2026-0538); `cargo test --locked` passes (production deploy is separate).
