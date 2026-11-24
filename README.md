@@ -1,3 +1,5 @@
+> Latest translations / 翻訳の最新版: [0-LATEST-TRANSLATIONS.md](0-LATEST-TRANSLATIONS.md)
+
 # aruaru-tokyo-server
 
 [aruaru.tokyo](https://aruaru.tokyo/) のTOPページ。Rust + [Poem](https://github.com/poem-web/poem)製、DB非依存・1バイナリ完結。
