@@ -283,6 +283,14 @@ pub const PROJECTS: &[Project] = &[
         role_ja: "Skype風「世界約130ヶ国語リアルタイム音声翻訳」対応のTV会議/ビデオチャットアプリ構想(Windows/macOS/Linux/Android/iPhone向け)。open-web-server+Rust/RPoem(Cosmo互換)構成。2026-09-26時点は設計ドキュメント段階、実装は未着手。",
     },
     Project {
+        name: "maid-cafe-vsc",
+        repo: "aon-co-jp/maid-cafe-vsc",
+        has_readme: true,
+        has_porting: true,
+        has_claude: true,
+        role_ja: "【日本語】コードに好きな色を付けて範囲を指定し、そのままAIに質問できるVS Code拡張(無料のaruaru-llmが既定、ChatGPT・Gemini・DeepSeek・Grok・Claudeは自分のAPIキーで)。ダウンロード・インストール・使い方: https://maid-cafe.tokyo/download/vsc/ と https://easy-web.tokyo/maid-cafe-vsc/ 。プレビュー版 0.1.0(署名なし)。 / [English] A VS Code extension to mark code with colours and ask AI about it (free aruaru-llm by default; ChatGPT, Gemini, DeepSeek, Grok and Claude with your own API key). Download, install and usage: https://maid-cafe.tokyo/download/vsc/ and https://easy-web.tokyo/maid-cafe-vsc/ . Preview 0.1.0 (unsigned).",
+    },
+    Project {
         name: "open-vsc-claude",
         repo: "aon-co-jp/open-vsc-claude",
         has_readme: true,
