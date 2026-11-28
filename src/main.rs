@@ -177,6 +177,7 @@ const TOP_VIDEO_HTML: &str = r#"<p style="max-width:960px;margin:1rem auto .8rem
 "#;
 
 /// スマホ紹介コーナー(2026-11-16: ページ最上部へ移動、ユーザー指示)。
+const SITE_SEARCH_HTML: &str = include_str!("site_search.html");
 const EASYWEB_LINE_HTML: &str = r#"<p id="easy-web-line" style="margin:0;padding:.45rem .8rem;text-align:center;font-size:.95rem;border-bottom:1px solid rgba(128,128,128,.5);"><a href="https://easy-web.tokyo/" style="font-weight:bold;">🛠 作ったツールの紹介 / Tools we build: MFastAPI・RMojo・2FastAPI ほか → easy-web.tokyo</a></p>"#;
 
 const SMARTPHONE_CORNER_HTML: &str = r#"<div class="pixel-intro">
@@ -1685,6 +1686,7 @@ async fn top(Query(q): Query<TopQuery>) -> Html<String> {
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+{SITE_SEARCH_HTML}
 {EASYWEB_LINE_HTML}
 <main>
 {SMARTPHONE_CORNER_HTML}
