@@ -95,7 +95,7 @@ Japanese and English are always the newest. Other languages are not translated e
 
 ## PORTING.md
 
-- 日本語 / ja: 2026-11-20 (latest)
+- 日本語 / ja: 2026-11-28 (latest)
 - English / en: not yet / まだ
 - 简体中文 / zh-Hans: not yet / まだ
 - 繁體中文 / zh-Hant: not yet / まだ
